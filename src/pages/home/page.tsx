@@ -1,10 +1,13 @@
-import { AfterHero } from "./AfterHero"
-import { Hero } from "./Hero"
+import { AfterHero } from "./sections/AfterHero"
+import { Hero } from "./sections/Hero"
+import { Services } from "./sections/Services"
 
 const HomePage: React.FC = () => {
     return(
         <div className="center bg-white flex-col">
             <Hero />
+            <AfterHero />
+            <Services />
             {/* 
                 Visitable Places
 
@@ -18,7 +21,6 @@ const HomePage: React.FC = () => {
 
                 jobs - read more            
             */}
-            <AfterHero />
         </div>
     )
 }

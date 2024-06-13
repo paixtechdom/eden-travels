@@ -9,7 +9,7 @@ export default {
         "hero": "url('/src/assets/images/hero.jpg')",  
       },
       colors:{
-        "primary" : "rgb(29,222,15)",
+        "primary" : "rgb(150,100,15)",
         "secondary": "rgb(17,18,22)",
         "tertiary" : "rgb(150,100,0)"
       }

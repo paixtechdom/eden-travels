@@ -10,7 +10,7 @@ export const Button :React.FC <button> = ({text , navigateTo, className, icon}) 
             navigate(`/${navigateTo}`)
         }
        }}
-       className={`p-2 px-6 center rounded-full rounded-l-xl rounded-br-xl text-sm ${className}`}>
+       className={`p-2 px-6 center rounded-tl-xl rounded-br-xl transition-all duration-500 hover:scale-90 active:scale-90 ${className} cursor-pointer`}>
         {text}
         {icon}
        </button>
