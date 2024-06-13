@@ -44,8 +44,8 @@ export const AfterHero : React.FC =  () => {
                     }
                 </div>
             </section>
-            <section className="bg-primary py-[10vh] center text-center flex-col gap-5 min-h-[30vh] w-full my-[20vh]">
-                    <h2 className="text-white font-semibold text-4xl md:text-5/12 w-11/12 lg:w-6/12">
+            <section className="bg-secondary py-[10vh] center text-center flex-col gap-5 min-h-[30vh] w-full my-[20vh]">
+                    <h2 className="text-primary font-semibold text-4xl md:text-5/12 w-11/12 lg:w-6/12">
                         Lorem, ipsum dolor Lorem ipsum dolor sit.
                     </h2>
 

@@ -20,7 +20,7 @@ export const ImageText:FC<ImageTextInterface> = ({heading, span, desc, children,
                             </p>
 
                             <Button 
-                                className="text-white bg-primary flex items-center h-fit py-3 font-bold w-fit px-9"
+                                className="text-primary bg-secondary flex items-center h-fit py-3 font-bold w-fit px-9"
                                 text="Learn More" 
                                 icon={<BsArrowRight className="ml-3 "/>}
                             />

@@ -35,3 +35,33 @@ export interface ImageTextInterface {
     img: string,
     children: JSX.Element
 }
+
+
+
+
+
+
+
+
+
+
+
+export interface FooterLinksInterface {
+    header: string,
+    links: string[]
+}
+export interface ContactInfoInterface {
+    icon: JSX.Element,
+    contact: string
+}
+
+
+export interface InputFieldInterface {
+    label: string,
+    type: string,
+    name: string,
+    className?: string
+    handleChange: Function,
+    value: string,
+    placeholder?: string
+}

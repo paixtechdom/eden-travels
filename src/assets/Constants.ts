@@ -64,7 +64,7 @@ export const NavInfo = [
     },
     {
         title: 'Contact Us',
-        link: 'Contact',
+        link: 'contact',
     },
 ]
 

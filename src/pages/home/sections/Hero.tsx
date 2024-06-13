@@ -25,7 +25,6 @@ export const Hero: React.FC = () => {
                     </div>
                 </div>
 
-
                 <img src={hero} alt="Hero Image" className="w-full md:w-9/12 lg:w-5/12"/>
             </div>
         </div>
