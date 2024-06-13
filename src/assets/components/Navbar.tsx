@@ -24,7 +24,7 @@ const currentDropDownIndex = navigation.currentDropDownIndex
     return(
         <>
            <>
-        <header className={`fixed center w-full left-0 top-0 h-[8vh] md:h-[10vh] z-50 transition-all duration-1000 shadow-xl bg-white`}>
+        <header className={`fixed center w-full left-0 top-0 h-[8vh] md:h-[10vh] z-50 transition-all duration-1000 ${scrolledDown ? "shadow-xl" : ""} bg-white`}>
             <div className="flex items-center justify-between w-11/12 lg:w-10/12 xl:w-9/12">
 
                 <Link to={'/'} className='w-3/12 md:w-2/12'>
@@ -50,10 +50,10 @@ const currentDropDownIndex = navigation.currentDropDownIndex
                                 NavInfo?.map((nav : nav, i) => (
                                     <div key={i} className={`flex flex-col transition-all duration-1000 justify-between w-full text-blue lg:border-0 relative lg:w-fit`}>
 
-                                        <div className={`flex w-full lg:w-fit py-5 px-[5%] lg:p-0 justify-between lg:justify-end lg:items-center cursor-pointer text-gray-200 bg-secondary lg:bg-transparent
+                                        <div className={`flex w-full lg:w-fit py-5 px-[5%] lg:p-0 justify-between lg:justify-end lg:items-center cursor-pointer lg:text-black text-gray-200 bg-secondary lg:bg-transparent
                                         ${currentNav === i ? 
-                                            'border-b-2 border-primary font-bold lg:bg-transparent lg:hover:border-b' 
-                                        : 'hover:bg-opacity-90 lg:hover:bg-transparent border-blue lg:hover:border-b-2 lg:hover:border-primary'} hover:bg-opacity-10 hover:bg-pri mary`} 
+                                            'font-bold lg:bg-transparent' 
+                                        : 'hover:bg-opacity-90 lg:hover:bg-transparent hover:font-bold'} hover:bg-opacity-10 hover:bg-pri mary`} 
 
                                         onClick={() => {
                                             if( nav.sublinks){
