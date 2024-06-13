@@ -1,9 +1,9 @@
 import planeTakeoff from "../assets/images/planeTakeoff.jpg"
 import passportServices from "../assets/images/passportServices.jpg"
 import familyTour from "../assets/images/familyTour.jpg"
-import customerService from "../assets/images/planeTakeoff.jpg"
-import operations from "../assets/images/passportServices.jpg"
-import destinationKnowledge from "../assets/images/familyTour.jpg"
+import customerService from "../assets/images/customerService.jpg"
+import operations from "../assets/images/operations.jpg"
+import destinationKnowledge from "../assets/images/destinationKnowledge.jpg"
 
 export const NavInfo = [
     {

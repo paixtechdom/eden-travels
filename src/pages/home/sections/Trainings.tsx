@@ -1,18 +1,18 @@
-import { servicesList } from "../../../assets/Constants"
+import { trainingList } from "../../../assets/Constants"
 import { Button } from "../../../assets/components/Button"
 
-export const Services = () => {
+export const Trainings = () => {
     return(
         <div className="w-full center flex-col gap-9 pb-[20vh]">
             <div className="flex flex-col items-center text-center gap-4">
-                <h2 className="font-semibold text-4xl md:text-5/12">Our Services</h2>
-                <p className="w-11/12 lg:w-9/12">Lorem ipsum dolor sit amet, consectOur servicesetur adipisicing elit. Labore, voluptatem!</p>
+                <h2 className="font-semibold text-4xl md:text-5/12">We also Train</h2>
+                <p className="w-11/12 lg:w-9/12">We offer a range of courses and trainings to help you secure your space in the air-space</p>
             </div>
 
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 lg:w-10/12 gap-9">
                 {
-                    servicesList.map((service, i) => (
+                    trainingList.map((service, i) => (
                         <div key={i} className="flex flex-col gap-6 w-full shadow-lg rounded-xl p-2 bg-gray-100">
                             <div className="center w-full overflow-hidden rounded-t-xl">
                                 <img src={service.img} alt={service.title} className="w-full transition-all duration-500 hover:scale-110 active:scale-110"/>

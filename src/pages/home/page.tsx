@@ -4,6 +4,7 @@ import { ImageText } from "../../assets/components/ImageText"
 import { AfterHero } from "./sections/AfterHero"
 import { Hero } from "./sections/Hero"
 import { Services } from "./sections/Services"
+import { Trainings } from "./sections/Trainings"
 import planeRun from "./../../assets/images/planeRun.jpg"
 
 const HomePage: React.FC = () => {
@@ -33,6 +34,8 @@ const HomePage: React.FC = () => {
                     />
                 </div>
             </ImageText>
+
+            <Trainings />
             {/* 
                 Visitable Places
 
