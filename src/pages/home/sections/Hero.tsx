@@ -7,7 +7,7 @@ export const Hero: React.FC = () => {
                 <div className="flex flex-col gap-5 w-full lg:w-5/12">
                     <h1 className="font-bold text-5xl text-primary">This and that</h1>
 
-                    <p>
+                    <p className="leading-relaxed tracking-wide">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa alias libero a nulla ab et quisquam beatae nobis repellat. Inventore, praesentium sapiente dolor fugiat repellendus tempore quasi aliquam unde itaque?
                     </p>
 
