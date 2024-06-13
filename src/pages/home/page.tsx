@@ -3,16 +3,21 @@ import { ImageExtras } from "../../assets/components/ImageExtras"
 import { ImageText } from "../../assets/components/ImageText"
 import { AfterHero } from "./sections/AfterHero"
 import { Hero } from "./sections/Hero"
-import { Services } from "./sections/Services"
-import { Trainings } from "./sections/Trainings"
 import planeRun from "./../../assets/images/planeRun.jpg"
+import { CardParent } from "../../assets/components/Card/CardParent"
+import { servicesList, trainingList } from "../../assets/Constants"
 
 const HomePage: React.FC = () => {
     return(
         <div className="center bg-white flex-col">
             <Hero />
             <AfterHero />
-            <Services />
+            <CardParent 
+                data={servicesList}
+                heading="Our Services"
+                description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatibus dolorum laboriosam voluptatem quia laudantium consequuntu"
+            />
+            
             
             <ImageText
                 heading={"Lorem ipsum dolor sit amet."} 
@@ -35,7 +40,11 @@ const HomePage: React.FC = () => {
                 </div>
             </ImageText>
 
-            <Trainings />
+            <CardParent 
+                data={trainingList}
+                heading="We train"
+                description="We offer a range of courses and trainings to help you secure your space in the air-space"
+            />
             {/* 
                 Visitable Places
 

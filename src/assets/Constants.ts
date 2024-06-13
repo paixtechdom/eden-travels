@@ -73,7 +73,7 @@ export const servicesList = [
         title: "Travel Arrangements",
         img: planeTakeoff,
         desc: "Hassle-free booking for flights, accommodations, and transportation.",
-        subservices: [
+        sub: [
             {
                 title: "Flight Booking"
             },
@@ -89,7 +89,7 @@ export const servicesList = [
         title: "Travel Packages and Insurance",
         img: familyTour,
         desc: "Tailored travel packages and comprehensive insurance coverage.",
-        subservices: [
+        sub: [
             {
                 title: "Tour Packages"
             },
@@ -103,13 +103,13 @@ export const servicesList = [
         title: "Travel Documentation and Corporate Services",
         img: passportServices,
         desc: "Visa, passport services, and efficient corporate travel solutions.",
-        subservices: [
-            {
-                title: "Visa and Passport Services"
-            },
-            {
-                title: "Corporate Travel"
-            },
+        sub: [
+                {
+                    title: "Visa and Passport Services"
+                },
+                {
+                    title: "Corporate Travel"
+                },
         ]
     },
 ]
@@ -120,7 +120,7 @@ export const trainingList = [
         title: "Customer and Sales Training",
         img: customerService,
         desc: "Enhance customer service and sales skills.",
-        subservices: [
+        sub: [
             {
                 title: "Customer Service Training"
             },
@@ -133,7 +133,7 @@ export const trainingList = [
         title: "Operational and Crisis Management Training",
         img: operations,
         desc: "Improve operational efficiency and crisis management.",
-        subservices: [
+        sub: [
             {
                 title: "Travel Operations Training"
             },
@@ -146,7 +146,7 @@ export const trainingList = [
         title: "Destination and Technology Training",
         img: destinationKnowledge,
         desc: "Gain knowledge on destinations and travel technology.",
-        subservices: [
+        sub: [
             {
                 title: "Destination Knowledge Training"
             },

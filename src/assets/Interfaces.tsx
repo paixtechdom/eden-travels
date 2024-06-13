@@ -65,3 +65,22 @@ export interface InputFieldInterface {
     value: string,
     placeholder?: string
 }
+
+export interface CardParentInterface {
+    data: cardObject[],
+    heading: string,
+    description: string
+}
+
+export interface sub {
+    title: string
+}
+
+interface cardObject {
+    img: string,
+    title: string,
+    sub: sub[]
+}
+export interface CardInterface {
+    data: cardObject
+}
