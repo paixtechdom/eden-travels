@@ -1,11 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Margaret:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+*{
+    font-family: 'Poppins';
+}
 
 .center{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+h1, h2, h3{
+    font-family: 'Margaret';
 }
 
