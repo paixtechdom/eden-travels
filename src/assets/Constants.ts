@@ -1,6 +1,9 @@
 import planeTakeoff from "../assets/images/planeTakeoff.jpg"
 import passportServices from "../assets/images/passportServices.jpg"
 import familyTour from "../assets/images/familyTour.jpg"
+import customerService from "../assets/images/planeTakeoff.jpg"
+import operations from "../assets/images/passportServices.jpg"
+import destinationKnowledge from "../assets/images/familyTour.jpg"
 
 export const NavInfo = [
     {
@@ -106,6 +109,49 @@ export const servicesList = [
             },
             {
                 title: "Corporate Travel"
+            },
+        ]
+    },
+]
+
+
+export const trainingList = [
+    {
+        title: "Customer and Sales Training",
+        img: customerService,
+        desc: "Enhance customer service and sales skills.",
+        subservices: [
+            {
+                title: "Customer Service Training"
+            },
+            {
+                title: "Sales and Marketing Training"
+            },
+        ]
+    },
+    {
+        title: "Operational and Crisis Management Training",
+        img: operations,
+        desc: "Improve operational efficiency and crisis management.",
+        subservices: [
+            {
+                title: "Travel Operations Training"
+            },
+            {
+                title: "Crisis Management Training"
+            },
+        ]
+    },
+    {
+        title: "Destination and Technology Training",
+        img: destinationKnowledge,
+        desc: "Gain knowledge on destinations and travel technology.",
+        subservices: [
+            {
+                title: "Destination Knowledge Training"
+            },
+            {
+                title: "Travel Technology Training"
             },
         ]
     },
