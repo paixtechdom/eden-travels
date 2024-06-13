@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom"
 import { button } from "../Interfaces"
 
 
-export const Button :React.FC <button> = ({text , navigateTo}) => {
+export const Button :React.FC <button> = ({text , navigateTo, className, icon}) => {
     const navigate = useNavigate()
     return(
        <button onClick={() => {
@@ -10,8 +10,9 @@ export const Button :React.FC <button> = ({text , navigateTo}) => {
             navigate(`/${navigateTo}`)
         }
        }}
-       className="bg-secondary p-2 px-6 rounded-full text-gray-100 w-fit">
+       className={`p-2 px-6 center rounded-full rounded-l-xl rounded-br-xl text-sm ${className}`}>
         {text}
+        {icon}
        </button>
     )
 }

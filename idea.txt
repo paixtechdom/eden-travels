@@ -1,33 +1,7 @@
-data type for e in input handling :  ChangeEvent<HTMLInputElement>
+a page for services listing that will lead to the page for each service
 
- const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    console.log('Button clicked:', event);
-  };
-
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log('Form submitted with name:', name);
-  };
+like macmay create a component that can be used for each page and just pass the props
 
 
 
-React.FC meaning
-
-interface props {
-    name: string,
-    id: number
-}
-
-
-const TypesProps: React.FC<props> = ({ name, id }) => {
-    
-    return (
-      <div>
-        <p>Name: {name}</p>
-        <p>ID: {id}</p>
-      </div>
-    );
-  };
-
-
+same for trainings

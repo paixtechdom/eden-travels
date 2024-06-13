@@ -13,7 +13,7 @@ export const Navbar: React.FC = () => {
     const dispatch = useDispatch()
     const showNav = navigation.showNavbar
     const currentNav = navigation.currentNav
-    const currentDropDownIndex = navigation.currentDropDownIndex
+const currentDropDownIndex = navigation.currentDropDownIndex
     const scrolledDown = navigation.scrolledDown
     const currentDropDown = navigation.currentDropDown
 
@@ -24,17 +24,17 @@ export const Navbar: React.FC = () => {
     return(
         <>
            <>
-        <header className={`fixed center w-full left-0 top-0 h-[8vh] md:h-[10vh] z-50 transition-all duration-1000  ${scrolledDown ? `shadow-xl bg-secondary` : 'bg-transparent'}`}>
+        <header className={`fixed center w-full left-0 top-0 h-[8vh] md:h-[10vh] z-50 transition-all duration-1000 shadow-xl bg-white`}>
             <div className="flex items-center justify-between w-11/12 lg:w-10/12 xl:w-9/12">
 
                 <Link to={'/'} className='w-3/12 md:w-2/12'>
-                    <p className='w-5/12 md:w-2/12 text-xl font-bold text-white'>
-                        devOpsTransio
+                    <p className='w-5/12 md:w-3/12 text-xl font-bold text-black'>
+                        EdenTT
                     </p>
                     {/* <img src={logo} alt="Macmay Logo" className='w-5/12 md:w-2/12'/> */}
                 </Link>
 
-                <div className={`bi bi-${showNav ? 'x-lg' : 'list'} text-blue text-3xl lg:hidden cursor-pointer text-white`}  onClick={() => dispatch(toggleShowNav())}>
+                <div className={`bi bi-${showNav ? 'x-lg' : 'list'} text-blue text-3xl lg:hidden cursor-pointer text-black`}  onClick={() => dispatch(toggleShowNav())}>
                     {
                         showNav ? 
                         <BiX /> :
@@ -44,7 +44,7 @@ export const Navbar: React.FC = () => {
                 
                 
 
-                <div className={`fixed w-full flex justify-center items-start  transition-all duration-1000 top-[8vh] md:top-[10vh] h-screen lg:relative lg:top-0 lg:w-9/12 lg:h-fit ${showNav ? ' left-0 z-40' : '-left-[100%] lg:-left-0'} bg-zinc-900 lg:bg-transparent`}>
+                <div className={`fixed w-full flex overflow -auto lg:o verflow-hidden justify-center items-start  transition-all duration-1000 top-[8vh] md:top-[10vh] h-screen lg:relative lg:top-0 lg:w-9/12 lg:h-fit ${showNav ? ' left-0 z-40' : '-left-[100%] lg:-left-0'} bg-zinc-900 lg:bg-transparent`}>
                         <nav className={`flex flex-col lg:flex-row items-center w-full h-screen lg:gap-9 lg:h-fit lg:bg-transparent lg:justify-end transition-all duration-1000`}>
                             {
                                 NavInfo?.map((nav : nav, i) => (
@@ -82,7 +82,7 @@ export const Navbar: React.FC = () => {
                                         {
                                             nav.sublinks ?
                                             <div className={`flex flex-col gap-[1px] w-full overflow-hidden transition-all duration-200 lg:duration-1000 lg:absolute lg:min-w-[250px] lg:bg-primary
-                                            ${currentDropDown == nav.title ? 'lg:left-0' : 'h-0 lg:h-fit text-[0px]  lg:left-[700%]'} lg:top-[7vh]`}>
+                                            ${currentDropDown == nav.title ? 'lg:top-[7vh] lg:left-0' : 'h-0 lg:h-fit text-[0px]  lg:-top-[500px]'} `}>
         
                                                 {   
                                                     nav?.sublinks?.map((sublink : any, j) => (

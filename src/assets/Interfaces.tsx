@@ -13,6 +13,9 @@ export interface nav  {
 
 
 export interface button {
-    text : string,
-    navigateTo : string
+    text: string,
+    navigateTo?: string,
+    className?: string,
+    icon?: JSX.Element,
+    scrollTo?: string
 }

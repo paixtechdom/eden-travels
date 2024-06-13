@@ -4,55 +4,75 @@ export const NavInfo = [
         link: '',
     },
     {
-        title: 'Cloud Services',
-        link: 'Cloud-services',
+        title: 'Services',
+        link: 'services',
         sublinks: [
             {
-                title: 'Cloud I',
-                link: '',
+                "title": "Flight Booking",
+                "link": "flight-booking"
             },
             {
-                title: 'Cloud II',
-                link: '',
+                "title": "Accommodation Booking",
+                "link": "accommodation-booking"
             },
             {
-                title: 'Cloud III',
-                link: '',
-            },
-        ]
-    },
-    {
-        title: 'DevOps Services',
-        link: 'devops-services',
-        sublinks: [
-            {
-                title: 'DevOps I',
-                link: '',
+                "title": "Transportation Services",
+                "link": "transportation-services"
             },
             {
-                title: 'DevOps II',
-                link: '',
-            },
-        ]
-    },
-    {
-        title: 'Cloud Transio',
-        link: 'cloud-transio',
-        sublinks: [
-            {
-                title: 'Cloud I',
-                link: '',
+                "title": "Tour Packages",
+                "link": "tour-packages"
             },
             {
-                title: 'Cloud II',
-                link: '',
+                "title": "Travel Insurance",
+                "link": "travel-insurance"
             },
             {
-                title: 'Cloud III',
-                link: '',
+                "title": "Visa and Passport Services",
+                "link": "visa-and-passport-services"
             },
+            {
+                "title": "Corporate Travel",
+                "link": "corporate-travel"
+            }
         ]
         
+        
+    },
+    {
+        title: 'Training',
+        link: 'training',
+        sublinks: [
+            {
+                "title": "Customer Service Training",
+                "link": "customer-service-training"
+            },
+            {
+                "title": "Travel Operations Training",
+                "link": "travel-operations-training"
+            },
+            {
+                "title": "Sales and Marketing Training",
+                "link": "sales-and-marketing-training"
+            },
+            {
+                "title": "Destination Knowledge Training",
+                "link": "destination-knowledge-training"
+            },
+            {
+                "title": "Travel Technology Training",
+                "link": "travel-technology-training"
+            },
+            {
+                "title": "Crisis Management Training",
+                "link": "crisis-management-training"
+            }
+        ]
+        
+    },
+    {
+        title: 'Jobs',
+        link: 'jobs',
     },
     {
         title: 'Contact Us',
