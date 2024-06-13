@@ -20,6 +20,14 @@ export interface button {
     scrollTo?: string
 }
 
+export interface imageextras {
+    iconBg: string,
+    icon: JSX.Element, 
+    topText:JSX.Element, 
+    bottomText: JSX.Element
+}
+
+
 export interface ImageTextInterface {
     heading: string,
     span: string,

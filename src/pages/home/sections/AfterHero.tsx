@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom"
-import { BiChevronRight } from "react-icons/bi"
 import newYork from "../../../assets/images/new york.jpg"
 import paris from "../../../assets/images/paris.jpg"
 import canada from "../../../assets/images/canada.jpg"
