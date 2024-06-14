@@ -4,7 +4,7 @@ import { ImageListing } from "../../assets/components/ImageListing"
 import { Hero } from "./sections/Hero"
 import planeRun from "./../../assets/images/planeRun.jpg"
 import { CardParent } from "../../assets/components/Card/CardParent"
-import { servicesList, trainingList } from "../../assets/Constants"
+import { servicesList, coursesList } from "../../assets/Constants"
 import { FaPlaneArrival } from "react-icons/fa6"
 import dubai from "../../assets/images/dubai.jpg"
 import paris from "../../assets/images/paris.jpg"
@@ -34,7 +34,7 @@ const visitablePlaces = [
 
 const HomePage: React.FC = () => {
     return(
-        <div className="center bg-white flex-col">
+        <div className="center bg-white flex-col mb-[10vh]">
             <Hero />
             <ImageListing data={visitablePlaces} heading="Travel anywhere, anytime!"/>
 
@@ -81,7 +81,7 @@ const HomePage: React.FC = () => {
             </ImageText>
 
             <CardParent 
-                data={trainingList}
+                data={coursesList}
                 heading="We train"
                 description="View all our cources to secure your space in the air-space"
                 parentNav={"trainings"}

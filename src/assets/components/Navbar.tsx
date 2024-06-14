@@ -28,7 +28,9 @@ export const Navbar = () => {
 
                 <Link to={'/'} className='w-3/12 md:w-2/12' onClick={() => {
                     dispatch(setCurrentNav(0))
-                    dispatch(toggleShowNav())
+                    if(showNav){
+                        dispatch(toggleShowNav())
+                    }
                     dispatch(setCurrentDropDown(""))
                 }}>
                     <p className='w-5/12 md:w-3/12 text-xl font-bold text-black'>

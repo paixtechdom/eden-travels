@@ -4,13 +4,13 @@ import { HeroComponentInterface } from "../../../assets/Interfaces"
 
 
 
-export const ServicesHero:FC<HeroComponentInterface> = ({heroHeader, desc, img, data, dataHeader}) => {
+export const CoursesHero:FC<HeroComponentInterface> = ({heroHeader, desc, img, data, dataHeader}) => {
     return(
         <>
-            <section className="min-h-[100vh] bg-white w-full center relative mt-[10vh] md:mt-[10vh] lg:mt-[20vh]"> 
+            <section className="min-h-[90vh] bg-white w-full flex items-start lg:items-center justify-center relative mt-[15vh] md:mt-[10vh] lg:mt-[20vh]"> 
                 <div className="w-11/12 lg:w-10/12 flex flex-col text-center items-center justify-center z-10 gap-[50px]">
                     <div className="center flex-col gap-5 w-full xl:w-9/12">
-                        <h1 className="font-bold text-5xl text-primary">{heroHeader}</h1>
+                        <h1 className="font-bold text-4xl md:text-5xl text-primary">{heroHeader}</h1>
 
                         <p className="leading-relaxed tracking-wide w-full md:w-10/12 xl:w-9/12">
                            {desc}
@@ -36,19 +36,19 @@ export const ServicesHero:FC<HeroComponentInterface> = ({heroHeader, desc, img, 
                 </div>
             </section>
 
-            <section id={"pageLinks"} className="bg-secondary py-[10vh] mt-[20vh] center text-center flex-col gap-5 min-h-[30vh] w-full">
-                    <h2 className="text-primary font-semibold text-4xl md:text-5/12 w-11/12 lg:w-6/12">
+            <section id={"pageLinks"} className="bg-primary py-[10vh] mt-[20vh] center text-center flex-col gap-5 min-h-[30vh] w-full">
+                    <h2 className="text-seconary font-semibold text-4xl md:text-5/12 w-11/12 lg:w-6/12">
                         {dataHeader}
                     </h2>
                     <div className="center gap-4 w-11/12 flex-wrap">
                         {
-                            data.map((service: any, i:number) => (
+                            data.map((courses: any, i:number) => (
                                 <p key={i} className="text-white underline cursor-pointer" onClick={() => {
-                                    document.querySelector(`#${service.title.replaceAll(" ", "")}`)?.scrollIntoView({
+                                    document.querySelector(`#${courses.title.replaceAll(" ", "")}`)?.scrollIntoView({
                                         behavior: "smooth"
                                     })
                                 }}>
-                                    {service.title}
+                                    {courses.title}
                                 </p>
                             ))
                         }

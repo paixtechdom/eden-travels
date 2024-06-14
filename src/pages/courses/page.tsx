@@ -1,6 +1,6 @@
-import { servicesList } from "../../assets/Constants"
+import { coursesList } from "../../assets/Constants"
 import { ImageText } from "../../assets/components/ImageText"
-import { ServicesHero } from "./sections/ServicesHero"
+import { CoursesHero } from "./sections/CoursesHero"
 import travellers from "../../assets/images/female travellers.jpg"
 import plane from "../../assets/images/planeRun.jpg"
 import { CardParent } from "../../assets/components/Card/CardParent"
@@ -11,7 +11,7 @@ import { PiCheck } from "react-icons/pi"
 import hero from "../../assets/images/hero1.jpg"
 
 
-const servicesImages = [
+const coursesImages = [
    {
        img: travellers,
        text: "Dubai"
@@ -31,27 +31,27 @@ const servicesImages = [
 ]
 
 
-const ServicesPage = () => {
+const CoursesPage = () => {
    return(
       <main className="center w-full flex-col pb-[15vh]">
          
-         <ServicesHero 
-            heroHeader="Our services"
+         <CoursesHero 
+            heroHeader="Our Professional Courses"
             desc=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa alias libero a nulla ab et quisquam beatae nobis repellat. Inventore, praesentium sapiente dolor fugiat repellendus tempore quasi aliquam unde itaque?"
             img={hero}
-            data={servicesList}
-            dataHeader="Explore our services"
+            data={coursesList}
+            dataHeader="Explore our courses"
          />
 
          {
-            servicesList.map((service, i) => (
+            coursesList.map((courses, i) => (
                i < 2 &&
                <CardParent 
                   key={i}
-                  data={service.sub}
-                  heading={service.title}
-                  description={service.desc}
-                  parentNav={"services/"+service.title.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-").toLowerCase()}
+                  data={courses.sub}
+                  heading={courses.title}
+                  description={courses.desc}
+                  parentNav={"courses/"+courses.title.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-").toLowerCase()}
                />
 
             ))
@@ -61,7 +61,7 @@ const ServicesPage = () => {
             desc="Lorem is hated by lorem and then Lorem ipsum dolor, sit amet consectetur adipisicing elit. A ipsa eos nemo assumenda optio."
             img={travellers}>
                <>
-                  <div className="absolute -bottom-5 left-[50%]">
+                  <div className="absolute -bottom-5 right-[50%]">
                      <ImageExtras 
                            icon={<PiCheck className="text-lg"/>}
                            iconBg={"bg-green-700"}
@@ -71,7 +71,7 @@ const ServicesPage = () => {
                            </p>}
                      />
                   </div>
-                  <div className="absolute -top-5 right-[50%]">
+                  <div className="absolute -top-5 left-[50%]">
                      <ImageExtras 
                            icon={<FaPlaneDeparture className="text-lg"/>}
                            iconBg={"bg-secondary"}
@@ -85,20 +85,20 @@ const ServicesPage = () => {
                
             </ImageText>
          {
-            servicesList.map((service, i) => (
+            coursesList.map((courses, i) => (
                i == 2 &&
                <CardParent 
                   key={i}
-                  data={service.sub}
-                  heading={service.title}
-                  description={service.desc}
-                  parentNav={"services/"+service.title.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-").toLowerCase()}
+                  data={courses.sub}
+                  heading={courses.title}
+                  description={courses.desc}
+                  parentNav={"courses/"+courses.title.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-").toLowerCase()}
                />
 
             ))
          }
          <ImageListing 
-            data={servicesImages}
+            data={coursesImages}
             heading={"Lorem ipsum dolor sit amet."}
          />
          
@@ -110,4 +110,4 @@ const ServicesPage = () => {
 }
 
 
-export default ServicesPage
+export default CoursesPage

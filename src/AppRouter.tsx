@@ -6,8 +6,10 @@ import { HelmetProvider  } from 'react-helmet-async';
 import { PageNotFound } from './pages/PageNotFound';
 import { Navbar } from './assets/components/Navbar';
 import Footer from './assets/components/Footer';
-import { servicesList, trainingList } from './assets/Constants';
+import { servicesList, coursesList } from './assets/Constants';
 import EachServicePage from './pages/services/eachpage/page';
+import EachCoursesPage from './pages/courses/eachpage/page';
+import CoursesPage from './pages/courses/page';
 
 const HomePage = lazy(() => delayLoad(import("./pages/home/page")))
 const ServicesPage = lazy(() => delayLoad(import('./pages/services/page')))
@@ -28,9 +30,10 @@ export const AppRouter = () => {
                                 <Route key={i} path={"services/"+l?.title?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-").toLowerCase()} element={<EachServicePage />}/>
                             ))
                         }
+                        <Route path="/courses" element={<CoursesPage />}/>
                         {
-                            trainingList.map((l, i) => (
-                                <Route key={i} path={"services/"+l?.title?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-").toLowerCase()} element={<EachServicePage />}/>
+                            coursesList.map((l, i) => (
+                                <Route key={i} path={"courses/"+l?.title?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-").toLowerCase()} element={<EachCoursesPage />}/>
                             ))
                         }
                         <Route path="/contact" element={<ContactPage />}/>

@@ -49,7 +49,7 @@ const EachServicePage = () => {
                         desc={servicesList[servicePageIndex].desc}
                         img={servicesList[servicePageIndex].img}
                         data={servicesList[servicePageIndex].sub}
-                        dataHeader="Explore our services"
+                        dataHeader={`Explore our ${servicesList[servicePageIndex].title} services`}
                     />
 
                     {
@@ -70,7 +70,7 @@ const EachServicePage = () => {
                     desc="Lorem is hated by lorem and then Lorem ipsum dolor, sit amet consectetur adipisicing elit. A ipsa eos nemo assumenda optio."
                     img={servicesList[servicePageIndex].img}>
                     <>
-                        <div className="absolute -bottom-5 left-[50%]">
+                        <div className="absolute -bottom-5 right-[50%]">
                             <ImageExtras 
                                 icon={<PiCheck className="text-lg"/>}
                                 iconBg={"bg-green-700"}
@@ -80,7 +80,7 @@ const EachServicePage = () => {
                                 </p>}
                             />
                         </div>
-                        <div className="absolute -top-5 right-[50%]">
+                        <div className="absolute -top-5 left-[50%]">
                             <ImageExtras 
                                 icon={<FaPlaneDeparture className="text-lg"/>}
                                 iconBg={"bg-secondary"}

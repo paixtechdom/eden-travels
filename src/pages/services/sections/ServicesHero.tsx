@@ -7,10 +7,10 @@ import { HeroComponentInterface } from "../../../assets/Interfaces"
 export const ServicesHero:FC<HeroComponentInterface> = ({heroHeader, desc, img, data, dataHeader}) => {
     return(
         <>
-            <section className="min-h-[100vh] bg-white w-full center relative mt-[10vh] md:mt-[10vh] lg:mt-[20vh]"> 
+            <section className="min-h-[90vh] bg-white w-full flex items-start lg:items-center justify-center relative mt-[15vh] md:mt-[10vh] lg:mt-[20vh]"> 
                 <div className="w-11/12 lg:w-10/12 flex flex-col text-center items-center justify-center z-10 gap-[50px]">
                     <div className="center flex-col gap-5 w-full xl:w-9/12">
-                        <h1 className="font-bold text-5xl text-primary">{heroHeader}</h1>
+                        <h1 className="font-bold text-4xl md:text-5xl text-primary">{heroHeader}</h1>
 
                         <p className="leading-relaxed tracking-wide w-full md:w-10/12 xl:w-9/12">
                            {desc}

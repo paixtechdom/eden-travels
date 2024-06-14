@@ -61,7 +61,7 @@ const ServicesPage = () => {
             desc="Lorem is hated by lorem and then Lorem ipsum dolor, sit amet consectetur adipisicing elit. A ipsa eos nemo assumenda optio."
             img={travellers}>
                <>
-                  <div className="absolute -bottom-5 left-[50%]">
+                  <div className="absolute -bottom-5 right-[50%]">
                      <ImageExtras 
                            icon={<PiCheck className="text-lg"/>}
                            iconBg={"bg-green-700"}
@@ -71,7 +71,7 @@ const ServicesPage = () => {
                            </p>}
                      />
                   </div>
-                  <div className="absolute -top-5 right-[50%]">
+                  <div className="absolute -top-5 left-[50%]">
                      <ImageExtras 
                            icon={<FaPlaneDeparture className="text-lg"/>}
                            iconBg={"bg-secondary"}

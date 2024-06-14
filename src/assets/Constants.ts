@@ -35,19 +35,19 @@ export const NavInfo = [
         
     },
     {
-        title: 'Training',
-        link: 'training',
+        title: 'Courses',
+        link: 'courses',
         sublinks: [
             {
-                title: "Customer and Sales Training",
+                title: "Customer and Sales",
                 link: "customer-sales"
             },
             {
-                title: "Operational and Crisis Management Training",
+                title: "Operational and Crisis Management",
                 link: "operations-crisis"
             },
             {
-                title: "Destination and Technology Training",
+                title: "Destination and Technology",
                 link: "destination-technology"
             },
             {
@@ -358,14 +358,14 @@ export const servicesList = [
 
 
 
-export const trainingList = [
+export const coursesList = [
     {
-        title: "Customer and Sales Training",
+        title: "Customer and Sales",
         img: customerService,
         desc: "Enhance customer service and sales skills.",
         sub: [
             {
-                title: "Customer Service Training",
+                title: "Customer Service",
                 img: customerService,
                 sub: [
                     {
@@ -398,7 +398,7 @@ export const trainingList = [
                 ]     
             },
             {
-                title: "Sales and Marketing Training",
+                title: "Sales and Marketing",
                 img: customerService,
                 sub: [
                     {
@@ -435,12 +435,12 @@ export const trainingList = [
         ]
     },
     {
-        title: "Operational and Crisis Management Training",
+        title: "Operational and Crisis Management",
         img: operations,
         desc: "Improve operational efficiency and crisis management.",
         sub: [
             {
-                title: "Travel Operations Training",
+                title: "Travel Operations",
                 img: operations,
                 sub: [
                     {
@@ -474,7 +474,7 @@ export const trainingList = [
                 
             },
             {
-                title: "Crisis Management Training",
+                title: "Crisis Management",
                 img: operations,
                 sub: [
                     {
@@ -483,7 +483,7 @@ export const trainingList = [
                         sub: [
                             "Developing response plans",
                             "Identifying potential risks",
-                            "Training staff"
+                            " staff"
                         ]
                     },
                     {
@@ -510,12 +510,12 @@ export const trainingList = [
         ]
     },
     {
-        title: "Destination and Technology Training",
+        title: "Destination and Technology",
         img: destinationKnowledge,
         desc: "Gain knowledge on destinations and travel technology.",
         sub: [
             {
-                title: "Destination Knowledge Training",
+                title: "Destination Knowledge",
                 img: destinationKnowledge,
                 sub: [
                     {
@@ -550,7 +550,7 @@ export const trainingList = [
                 
             },
             {
-                title: "Travel Technology Training",
+                title: "Travel Technology",
                 img: destinationKnowledge,
                 sub: [
                     {
