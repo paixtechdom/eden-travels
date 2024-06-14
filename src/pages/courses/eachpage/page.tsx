@@ -4,11 +4,14 @@ import { ListingCardParent } from "../../../assets/components/Card/ListingCardPa
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../../../assets/store/AppStore"
 import { ImageText } from "../../../assets/components/ImageText"
-import { ImageExtras } from "../../../assets/components/ImageExtras"
-import { PiCheck } from "react-icons/pi"
-import { FaPlaneDeparture } from "react-icons/fa6"
 import { setCurrentDropDown, setCurrentDropDownIndex, setCurrentNav } from "../../../assets/store/navigation/navigationSlice"
 import { CoursesHero } from "../sections/CoursesHero"
+
+import customer from "../../../assets/images/customer.jpg"
+import airlinemarketing from "../../../assets/images/airlinemarketing.jpg"
+import operationss from "../../../assets/images/operationss.jpg"
+
+
 
 
 const EachCoursesPage = () => {
@@ -66,31 +69,27 @@ const EachCoursesPage = () => {
 
 
                  <ImageText 
-                    heading="Lorem lorem is a lorem"
-                    desc="Lorem is hated by lorem and then Lorem ipsum dolor, sit amet consectetur adipisicing elit. A ipsa eos nemo assumenda optio."
-                    img={coursesList[coursesPageIndex].img}>
-                    <>
-                        <div className="absolute -bottom-5 right-[50%]">
-                            <ImageExtras 
-                                icon={<PiCheck className="text-lg"/>}
-                                iconBg={"bg-green-700"}
-                                topText={<p className="font-bold">100+</p>}
-                                bottomText={<p className="text-gray-400">
-                                    Successful Flights
-                                </p>}
-                            />
-                        </div>
-                        <div className="absolute -top-5 left-[50%]">
-                            <ImageExtras 
-                                icon={<FaPlaneDeparture className="text-lg"/>}
-                                iconBg={"bg-secondary"}
-                                topText={<p className="font-bold">100+</p>}
-                                bottomText={<p className="text-gray-400">
-                                    Successful Flights
-                                </p>}
-                            />
-                        </div>
-                    </>
+                        heading={
+                            coursesPageIndex === 0
+                            ? "Master Customer Service Skills"
+                            : coursesPageIndex === 1
+                            ? "Boost Your Sales and Marketing Expertise"
+                            : "Optimize Travel Operations"
+                        }
+
+                        desc={coursesPageIndex === 0
+                            ? "Learn how to communicate effectively and build lasting customer relationships with our comprehensive customer service training."
+                            : coursesPageIndex === 1
+                            ? "Enhance your sales techniques and marketing strategies with our specialized training programs."
+                            : "Streamline booking processes and improve operational efficiency with our travel operations training."
+                        }
+                        img={
+                            coursesPageIndex === 0 ?
+                            customer : 
+                            coursesPageIndex === 1 ?
+                            airlinemarketing :
+                            operationss
+                        }>
                     
                     </ImageText>
                 </>

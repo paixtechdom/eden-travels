@@ -35,7 +35,30 @@ import incentiveTravel from "../assets/images/incentiveTravel.jpg"
 import medicalInsurance from "../assets/images/medicalInsurance.jpg"
 import tripCancellation from "../assets/images/tripCancellation.jpg"
 import baggageLoss from "../assets/images/baggageLoss.jpg"
-
+import customerandSales from "../assets/images/customerandSales.jpg"
+import effectiveCommunication from "../assets/images/effectiveCommunication.jpg"
+import customerComplaints from "../assets/images/customerComplaints.jpg"
+import customerRelationships from "../assets/images/customerRelationships.jpg"
+import salesAndMarketing from "../assets/images/salesAndMarketing.jpg"
+import salesTechniques from "../assets/images/salesTechniques.jpg"
+import marketingStrategies from "../assets/images/marketingStrategies.jpg"
+import leadGeneration from "../assets/images/leadGeneration.jpg"
+import travelOperations from "../assets/images/travelOperations.jpg"
+import bookingSystems from "../assets/images/bookingSystems.jpg"
+import operationalEfficiency from "../assets/images/operationalEfficiency.jpg"
+import workflowManagement from "../assets/images/workflowManagement.jpg"
+import crisisManagement from "../assets/images/crisisManagement.jpg"
+import emergencyPlanning from "../assets/images/emergencyPlanning.jpg"
+import crisisCommunication from "../assets/images/crisisCommunication.jpg"
+import riskAssessment from "../assets/images/riskAssessment.jpg"
+import destinationknowledge from "../assets/images/destination-Knowledge.jpg"
+import geographicalKnowledge from "../assets/images/geographicalKnowledge.jpg"
+import localCulture from "../assets/images/localCulture.jpg"
+import popularAttractions from "../assets/images/popularAttractions.jpg"
+import travelTechnology from "../assets/images/travelTechnology.jpg"
+import bookingSoftware from "../assets/images/bookingSoftware.jpg"
+import travelApps from "../assets/images/travelApps.jpg"
+import technologyTrends from "../assets/images/technologyTrends.jpg"
 
 
 export const NavInfo = [
@@ -99,9 +122,6 @@ export const NavInfo = [
         link: 'contact',
     },
 ]
-
-
-
 export const servicesList = [
     {
         title: "Travel Arrangements",
@@ -388,13 +408,10 @@ export const servicesList = [
         ]
     },
 ]
-
-
-
 export const coursesList = [
     {
         title: "Customer and Sales",
-        img: customerService,
+        img: customerandSales,
         desc: "Enhance customer service and sales skills.",
         sub: [
             {
@@ -403,7 +420,7 @@ export const coursesList = [
                 sub: [
                     {
                         title: "Effective Communication Skills",
-                        img: "effectiveCommunication.jpg",
+                        img: effectiveCommunication,
                         sub: [
                             "Active listening",
                             "Clear and concise communication",
@@ -412,7 +429,7 @@ export const coursesList = [
                     },
                     {
                         title: "Handling Customer Complaints",
-                        img: "customerComplaints.jpg",
+                        img: customerComplaints,
                         sub: [
                             "Complaint resolution techniques",
                             "Maintaining professionalism",
@@ -421,7 +438,7 @@ export const coursesList = [
                     },
                     {
                         title: "Building Customer Relationships",
-                        img: "customerRelationships.jpg",
+                        img: customerRelationships,
                         sub: [
                             "Trust-building strategies",
                             "Personalized service",
@@ -432,11 +449,11 @@ export const coursesList = [
             },
             {
                 title: "Sales and Marketing",
-                img: customerService,
+                img: salesAndMarketing,
                 sub: [
                     {
                         title: "Sales Techniques",
-                        img: "salesTechniques.jpg",
+                        img: salesTechniques,
                         sub: [
                             "Effective sales pitches",
                             "Closing deals",
@@ -445,7 +462,7 @@ export const coursesList = [
                     },
                     {
                         title: "Marketing Strategies",
-                        img: "marketingStrategies.jpg",
+                        img: marketingStrategies,
                         sub: [
                             "Market research",
                             "Digital marketing",
@@ -454,7 +471,7 @@ export const coursesList = [
                     },
                     {
                         title: "Lead Generation",
-                        img: "leadGeneration.jpg",
+                        img: leadGeneration,
                         sub: [
                             "Identifying prospects",
                             "Lead nurturing",
@@ -474,11 +491,11 @@ export const coursesList = [
         sub: [
             {
                 title: "Travel Operations",
-                img: operations,
+                img: travelOperations,
                 sub: [
                     {
                         title: "Booking and Reservation Systems",
-                        img: "bookingSystems.jpg",
+                        img: bookingSystems,
                         sub: [
                             "Using booking software",
                             "Managing reservations",
@@ -487,7 +504,7 @@ export const coursesList = [
                     },
                     {
                         title: "Operational Efficiency",
-                        img: "operationalEfficiency.jpg",
+                        img: operationalEfficiency,
                         sub: [
                             "Process optimization",
                             "Time management",
@@ -496,7 +513,7 @@ export const coursesList = [
                     },
                     {
                         title: "Workflow Management",
-                        img: "workflowManagement.jpg",
+                        img: workflowManagement,
                         sub: [
                             "Task prioritization",
                             "Team collaboration",
@@ -508,11 +525,11 @@ export const coursesList = [
             },
             {
                 title: "Crisis Management",
-                img: operations,
+                img: crisisManagement,
                 sub: [
                     {
                         title: "Emergency Response Planning",
-                        img: "emergencyPlanning.jpg",
+                        img: emergencyPlanning,
                         sub: [
                             "Developing response plans",
                             "Identifying potential risks",
@@ -521,7 +538,7 @@ export const coursesList = [
                     },
                     {
                         title: "Crisis Communication",
-                        img: "crisisCommunication.jpg",
+                        img: crisisCommunication,
                         sub: [
                             "Effective communication during crises",
                             "Media management",
@@ -530,7 +547,7 @@ export const coursesList = [
                     },
                     {
                         title: "Risk Assessment",
-                        img: "riskAssessment.jpg",
+                        img: riskAssessment,
                         sub: [
                             "Identifying vulnerabilities",
                             "Risk mitigation strategies",
@@ -549,11 +566,11 @@ export const coursesList = [
         sub: [
             {
                 title: "Destination Knowledge",
-                img: destinationKnowledge,
+                img: destinationknowledge,
                 sub: [
                     {
                         title: "Geographical Knowledge",
-                        img: "geographicalKnowledge.jpg",
+                        img: geographicalKnowledge,
                         sub: [
                             "Country and city information",
                             "Geopolitical awareness",
@@ -562,7 +579,7 @@ export const coursesList = [
                     },
                     {
                         title: "Local Customs and Culture",
-                        img: "localCulture.jpg",
+                        img: localCulture,
                         sub: [
                             "Cultural norms and etiquette",
                             "Local traditions",
@@ -571,7 +588,7 @@ export const coursesList = [
                     },
                     {
                         title: "Popular Attractions",
-                        img: "popularAttractions.jpg",
+                        img: popularAttractions,
                         sub: [
                             "Top tourist destinations",
                             "Hidden gems",
@@ -584,11 +601,11 @@ export const coursesList = [
             },
             {
                 title: "Travel Technology",
-                img: destinationKnowledge,
+                img: travelTechnology,
                 sub: [
                     {
                         title: "Booking Software",
-                        img: "bookingSoftware.jpg",
+                        img: bookingSoftware,
                         sub: [
                             "Software features",
                             "User training",
@@ -597,7 +614,7 @@ export const coursesList = [
                     },
                     {
                         title: "Travel Apps",
-                        img: "travelApps.jpg",
+                        img: travelApps,
                         sub: [
                             "Popular travel apps",
                             "App functionalities",
@@ -606,7 +623,7 @@ export const coursesList = [
                     },
                     {
                         title: "Technology Trends in Travel",
-                        img: "technologyTrends.jpg",
+                        img: technologyTrends,
                         sub: [
                             "Latest technology in travel",
                             "Future trends",
