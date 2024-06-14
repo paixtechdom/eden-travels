@@ -47,26 +47,26 @@ export interface CardParentInterface {
 
 
 export interface CardInterface {
-    data: cardObject
+    data?: cardObject
 }
 
 export interface cardObject {
-    title: string,
-    img: string,
-    desc: string
-    sub: subFirstLayer[],
+    title?: string,
+    img?: string,
+    desc?: string
+    sub?: subFirstLayer[],
 }
 
 export interface subFirstLayer{
-    title: string,
-    img: string,
-    sub?: sub[]
+    title?: string,
+    img?: string,
+    sub?: sub[] | string[]
 }
 
 export interface sub {
-    title: string,
-    img: string,
-    sub: string[]
+    title?: string,
+    img?: string,
+    sub?: string[]
 }
 
 
