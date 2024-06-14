@@ -1,40 +1,13 @@
-/* 
+2. Loader
+4. Footer Links
+5. Contact Page
 
-   hero
+1. Blur images - focus - images used for hero [ first and second layer images (from constants) ]
+3. Services and training image listing
 
-   after hero bg-secondry stuff
+scroll top on page change
 
-   service list with card parent three/two different card parent
-
-   image text
-
-   
-
-   for each servic same
+change view all hero design
 
 
-   
-
-    a page that lists all the services
-    
-    a page for each service - a combination in one page
-
-
-    convert homepage services to a component
-
-    1.
-     our services
-        list of each service for easy scroll to
-
-
-     headers : 
-        services under each
-        images of each - using that on the home page
-        read more   
-
-
-        2. each service header
-            explanation of each in details
-
-    
-*/
+4. Jobs
