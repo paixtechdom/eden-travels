@@ -1,4 +1,3 @@
-import planeTakeoff from "../assets/images/planeTakeoff.jpg"
 import passportServices from "../assets/images/passportServices.jpg"
 import familyTour from "../assets/images/familyTour.jpg"
 import customerService from "../assets/images/customerService.jpg"
