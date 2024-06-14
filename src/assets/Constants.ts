@@ -4,6 +4,40 @@ import familyTour from "../assets/images/familyTour.jpg"
 import customerService from "../assets/images/customerService.jpg"
 import operations from "../assets/images/operations.jpg"
 import destinationKnowledge from "../assets/images/destinationKnowledge.jpg"
+import travelArrangements from "../assets/images/travelArrangements.jpg"
+import travelInsurance from "../assets/images/travelInsurance.jpg"
+import flightBooking from "../assets/images/flightBooking.jpg"
+import domaesticFlights from "../assets/images/domaesticFlights.jpg"
+import internationalFlights from "../assets/images/internationalFlights.jpg"
+import groupBookings from "../assets/images/groupBookings.jpg"
+import charterFlights from "../assets/images/charterFlights.jpg"
+import accommodationBooking from "../assets/images/accommodationBooking.jpg"
+import hotelReservations from "../assets/images/hotelReservations.jpg"
+import vacationRentals from "../assets/images/vacationRentals.jpg"
+import budgetLodging from "../assets/images/budgetLodging.jpg"
+import transportationServices from "../assets/images/transportationServices.jpg"
+import carRentals from "../assets/images/carRentals.jpg"
+import airportTransfers from "../assets/images/airportTransfers.jpg"
+import trainBusTickets from "../assets/images/trainBusTickets.jpg"
+import cruiseBookings from "../assets/images/cruiseBookings.jpg"
+import tourPackages from "../assets/images/tourPackages.jpg"
+import customizableTravel from "../assets/images/customizableTravel.jpg"
+import groupTours from "../assets/images/groupTours.jpg"
+import adventureTours from "../assets/images/adventureTours.jpg"
+import culturalTours from "../assets/images/culturalTours.jpg"
+import visaandPassportServices from "../assets/images/visaandPassport Services.jpg"
+import visaApplication from "../assets/images/visaApplication.jpg"
+import passportRenewal from "../assets/images/passportRenewal.jpg"
+import documentGuidance from "../assets/images/documentGuidance.jpg"
+import corporateTravel from "../assets/images/corporateTravel.jpg"
+import businessTravel from "../assets/images/businessTravel.jpg"
+import conferencePlanning from "../assets/images/conferencePlanning.jpg"
+import incentiveTravel from "../assets/images/incentiveTravel.jpg"
+import medicalInsurance from "../assets/images/medicalInsurance.jpg"
+import tripCancellation from "../assets/images/tripCancellation.jpg"
+import baggageLoss from "../assets/images/baggageLoss.jpg"
+
+
 
 export const NavInfo = [
     {
@@ -72,16 +106,16 @@ export const NavInfo = [
 export const servicesList = [
     {
         title: "Travel Arrangements",
-        img: planeTakeoff,
+        img: travelArrangements,
         desc: "Hassle-free booking for flights, accommodations, and transportation.",
         sub: [
             {
                 title: "Flight Booking",
-                img: planeTakeoff,
+                img: flightBooking,                
                 sub: [
                     {
                         title: "Domestic Flights",
-                        img: "domesticFlights.jpg",
+                        img: domaesticFlights,
                         sub: [
                             "Booking for all major domestic airlines",
                             "Last-minute flight deals",
@@ -90,7 +124,7 @@ export const servicesList = [
                     },
                     {
                         title: "International Flights",
-                        img: "internationalFlights.jpg",
+                        img: internationalFlights,
                         sub: [
                             "Booking for all major international airlines",
                             "Assistance with travel documents",
@@ -99,7 +133,7 @@ export const servicesList = [
                     },
                     {
                         title: "Group Bookings",
-                        img: "groupBookings.jpg",
+                        img: groupBookings,
                         sub: [
                             "Special rates for group travel",
                             "Custom itineraries",
@@ -108,23 +142,23 @@ export const servicesList = [
                     },
                     {
                         title: "Charter Flights",
-                        img: "charterFlights.jpg",
+                        img: charterFlights,
                         sub: [
                             "Private jet charters",
                             "Luxury amenities",
                             "Flexible scheduling"
                         ]
                     }
-                ]
-                
+                ]  
             },
+
             {
                 title: "Accommodation Booking",
-                img: planeTakeoff,
+                img: accommodationBooking,
                 sub: [
                     {
                         title: "Hotel Reservations",
-                        img: "hotelReservations.jpg",
+                        img: hotelReservations,
                         sub: [
                             "Booking for major hotel chains",
                             "Luxury and boutique hotels",
@@ -133,7 +167,7 @@ export const servicesList = [
                     },
                     {
                         title: "Vacation Rentals",
-                        img: "vacationRentals.jpg",
+                        img: vacationRentals,
                         sub: [
                             "Booking for apartments and villas",
                             "Long-term rental options",
@@ -142,7 +176,7 @@ export const servicesList = [
                     },
                     {
                         title: "Hostels and Budget Lodging",
-                        img: "budgetLodging.jpg",
+                        img: budgetLodging,
                         sub: [
                             "Affordable hostel bookings",
                             "Shared and private rooms",
@@ -154,11 +188,11 @@ export const servicesList = [
             },
             {
                 title: "Transportation Services",
-                img: planeTakeoff,
+                img: transportationServices,
                 sub: [
                     {
                         title: "Car Rentals",
-                        img: "carRentals.jpg",
+                        img: carRentals,
                         sub: [
                             "Wide range of vehicles",
                             "Flexible rental periods",
@@ -167,7 +201,7 @@ export const servicesList = [
                     },
                     {
                         title: "Airport Transfers",
-                        img: "airportTransfers.jpg",
+                        img: airportTransfers,
                         sub: [
                             "Private and shared transfers",
                             "Meet and greet services",
@@ -176,7 +210,7 @@ export const servicesList = [
                     },
                     {
                         title: "Train and Bus Tickets",
-                        img: "trainBusTickets.jpg",
+                        img: trainBusTickets,
                         sub: [
                             "Domestic and international routes",
                             "Flexible ticket options",
@@ -185,7 +219,7 @@ export const servicesList = [
                     },
                     {
                         title: "Cruise Bookings",
-                        img: "cruiseBookings.jpg",
+                        img: cruiseBookings,
                         sub: [
                             "Ocean and river cruises",
                             "Luxury and budget options",
@@ -204,11 +238,11 @@ export const servicesList = [
         sub: [
             {
                 title: "Tour Packages",
-                img: familyTour,
+                img: tourPackages,
                 sub: [
                     {
                         title: "Customizable Travel Packages",
-                        img: "customizableTravel.jpg",
+                        img: customizableTravel,
                         sub: [
                             "Tailored itineraries",
                             "Flexible travel dates",
@@ -217,7 +251,7 @@ export const servicesList = [
                     },
                     {
                         title: "Group Tours",
-                        img: "groupTours.jpg",
+                        img: groupTours,
                         sub: [
                             "Scheduled group departures",
                             "Special rates for groups",
@@ -226,7 +260,7 @@ export const servicesList = [
                     },
                     {
                         title: "Adventure Tours",
-                        img: "adventureTours.jpg",
+                        img: adventureTours,
                         sub: [
                             "Adventure activities",
                             "Guided expeditions",
@@ -235,7 +269,7 @@ export const servicesList = [
                     },
                     {
                         title: "Cultural and Heritage Tours",
-                        img: "culturalTours.jpg",
+                        img: culturalTours,
                         sub: [
                             "Historical site visits",
                             "Cultural immersion experiences",
@@ -247,11 +281,11 @@ export const servicesList = [
             },
             {
                 title: "Travel Insurance",
-                img: familyTour,
+                img: travelInsurance,
                 sub: [
                     {
                         title: "Medical Travel Insurance",
-                        img: "medicalInsurance.jpg",
+                        img: medicalInsurance,
                         sub: [
                             "Emergency medical coverage",
                             "Hospitalization benefits",
@@ -260,7 +294,7 @@ export const servicesList = [
                     },
                     {
                         title: "Trip Cancellation Insurance",
-                        img: "tripCancellation.jpg",
+                        img: tripCancellation,
                         sub: [
                             "Refunds for cancellations",
                             "Coverage for trip interruptions",
@@ -269,7 +303,7 @@ export const servicesList = [
                     },
                     {
                         title: "Baggage Loss Insurance",
-                        img: "baggageLoss.jpg",
+                        img: baggageLoss,
                         sub: [
                             "Lost baggage compensation",
                             "Delayed baggage coverage",
@@ -287,11 +321,11 @@ export const servicesList = [
         sub: [
             {
                 title: "Visa and Passport Services",
-                img: passportServices,
+                img: visaandPassportServices,
                 sub: [
                     {
                         title: "Visa Application Assistance",
-                        img: "visaApplication.jpg",
+                        img: visaApplication,
                         sub: [
                             "Application process guidance",
                             "Document preparation",
@@ -300,7 +334,7 @@ export const servicesList = [
                     },
                     {
                         title: "Passport Renewal Services",
-                        img: "passportRenewal.jpg",
+                        img: passportRenewal,
                         sub: [
                             "Renewal form assistance",
                             "Expedited processing",
@@ -309,7 +343,7 @@ export const servicesList = [
                     },
                     {
                         title: "Travel Document Guidance",
-                        img: "documentGuidance.jpg",
+                        img: documentGuidance,
                         sub: [
                             "Information on required documents",
                             "Embassy and consulate support",
@@ -321,11 +355,11 @@ export const servicesList = [
             },
             {
                 title: "Corporate Travel",
-                img: passportServices,
+                img: corporateTravel,
                 sub: [
                     {
                         title: "Business Travel Management",
-                        img: "businessTravel.jpg",
+                        img: businessTravel,
                         sub: [
                             "Itinerary planning",
                             "Corporate discounts",
@@ -334,7 +368,7 @@ export const servicesList = [
                     },
                     {
                         title: "Conference and Event Planning",
-                        img: "conferencePlanning.jpg",
+                        img: conferencePlanning,
                         sub: [
                             "Venue selection",
                             "Event logistics",
@@ -343,7 +377,7 @@ export const servicesList = [
                     },
                     {
                         title: "Incentive Travel Programs",
-                        img: "incentiveTravel.jpg",
+                        img: incentiveTravel,
                         sub: [
                             "Reward trips",
                             "Team-building events",

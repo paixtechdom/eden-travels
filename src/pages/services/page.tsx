@@ -36,8 +36,8 @@ const ServicesPage = () => {
       <main className="center w-full flex-col pb-[15vh]">
          
          <ServicesHero 
-            heroHeader="Our services"
-            desc=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa alias libero a nulla ab et quisquam beatae nobis repellat. Inventore, praesentium sapiente dolor fugiat repellendus tempore quasi aliquam unde itaque?"
+            heroHeader="Explore Our Services"
+            desc="From seamless flight bookings and comfortable accommodations to reliable transportation and tailored travel packages, our expert team is dedicated to making your travel experience exceptional. Discover the wide range of services we offer to make your journey unforgettable."
             img={hero}
             data={servicesList}
             dataHeader="Explore our services"

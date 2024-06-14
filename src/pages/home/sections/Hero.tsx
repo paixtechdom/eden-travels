@@ -5,10 +5,10 @@ export const Hero: React.FC = () => {
         <div className="min-h-screen bg-white w-full center relative mt-[12vh] md:mt-[15vh] lg:mt-0"> 
             <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row items-center justify-between z-10 gap-[50px]">
                 <div className="flex flex-col gap-5 w-full lg:w-5/12">
-                    <h1 className="font-bold text-5xl text-primary">This and that</h1>
+                    <h1 className="font-bold text-5xl text-primary">Seamless Travel, Expertly Planned for Your Perfect Journey</h1>
 
                     <p className="leading-relaxed tracking-wide">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa alias libero a nulla ab et quisquam beatae nobis repellat. Inventore, praesentium sapiente dolor fugiat repellendus tempore quasi aliquam unde itaque?
+                        From personalized tour packages and hassle-free bookings to professional training in travel services, we offer everything you need for an exceptional travel experience. Let us guide you on your next adventure.
                     </p>
 
                     <div className="flex gap-3 items-center">

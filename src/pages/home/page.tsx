@@ -40,7 +40,7 @@ const HomePage: React.FC = () => {
 
             <section className="bg-secondary py-[10vh] center text-center flex-col gap-5 min-h-[30vh] w-full my-[20vh]">
                     <h2 className="text-primary font-semibold text-4xl md:text-5/12 w-11/12 lg:w-6/12">
-                        Lorem, ipsum dolor Lorem ipsum dolor sit.
+                        Services Expertly Planned for Your Next Journey
                     </h2>
 
                     <Button 
@@ -60,9 +60,9 @@ const HomePage: React.FC = () => {
             
             
             <ImageText
-                heading={"Lorem ipsum dolor sit amet."} 
-                span={"Lorem, ipsum dolor."}
-                desc={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti nihil minima neque, optio quod quae officiis voluptatibus nesciunt quasi doloribus."}
+                heading={"Elevate Your Travel Experience with Our"} 
+                span={" Expert Services"}
+                desc={"Whether you need help with flight bookings, personalized tour packages, or professional travel training, we are here to make your journeys seamless and memorable. Discover the difference with our dedicated team of travel experts."}
                 img={planeRun}
             >
 

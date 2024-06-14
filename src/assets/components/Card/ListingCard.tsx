@@ -1,13 +1,12 @@
 import { FC } from "react"
 import { ListingCardInterface } from "../../Interfaces"
-import img from "../../images/canada.jpg"
 import { BsFillCheckCircleFill } from "react-icons/bs"
 
 export const ListingCard:FC<ListingCardInterface> = ({data}) => {
     return(
         <div className="flex flex-col gap-6 w-full shadow-lg rounded-xl p- 2 bg-gray-100">
             <div className="center w-full overflow-hidden rounded-t-xl">
-                <img src={img} alt={data?.title} className="w-full transition-all duration-500 hover:scale-110 active:scale-110"/>
+                <img src={data?.img} alt={data?.title} className="w-full transition-all duration-500 hover:scale-110 active:scale-110"/>
             </div>
 
             <div className="flex flex-col gap-3 p-3 px-4 pb-7">
