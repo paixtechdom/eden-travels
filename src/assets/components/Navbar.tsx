@@ -5,10 +5,9 @@ import { RiArrowDropDownFill, RiArrowDropUpFill } from "react-icons/ri"
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../store/AppStore"
 import { setCurrentDropDown, setCurrentNav, toggleShowNav } from "../store/navigation/navigationSlice"
-import { nav } from "../Interfaces"
 
 
-export const Navbar: React.FC = () => {
+export const Navbar = () => {
     const navigation = useSelector((state: RootState) => state.navigation)
     const dispatch = useDispatch()
     const showNav = navigation.showNavbar
@@ -25,7 +24,7 @@ const currentDropDownIndex = navigation.currentDropDownIndex
         <>
            <>
         <header className={`fixed center w-full left-0 top-0 h-[8vh] md:h-[10vh] z-50 transition-all duration-1000 ${scrolledDown ? "shadow-xl" : ""} bg-white`}>
-            <div className="flex items-center justify-between w-11/12 lg:w-10/12 xl:w-9/12">
+            <div className="flex items-center justify-between w-11/12 lg:w-10/12">
 
                 <Link to={'/'} className='w-3/12 md:w-2/12'>
                     <p className='w-5/12 md:w-3/12 text-xl font-bold text-black'>
@@ -47,7 +46,7 @@ const currentDropDownIndex = navigation.currentDropDownIndex
                 <div className={`fixed w-full flex overflow -auto lg:o verflow-hidden justify-center items-start  transition-all duration-1000 top-[8vh] md:top-[10vh] h-screen lg:relative lg:top-0 lg:w-9/12 lg:h-fit ${showNav ? ' left-0 z-40' : '-left-[100%] lg:-left-0'} bg-zinc-900 lg:bg-transparent`}>
                         <nav className={`flex flex-col lg:flex-row items-center w-full h-screen lg:gap-9 lg:h-fit lg:bg-transparent lg:justify-end transition-all duration-1000`}>
                             {
-                                NavInfo?.map((nav : nav, i) => (
+                                NavInfo?.map((nav :any , i: number) => (
                                     <div key={i} className={`flex flex-col transition-all duration-1000 justify-between w-full text-blue lg:border-0 relative lg:w-fit`}>
 
                                         <div className={`flex w-full lg:w-fit py-5 px-[5%] lg:p-0 justify-between lg:justify-end lg:items-center cursor-pointer lg:text-black text-gray-200 bg-secondary lg:bg-transparent
@@ -85,7 +84,7 @@ const currentDropDownIndex = navigation.currentDropDownIndex
                                             ${currentDropDown == nav.title ? 'lg:top-[7vh] lg:left-0' : 'h-0 lg:h-fit text-[0px]  lg:-top-[500px]'} `}>
         
                                                 {   
-                                                    nav?.sublinks?.map((sublink : any, j) => (
+                                                    nav?.sublinks?.map((sublink:any, j:number) => (
                                                         <Link to={`/${nav.link}/${sublink.link}`} key={j} className={`flex gap-5 py-3 lg:py-5 bg-secondary bg-opacity-[0.35] lg:bg-opacity-[1] hover:bg-opacity-[0] lg:hover:bg-opacity-[0.95] text-gray-200
                                                         w-full px-8 lg:px-5 lg:p-2 text-sm transition-all duration-500
                                                         ${

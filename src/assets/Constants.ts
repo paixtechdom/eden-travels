@@ -15,13 +15,20 @@ export const NavInfo = [
         link: 'services',
         sublinks: [
             {
-                "title": "Travel Arrangements",
+                title: "Travel Arrangements",
+                link: "travel-arrangements"
             },
             {
-                "title": "Travel Packages and Insurance",
+                title: "Travel Packages and Insurance",
+                link: "travel-packages"
             },
             {
-                "title": "Travel Documentation and Corporate Services",
+                title: "Travel Documentation and Corporate Services",
+                link: "documentation"
+            },
+            {
+                title: "View All",
+                link: ""
             }
         ]
         
@@ -32,28 +39,20 @@ export const NavInfo = [
         link: 'training',
         sublinks: [
             {
-                "title": "Customer Service Training",
-                "link": "customer-service-training"
+                title: "Customer and Sales Training",
+                link: "customer-sales"
             },
             {
-                "title": "Travel Operations Training",
-                "link": "travel-operations-training"
+                title: "Operational and Crisis Management Training",
+                link: "operations-crisis"
             },
             {
-                "title": "Sales and Marketing Training",
-                "link": "sales-and-marketing-training"
+                title: "Destination and Technology Training",
+                link: "destination-technology"
             },
             {
-                "title": "Destination Knowledge Training",
-                "link": "destination-knowledge-training"
-            },
-            {
-                "title": "Travel Technology Training",
-                "link": "travel-technology-training"
-            },
-            {
-                "title": "Crisis Management Training",
-                "link": "crisis-management-training"
+                title: "View All",
+                link: ""
             }
         ]
         
@@ -68,6 +67,8 @@ export const NavInfo = [
     },
 ]
 
+
+
 export const servicesList = [
     {
         title: "Travel Arrangements",
@@ -75,13 +76,37 @@ export const servicesList = [
         desc: "Hassle-free booking for flights, accommodations, and transportation.",
         sub: [
             {
-                title: "Flight Booking"
+                title: "Flight Booking",
+                img: planeTakeoff,
+                sub: [
+                    {
+                        title: "",
+                        img: planeTakeoff,
+                        sub: []
+                    }
+                ]
             },
             {
-                title: "Accommodation Booking"
+                title: "Accommodation Booking",
+                img: planeTakeoff,
+                sub: [
+                    {
+                        title: "",
+                        img: "",
+                        sub: []
+                    }
+                ]
             },
             {
-                title: "Transportation Services"
+                title: "Transportation Services",
+                img: planeTakeoff,
+                sub: [
+                    {
+                        title: "",
+                        img: "",
+                        sub: []
+                    }
+                ]
             },
         ]
     },
@@ -91,10 +116,26 @@ export const servicesList = [
         desc: "Tailored travel packages and comprehensive insurance coverage.",
         sub: [
             {
-                title: "Tour Packages"
+                title: "Tour Packages",
+                img: familyTour,
+                sub: [
+                    {
+                        title: "",
+                        img: "",
+                        sub: []
+                    }
+                ]
             },
             {
-                title: "Travel Insurance"
+                title: "Travel Insurance",
+                img: familyTour,
+                sub: [
+                    {
+                        title: "",
+                        img: "",
+                        sub: []
+                    }
+                ]
             },
             
         ]
@@ -104,15 +145,32 @@ export const servicesList = [
         img: passportServices,
         desc: "Visa, passport services, and efficient corporate travel solutions.",
         sub: [
-                {
-                    title: "Visa and Passport Services"
-                },
-                {
-                    title: "Corporate Travel"
-                },
+            {
+                title: "Visa and Passport Services",
+                img: passportServices,
+                sub: [
+                    {
+                        title: "",
+                        img: "",
+                        sub: []
+                    }
+                ]
+            },
+            {
+                title: "Corporate Travel",
+                img: passportServices,
+                sub: [
+                    {
+                        title: "",
+                        img: "",
+                        sub: []
+                    }
+                ]
+            },
         ]
     },
 ]
+
 
 
 export const trainingList = [
@@ -122,10 +180,26 @@ export const trainingList = [
         desc: "Enhance customer service and sales skills.",
         sub: [
             {
-                title: "Customer Service Training"
+                title: "Customer Service Training",
+                img: customerService,
+                sub: [
+                    {
+                        title: "",
+                        img: "",
+                        sub: []
+                    }
+                ]
             },
             {
-                title: "Sales and Marketing Training"
+                title: "Sales and Marketing Training",
+                img: customerService,
+                sub: [
+                    {
+                        title: "",
+                        img: "",
+                        sub: []
+                    }
+                ]
             },
         ]
     },
@@ -135,10 +209,26 @@ export const trainingList = [
         desc: "Improve operational efficiency and crisis management.",
         sub: [
             {
-                title: "Travel Operations Training"
+                title: "Travel Operations Training",
+                img: operations,
+                sub: [
+                    {
+                        title: "",
+                        img: "",
+                        sub: []
+                    }
+                ]
             },
             {
-                title: "Crisis Management Training"
+                title: "Crisis Management Training",
+                img: operations,
+                sub: [
+                    {
+                        title: "",
+                        img: "",
+                        sub: []
+                    }
+                ]
             },
         ]
     },
@@ -148,10 +238,26 @@ export const trainingList = [
         desc: "Gain knowledge on destinations and travel technology.",
         sub: [
             {
-                title: "Destination Knowledge Training"
+                title: "Destination Knowledge Training",
+                img: destinationKnowledge,
+                sub: [
+                    {
+                        title: "",
+                        img: "",
+                        sub: []
+                    }
+                ]
             },
             {
-                title: "Travel Technology Training"
+                title: "Travel Technology Training",
+                img: destinationKnowledge,
+                sub: [
+                    {
+                        title: "",
+                        img: "",
+                        sub: []
+                    }
+                ]
             },
         ]
     },

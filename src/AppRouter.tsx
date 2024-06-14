@@ -8,6 +8,7 @@ import { Navbar } from './assets/components/Navbar';
 import Footer from './assets/components/Footer';
 
 const HomePage = lazy(() => delayLoad(import("./pages/home/page")))
+const ServicesPage = lazy(() => delayLoad(import('./pages/services/page')))
 const ContactPage = lazy(() => delayLoad(import('./pages/contact/page')))
 
 
@@ -19,6 +20,7 @@ export const AppRouter = () => {
                     <Navbar />
                     <Routes>
                         <Route path="/" element={<HomePage />}/>
+                        <Route path="/services" element={<ServicesPage />}/>
                         <Route path="/contact" element={<ContactPage />}/>
                         <Route path="/*" element={<PageNotFound />} />
                     </Routes>

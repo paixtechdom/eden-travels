@@ -1,4 +1,3 @@
-import { PiCheck } from "react-icons/pi"
 import { ImageExtras } from "../../assets/components/ImageExtras"
 import { ImageText } from "../../assets/components/ImageText"
 import { AfterHero } from "./sections/AfterHero"
@@ -6,6 +5,7 @@ import { Hero } from "./sections/Hero"
 import planeRun from "./../../assets/images/planeRun.jpg"
 import { CardParent } from "../../assets/components/Card/CardParent"
 import { servicesList, trainingList } from "../../assets/Constants"
+import { FaPlaneArrival } from "react-icons/fa6"
 
 const HomePage: React.FC = () => {
     return(
@@ -30,7 +30,7 @@ const HomePage: React.FC = () => {
 
                 <div className="absolute -bottom-5 left-[50%]">
                     <ImageExtras 
-                        icon={<PiCheck className="text-lg"/>}
+                        icon={<FaPlaneArrival className="text-lg"/>}
                         iconBg={"bg-secondary"}
                         topText={<p className="font-bold">100+</p>}
                         bottomText={<p className="text-gray-400">

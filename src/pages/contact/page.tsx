@@ -1,5 +1,5 @@
 import { BsArrowRight, BsDiscord, BsEnvelopeFill, BsGeoAltFill, BsInstagram, BsTelephoneOutboundFill, BsTwitter } from "react-icons/bs"
-import { ContactInfoInterface, InputFieldInterface } from "../../assets/Interfaces"
+import { InputFieldInterface } from "../../assets/Interfaces"
 import { ChangeEvent, FC, useState } from "react"
 import { BiCheck } from "react-icons/bi"
 import { Button } from "../../assets/components/Button"
@@ -35,7 +35,7 @@ const ContactPage = () => {
         subject: subjectOptions[0]
     })
 
-    const handleChange = (e : ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setFormInputs({
             ...formInputs,
             [e.target.name]: e.target.value
@@ -64,7 +64,7 @@ const ContactPage = () => {
                         </div>
                         <div className="flex flex-col gap-5 h-[65%]">
                             {
-                                contactInfo.map((contact : ContactInfoInterface, i) => (
+                                contactInfo.map((contact, i) => (
                                     <div key={i} className="flex gap-3 items-start">
                                         <div className="text-xl text-white">
                                             {contact.icon}
@@ -78,7 +78,7 @@ const ContactPage = () => {
 
                         <div className="flex gap-4 h-[10%]">
                             {
-                                socialLinks.map((link: JSX.Element, i) => (
+                                socialLinks.map((link, i) => (
                                     <div key={i} className="center h-8 w-8 rounded-full bg-[#000] text-white hover:bg-white hover:text-black2 transition-all duration-500 cursor-pointer">
                                         {link}
                                     </div>
@@ -127,7 +127,7 @@ const ContactPage = () => {
 
                                 <div className="flex flex-col flex-wrap gap-3">
                                     {
-                                        subjectOptions.map((subject: string, i) => (
+                                        subjectOptions.map((subject, i) => (
                                             <div key={i} className="flex items-center gap-2 cursor-pointer" onClick={() => {
                                                 setFormInputs({
                                                     ...formInputs,
@@ -177,7 +177,7 @@ const ContactPage = () => {
 export default ContactPage
 
 
-const InputField :FC <InputFieldInterface> = ({type, label, className, handleChange, name, value, placeholder}) => {
+const InputField:FC<InputFieldInterface> = ({type, label, className, handleChange, name, value, placeholder}) => {
     return(
         <div className={`flex flex-col w-full text-sm ${className}`}>
             <label htmlFor={label} className={`${value !== "" ? "font-bold text-primary" : "text-gray-600"}`}>{label}</label>

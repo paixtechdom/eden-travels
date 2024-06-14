@@ -1,7 +1,6 @@
 import { BsGeoAlt, BsTelephone, BsYoutube } from "react-icons/bs"
 import { FaFacebookF, FaXTwitter } from "react-icons/fa6"
 import { Link } from "react-router-dom"
-import { ContactInfoInterface, FooterLinksInterface } from "../Interfaces"
 import { BiEnvelope } from "react-icons/bi"
 import { RiInstagramFill, RiLinkedinFill } from "react-icons/ri"
 
@@ -58,7 +57,7 @@ const Footer = () => {
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam.</p>
                         <div className="flex gap-3 items-center ">
                             {
-                                icons.map((icon : JSX.Element, i) => (
+                                icons.map((icon, i) => (
                                     <div key={i} className="text-xl lg:text-2xl">
                                         {icon}
                                     </div>
@@ -69,13 +68,13 @@ const Footer = () => {
 
 
                     {
-                        FooterLinks.map((link : FooterLinksInterface, i) => (
+                        FooterLinks.map((link, i) => (
                             <div key={i} className="flex flex-col gap-4 w-full">
                                 <h3 className="text-gray-100 font-semibold text-lg">{link.header}</h3>
 
                                 <div className="flex flex-col gap-4 text-sm text-gray-200">
                                     {
-                                        link.links.map((link : string, i) => (
+                                        link.links.map((link, i) => (
                                             <Link key={i} to={''}>
                                                 {link}
                                             </Link>
@@ -89,7 +88,7 @@ const Footer = () => {
 
                 <div className="flex flex-col flex-wrap md:flex-row gap-3 lg:items-center my-3 lg:my-0">
                     {
-                        ContactInfo.map((info: ContactInfoInterface, i) => (
+                        ContactInfo.map((info, i) => (
                             <div key={i} className="flex items-center gap-2">
                                 {info.icon}
 

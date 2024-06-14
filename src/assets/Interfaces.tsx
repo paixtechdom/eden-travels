@@ -29,14 +29,36 @@ export interface imageextras {
 
 
 export interface ImageTextInterface {
-    heading: string,
-    span: string,
-    desc: string,
+    heading?: string,
+    span?: string,
+    desc?: string,
     img: string,
-    children: JSX.Element
+    children?: JSX.Element
 }
 
 
+export interface CardParentInterface {
+    data?: cardObject[],
+    heading: string,
+    description: string
+}
+
+
+export interface CardInterface {
+    data: cardObject[]
+}
+
+export interface cardObject {
+    img: string,
+    title: string,
+    sub?: sub[]
+}
+
+export interface sub {
+    title: string,
+    img: string,
+    sub?: sub[]
+}
 
 
 
@@ -64,23 +86,4 @@ export interface InputFieldInterface {
     handleChange: Function,
     value: string,
     placeholder?: string
-}
-
-export interface CardParentInterface {
-    data: cardObject[],
-    heading: string,
-    description: string
-}
-
-export interface sub {
-    title: string
-}
-
-interface cardObject {
-    img: string,
-    title: string,
-    sub: sub[]
-}
-export interface CardInterface {
-    data: cardObject
 }

@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router-dom"
 import { button } from "../Interfaces"
+import { FC } from "react"
 
 
-export const Button :React.FC <button> = ({text , navigateTo, className, icon}) => {
+export const Button:FC<button> = ({text , navigateTo, className, icon}) => {
     const navigate = useNavigate()
     return(
        <button onClick={() => {

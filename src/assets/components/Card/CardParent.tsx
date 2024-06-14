@@ -5,9 +5,9 @@ import { CardParentInterface } from "../../Interfaces"
 export const CardParent:FC<CardParentInterface> = ({data, heading, description}) => {
     return(
         <div className="w-full center flex-col gap-9 pb-[20vh]">
-            <div className="flex flex-col items-center text-center gap-4">
+            <div className="flex flex-col items-center text-center gap-4 w-11/12 lg:w-9/12">
                 <h2 className="font-semibold text-4xl md:text-5/12">{heading}</h2>
-                <p className="w-11/12 lg:w-9/12">{description}</p>
+                <p className="">{description}</p>
             </div>
 
 

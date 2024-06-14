@@ -24,7 +24,7 @@ const visitablePlaces = [
     },
 ]
 
-export const AfterHero : React.FC =  () => {
+export const AfterHero =  () => {
     return(
 <>
             <section className="w-full center flex-col text-center gap-9 mt-[20vh] lg:mt-0">
