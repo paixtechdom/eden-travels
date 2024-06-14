@@ -12,7 +12,7 @@ const ServicesPage = () => {
       <main className="center w-full flex-col">
          <ServicesHero />
 
-         {
+         {/* {
             servicesList.map((service, i) => (
                i < 2 &&
                <CardParent 
@@ -23,7 +23,7 @@ const ServicesPage = () => {
                />
 
             ))
-         }
+         } */}
          <ImageText 
             heading="Lorem lorem is a lorem"
             desc="Lorem is hated by lorem and then Lorem ipsum dolor, sit amet consectetur adipisicing elit. A ipsa eos nemo assumenda optio."
@@ -52,7 +52,7 @@ const ServicesPage = () => {
                </>
                
             </ImageText>
-         {
+         {/* {
             servicesList.map((service, i) => (
                i == 2 &&
                <CardParent 
@@ -63,7 +63,7 @@ const ServicesPage = () => {
                />
 
             ))
-         }
+         } */}
    
 
       </main>

@@ -13,7 +13,7 @@ export const CardParent:FC<CardParentInterface> = ({data, heading, description})
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 lg:w-10/12 gap-9">
                 {
-                    data.map((d, i) => (
+                    data?.map((d, i) => (
                         <Card key={i} data={d}/>
                     ))
                 }
