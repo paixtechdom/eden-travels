@@ -4,7 +4,7 @@ import { BiMenu, BiX } from "react-icons/bi"
 import { RiArrowDropDownFill, RiArrowDropUpFill } from "react-icons/ri"
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../store/AppStore"
-import { setCurrentDropDown, setCurrentNav, toggleShowNav } from "../store/navigation/navigationSlice"
+import { setCurrentDropDown, setCurrentDropDownIndex, setCurrentNav, toggleShowNav } from "../store/navigation/navigationSlice"
 
 
 export const Navbar = () => {
@@ -12,7 +12,7 @@ export const Navbar = () => {
     const dispatch = useDispatch()
     const showNav = navigation.showNavbar
     const currentNav = navigation.currentNav
-const currentDropDownIndex = navigation.currentDropDownIndex
+    const currentDropDownIndex = navigation.currentDropDownIndex
     const scrolledDown = navigation.scrolledDown
     const currentDropDown = navigation.currentDropDown
 
@@ -26,7 +26,11 @@ const currentDropDownIndex = navigation.currentDropDownIndex
         <header className={`fixed center w-full left-0 top-0 h-[8vh] md:h-[10vh] z-50 transition-all duration-1000 ${scrolledDown ? "shadow-xl" : ""} bg-white`}>
             <div className="flex items-center justify-between w-11/12 lg:w-10/12">
 
-                <Link to={'/'} className='w-3/12 md:w-2/12'>
+                <Link to={'/'} className='w-3/12 md:w-2/12' onClick={() => {
+                    dispatch(setCurrentNav(0))
+                    dispatch(toggleShowNav())
+                    dispatch(setCurrentDropDown(""))
+                }}>
                     <p className='w-5/12 md:w-3/12 text-xl font-bold text-black'>
                         EdenTT
                     </p>
@@ -85,7 +89,7 @@ const currentDropDownIndex = navigation.currentDropDownIndex
         
                                                 {   
                                                     nav?.sublinks?.map((sublink:any, j:number) => (
-                                                        <Link to={`/${nav.link}/${sublink.link}`} key={j} className={`flex gap-5 py-3 lg:py-5 bg-secondary bg-opacity-[0.35] lg:bg-opacity-[1] hover:bg-opacity-[0] lg:hover:bg-opacity-[0.95] text-gray-200
+                                                        <Link to={`/${nav.title}/${sublink.link == "" ? "" : sublink.title.replaceAll(" ", "-")?.toLowerCase()}`} key={j} className={`flex gap-5 py-3 lg:py-5 bg-secondary bg-opacity-[0.35] lg:bg-opacity-[1] hover:bg-opacity-[0] lg:hover:bg-opacity-[0.95] text-gray-200
                                                         w-full px-8 lg:px-5 lg:p-2 text-sm transition-all duration-500
                                                         ${
                                                             currentNav == i && 
@@ -96,6 +100,7 @@ const currentDropDownIndex = navigation.currentDropDownIndex
                                                          onClick={() => {
                                                             dispatch(toggleShowNav())
                                                             dispatch(setCurrentNav(i))
+                                                            dispatch(setCurrentDropDownIndex(j))
                                                             dispatch(setCurrentDropDown(""))
                                                         }}>
                                                         <p className={``}>{sublink.title}</p>

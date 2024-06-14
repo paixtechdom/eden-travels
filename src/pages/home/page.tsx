@@ -1,21 +1,61 @@
 import { ImageExtras } from "../../assets/components/ImageExtras"
 import { ImageText } from "../../assets/components/ImageText"
-import { AfterHero } from "./sections/AfterHero"
+import { ImageListing } from "../../assets/components/ImageListing"
 import { Hero } from "./sections/Hero"
 import planeRun from "./../../assets/images/planeRun.jpg"
 import { CardParent } from "../../assets/components/Card/CardParent"
 import { servicesList, trainingList } from "../../assets/Constants"
 import { FaPlaneArrival } from "react-icons/fa6"
+import dubai from "../../assets/images/dubai.jpg"
+import paris from "../../assets/images/paris.jpg"
+import canada from "../../assets/images/canada.jpg"
+import newYork from "../../assets/images/new york.jpg"
+import { Button } from "../../assets/components/Button"
+
+const visitablePlaces = [
+    {
+        img: dubai,
+        text: "Dubai"
+    },
+    {
+        img: paris,
+        text: "Paris"
+    },
+    {
+        img: canada,
+        text: "Canada"
+    },
+    {
+        img: newYork,
+        text: "New York"
+    },
+]
+
 
 const HomePage: React.FC = () => {
     return(
         <div className="center bg-white flex-col">
             <Hero />
-            <AfterHero />
+            <ImageListing data={visitablePlaces} heading="Travel anywhere, anytime!"/>
+
+            <section className="bg-secondary py-[10vh] center text-center flex-col gap-5 min-h-[30vh] w-full my-[20vh]">
+                    <h2 className="text-primary font-semibold text-4xl md:text-5/12 w-11/12 lg:w-6/12">
+                        Lorem, ipsum dolor Lorem ipsum dolor sit.
+                    </h2>
+
+                    <Button 
+                        text="Contact us now"
+                        className="bg-transparent border border-white text-white w-[200px]"
+                        navigateTo="contact"
+                    />
+            </section>
+
+
             <CardParent 
                 data={servicesList}
                 heading="Our Services"
-                description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea voluptatibus dolorum laboriosam voluptatem quia laudantium consequuntu"
+                description="View all services tailored to your needs"
+                parentNav={"services"}
             />
             
             
@@ -43,7 +83,8 @@ const HomePage: React.FC = () => {
             <CardParent 
                 data={trainingList}
                 heading="We train"
-                description="We offer a range of courses and trainings to help you secure your space in the air-space"
+                description="View all our cources to secure your space in the air-space"
+                parentNav={"trainings"}
             />
             {/* 
                 Visitable Places

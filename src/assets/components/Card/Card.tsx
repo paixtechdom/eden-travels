@@ -2,7 +2,7 @@ import { FC } from "react"
 import { CardInterface } from "../../Interfaces"
 import { Button } from "../Button"
 
-export const Card:FC<CardInterface> = ({data}) => {
+export const Card:FC<CardInterface> = ({data, navigateTo}) => {
     return(
         <div className="flex flex-col gap-6 w-full shadow-lg rounded-xl p-2 bg-gray-100">
             <div className="center w-full overflow-hidden rounded-t-xl">
@@ -16,15 +16,22 @@ export const Card:FC<CardInterface> = ({data}) => {
                     {
                         data?.sub?.map((sub, i) => (
                             <p key={i} className="rounded-lg shadow-lg center bg-white p-2 text-gray-700 w-fit text-sm">
-                                {sub.title}
+                                {sub?.title}
                             </p>
                         ))
                     }
                 </div>
-
-                <Button text="Read more"
-                    className="bg-primary text-white font-semibold w-fit mt-4 text-sm"
-                />
+                    {
+                        data?.sub?.map((sub, i) => (
+                            i == 0 &&
+                            sub?.title ?
+                            <Button key={i} text="Read more"
+                                className="bg-primary text-white font-semibold w-fit mt-4 text-sm"
+                                navigateTo={navigateTo}
+                            /> : ""
+                           
+                        ))
+                    }
             </div>
         </div>
     )

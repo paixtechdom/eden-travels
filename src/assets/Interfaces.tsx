@@ -1,7 +1,7 @@
 export interface Services {
     img: string,
     title: string,
-    desc: string
+    desc?: string
 }
 
 
@@ -11,6 +11,15 @@ export interface nav  {
     sublinks?: Object[]
 }
 
+interface img{
+    img: string,
+    text: string
+}
+
+export interface imageListInterface { 
+    data: img[], 
+    heading: string
+}
 
 export interface button {
     text: string,
@@ -37,17 +46,25 @@ export interface ImageTextInterface {
 }
 
 
+export interface HeroComponentInterface{
+    heroHeader: string, 
+    desc?: string, 
+    img: string, 
+    data: any, 
+    dataHeader: string
+}
 
 
 export interface CardParentInterface {
     data?: cardObject[],
     heading: string,
-    description: string
+    description?: string,
+    parentNav?: string,
+    icon?: JSX.Element
 }
-
-
 export interface CardInterface {
-    data?: cardObject
+    data?: cardObject,
+    navigateTo?: string
 }
 
 export interface cardObject {
@@ -55,6 +72,29 @@ export interface cardObject {
     img?: string,
     desc?: string
     sub?: subFirstLayer[],
+}
+
+
+export interface ListingCardParentInterface {
+    data?: ListingCardObject[],
+    heading: string,
+    description?: string,
+    parentNav?: string,
+    icon?: JSX.Element
+}
+
+
+export interface ListingCardInterface {
+    data?: ListingCardObject,
+    navigateTo?: string
+}
+
+
+export interface ListingCardObject {
+    title?: string,
+    img?: string,
+    desc?: string
+    sub?: string[],
 }
 
 export interface subFirstLayer{
@@ -68,6 +108,8 @@ export interface sub {
     img?: string,
     sub?: string[]
 }
+
+
 
 
 

@@ -13,13 +13,15 @@ export const Hero: React.FC = () => {
 
                     <div className="flex gap-3 items-center">
                         <Button
-                            text="Get started"
+                            text="Contact us"
                             className="bg-primary text-white lg:w-full"
+                            navigateTo="contact"
                         />
 
                         <Button
-                            text="Contact us"
+                            text="Learn more"
                             className="border border-primary bg-transparent text-primary lg:w-full"
+                            scrollTo="imagelisting"
                         />
 
                     </div>
