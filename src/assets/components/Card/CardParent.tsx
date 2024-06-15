@@ -9,7 +9,7 @@ export const CardParent:FC<CardParentInterface> = ({data, heading, description, 
     return(
         <div id={heading?.replace(" ", "")?.replace(" ", "")?.replace(" ", "")?.replace(" ", "")} className="w-full center flex-col gap-9 pt-[5vh] lg:pt-[20vh]">
             <div className="flex flex-col items-center text-center gap-4 w-11/12 lg:w-9/12">
-                <h2 className="font-semibold text-center text-4xl md:text-5/12">{heading}</h2>
+                <h2 className="font-semibold text-center text-4xl md:text-5/12">{heading}{parentNav}</h2>
                 <Link to={`/${parentNav}`} className="underline center flex-wrap">
                     {description}
                     <BsArrowRight className="ml-1"/>
@@ -17,11 +17,15 @@ export const CardParent:FC<CardParentInterface> = ({data, heading, description, 
                 
             </div>
 
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 lg:w-10/12 gap-9">
                 {
                     data?.map((d, i) => (
-                        <Card key={i} data={d} navigateTo={`/${parentNav}/${d.title}`}/>
+                        <Link to={`/${parentNav}/${
+                            parentNav == "courses" || parentNav=="services"
+                            ?d.title?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-").toLowerCase() : ""} 
+                            `} key={i}>
+                            <Card  data={d}/>
+                        </Link>
                     ))
                 }
             </div>

@@ -11,6 +11,7 @@ import { setCurrentDropDown, setCurrentDropDownIndex, setCurrentNav } from "../.
 import planaTakeOff from "../../../assets/images/planaTakeOff.jpg"
 import girlTour from "../../../assets/images/girlTour.jpg"
 import travelDoc from "../../../assets/images/travelDoc.jpg"
+import { BeforeFooter } from "../../../assets/components/BeforeFooter"
 
 const serviceImageExtras = [
     {
@@ -122,10 +123,12 @@ const EachServicePage = () => {
                     </>
                     
                     </ImageText>
+                    <BeforeFooter 
+                        text="Contact us now to book your next flight"
+                    />
                 </>
             }
 
-         {/* image text */}
         </>
     )
 }

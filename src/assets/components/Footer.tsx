@@ -14,7 +14,7 @@ const icons = [
 const FooterLinks = [
     {
         header: 'Services',
-        links: ["Flight Booking", "Case studies", "Reviews", "Updates"]
+        links: ["Travel Arrangements", "Travel Packages and Insurance", "Reviews", "Updates"]
     },
     {
         header: "Trainings",
@@ -48,7 +48,7 @@ export const ContactInfo = [
 
 const Footer = () => {
     return(
-        <footer className="w-full center bg-secondary pt-[10vh] pb-[5vh] lg:py-[15vh]">
+        <footer className="w-full center bg-secondary pt-[10vh] pb-[5vh] lg:py-[15vh] border-t-2 border-primary">
             <div className="w-11/12 lg:w-10/12 flex flex-col gap-6 text-gray-200">
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-9 md:gap-9">
 

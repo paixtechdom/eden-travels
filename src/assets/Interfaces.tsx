@@ -52,6 +52,7 @@ export interface HeroComponentInterface{
     img: string, 
     data: any, 
     dataHeader: string
+    type?: string,
 }
 
 

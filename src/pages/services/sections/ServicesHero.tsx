@@ -4,19 +4,19 @@ import { HeroComponentInterface } from "../../../assets/Interfaces"
 
 
 
-export const ServicesHero:FC<HeroComponentInterface> = ({heroHeader, desc, img, data, dataHeader}) => {
+export const ServicesHero:FC<HeroComponentInterface> = ({heroHeader, desc, img, data, dataHeader, type}) => {
     return(
         <>
-            <section className="min-h-[90vh] bg-white w-full flex items-start lg:items-center justify-center relative mt-[15vh] md:mt-[10vh] lg:mt-[20vh]"> 
-                <div className="w-11/12 lg:w-10/12 flex flex-col text-center items-center justify-center z-10 gap-[50px]">
-                    <div className="center flex-col gap-5 w-full xl:w-9/12">
+            <section className={`min-h-[90vh] bg-white w-full flex items-start lg:items-center justify-center relative  ${type == "row" ? "pt-[15vh] lg:pt-[10vh]" : "pt-[15vh] md:pt-[10vh] lg:pt-[20vh]"}`}> 
+                <div className={`w-11/12 lg:w-10/12 flex ${type == "row" ? "flex-col lg:flex-row" : "flex-col text-center"}   items-center justify-center z-10 gap-[50px]`}>
+                    <div className={`${type == "row" ? "flex items-start " : "center" }  flex-col gap-5 w-full xl:w-9/12`}>
                         <h1 className="font-bold text-4xl md:text-5xl text-primary">{heroHeader}</h1>
 
                         <p className="leading-relaxed tracking-wide w-full md:w-10/12 xl:w-9/12">
                            {desc}
                         </p>
 
-                        <div className="center gap-3 w-full md:w-9/12">
+                        <div className={`${type == "row" ? "flex" : "center"}  gap-3 w-full md:w-9/12`}>
                             <Button
                                 text="Learn more"
                                 className="bg-primary text-white "
@@ -32,7 +32,7 @@ export const ServicesHero:FC<HeroComponentInterface> = ({heroHeader, desc, img, 
                         </div>
                     </div>
 
-                    <img src={img} alt="Hero Image" className="w-full md:w-10/12 xl:w-9/12"/>
+                    <img src={img} alt="Hero Image" className={`w-full ${type == "row" ? "w-full lg:w-5/12" : "md:w-10/12 xl:w-9/12"} `}/>
                 </div>
             </section>
 

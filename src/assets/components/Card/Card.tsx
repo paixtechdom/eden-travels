@@ -2,7 +2,7 @@ import { FC } from "react"
 import { CardInterface } from "../../Interfaces"
 import { Button } from "../Button"
 
-export const Card:FC<CardInterface> = ({data, navigateTo}) => {
+export const Card:FC<CardInterface> = ({data}) => {
     return(
         <div className="flex flex-col gap-6 w-full shadow-lg rounded-xl p-2 bg-gray-100">
             <div className="center w-full overflow-hidden rounded-t-xl">
@@ -27,7 +27,6 @@ export const Card:FC<CardInterface> = ({data, navigateTo}) => {
                             sub?.title ?
                             <Button key={i} text="Read more"
                                 className="bg-primary text-white font-semibold w-fit mt-4 text-sm"
-                                navigateTo={navigateTo}
                             /> : ""
                            
                         ))

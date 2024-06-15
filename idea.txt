@@ -1,13 +1,10 @@
-2. Loader
 4. Footer Links
-5. Contact Page
 
-1. Blur images - focus - images used for hero [ first and second layer images (from constants) ]
-3. Services and training image listing
 
-scroll top on page change
+7. Blur images - all images
+8. Services and training image listing
 
-change view all hero design
+
 
 
 4. Jobs

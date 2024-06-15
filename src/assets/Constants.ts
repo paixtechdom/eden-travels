@@ -67,6 +67,10 @@ export const NavInfo = [
         link: '',
     },
     {
+        title: 'About Us',
+        link: 'about',
+    },
+    {
         title: 'Services',
         link: 'services',
         sublinks: [

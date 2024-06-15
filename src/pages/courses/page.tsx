@@ -41,6 +41,7 @@ const CoursesPage = () => {
             img={hero}
             data={coursesList}
             dataHeader="Explore our courses"
+            type={"row"}
          />
 
          {

@@ -41,6 +41,7 @@ const ServicesPage = () => {
             img={hero}
             data={servicesList}
             dataHeader="Explore our services"
+            type={"row"}
          />
 
          {

@@ -5,7 +5,7 @@ export const ImageListing : FC <imageListInterface> =  ({data, heading}) => {
     return(
 <>
             <section id="imagelisting" className="w-full center flex-col text-center gap-9 pt-[20vh] lg:mt-0">
-                <h2 className="text-3xl font-semibold tracking-wide leading-relaxed">
+                <h2 className="text-3xl font-semibold tracking-[1.2px] leading-[35px] w-11/12">
                     {heading}
                 </h2>
                 <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row rounded-2xl gap-6">

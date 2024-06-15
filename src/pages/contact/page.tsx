@@ -1,8 +1,8 @@
-import { BsArrowRight, BsDiscord, BsEnvelopeFill, BsGeoAltFill, BsInstagram, BsTelephoneOutboundFill, BsTwitter } from "react-icons/bs"
+import { BsArrowRight, BsEnvelopeFill, BsGeoAltFill, BsInstagram, BsTelephoneOutboundFill, BsWhatsapp } from "react-icons/bs"
 import { InputFieldInterface } from "../../assets/Interfaces"
 import { ChangeEvent, FC, useState } from "react"
-import { BiCheck } from "react-icons/bi"
 import { Button } from "../../assets/components/Button"
+import { FaFacebook } from "react-icons/fa6"
 
 const contactInfo = [
     {
@@ -11,7 +11,7 @@ const contactInfo = [
     },
     {
         icon: <BsEnvelopeFill />,
-        contact: "demo@gmail.com",
+        contact: "hello@edentravels.com",
     },
     {
         icon: <BsGeoAltFill />,
@@ -19,10 +19,7 @@ const contactInfo = [
     }
 ]
 const socialLinks = [
-    <BsTwitter/>, <BsInstagram/>, <BsDiscord/>
-]
-const subjectOptions = [
-    "General Inquiry", "Payments and Feeds", "Technical", "Registration", "Other"
+    <FaFacebook/>, <BsWhatsapp/>, <BsInstagram/>
 ]
 
 const ContactPage = () => {
@@ -32,7 +29,7 @@ const ContactPage = () => {
         email: "",
         phoneNumber: "",
         message: "",
-        subject: subjectOptions[0]
+        subject: ""
     })
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -46,23 +43,18 @@ const ContactPage = () => {
     return(
         <main className="center flex-col w-full pt-[20vh] pb-[10vh] bg-white">
             <div className="w-11/12 lg:w-10/12 center flex-col gap-9 text-primary">
-                <div className="flex flex-col gap-3 text-center">
+                <div className="center gap-3 text-center">
+                    <BsEnvelopeFill className="text-4xl"/>
                     <h1 className="font-bold text-4xl">
                         Contact Us
                     </h1>
-                    <p className="text-gray-700">
-                        Any question or remarks? Just write us a message
-                    </p>
                 </div>
 
                 <div className="w-full flex flex-col lg:flex-row gap-[50px] lg:gap-[25px] xl:gap-[50px] p-2 rounded-xl bg-white min-h-[80vh] shadow-2xl">
-                    <div className="bg-primary flex flex-col justify-between text-gray-300 p-9 py-[6vh] rounded-t-xl lg:rounded-r-none lg:rounded-l-xl relative overflow-hidden w-full lg:w-5/12 gap-[10vh] lg:gap-9">
+                    <div className="bg-secondary flex flex-col justify-start text-gray-300 p-9 py-[6vh] rounded-t-xl lg:rounded-r-none lg:rounded-l-xl relative overflow-hidden w-full lg:w-5/12 gap-[10vh] lg:gap-9">
 
-                        <div className="flex flex-col gap-1 h-[20%]">
-                            <h2 className="text-white text-2xl font-semibold">Contact Information</h2>
-                            <p>Say something to start a live chat!</p>
-                        </div>
-                        <div className="flex flex-col gap-5 h-[65%]">
+                            <h2 className="text-primary text-2xl font-semibold">Contact Information</h2>
+                        <div className="flex flex-col gap-5">
                             {
                                 contactInfo.map((contact, i) => (
                                     <div key={i} className="flex gap-3 items-start">
@@ -76,18 +68,15 @@ const ContactPage = () => {
                             }
                         </div>
 
-                        <div className="flex gap-4 h-[10%]">
+                        <div className="flex gap-4 ">
                             {
                                 socialLinks.map((link, i) => (
-                                    <div key={i} className="center h-8 w-8 rounded-full bg-[#000] text-white hover:bg-white hover:text-black2 transition-all duration-500 cursor-pointer">
+                                    <div key={i} className="center h-8 w-8 rounded-xl bg-[#000] text-white hover:bg-white hover:text-black transition-all duration-500 cursor-pointer">
                                         {link}
                                     </div>
                                 ))
                             }
                         </div>
-
-                        <div className="absolute w-[150px] h-[150px] bg-white bg-opacity-20 rounded-full -right-[70px] -bottom-[35px]"></div>
-
                     </div>
 
 
@@ -121,31 +110,14 @@ const ContactPage = () => {
                                 handleChange={handleChange}
                                 value={formInputs.phoneNumber}
                             />
-
-                            <div className="flex flex-col gap-3">
-                                <label htmlFor="Subject" className="font-bold">Select Subject</label>
-
-                                <div className="flex flex-col flex-wrap gap-3">
-                                    {
-                                        subjectOptions.map((subject, i) => (
-                                            <div key={i} className="flex items-center gap-2 cursor-pointer" onClick={() => {
-                                                setFormInputs({
-                                                    ...formInputs,
-                                                    subject: subject
-                                                })
-                                            }}>
-                                                <div className={`${formInputs.subject === subject ? "bg-primary " : "bg-gray-300"} rounded-full text-white center h-4 w-4`}>
-                                                    {
-                                                        formInputs.subject === subject &&
-                                                        <BiCheck className="text-sm"/> 
-                                                    }
-                                                </div>
-                                                <p className="text-sm">{subject}</p>
-                                            </div>
-                                        ))
-                                    }
-                                </div>
-                            </div>
+                            <InputField 
+                                label="Subject"
+                                type="subject"
+                                name="subject"
+                                className="col-span-2"
+                                handleChange={handleChange}
+                                value={formInputs.phoneNumber}
+                            />
 
                             <InputField 
                                 className="col-span-2"
@@ -179,7 +151,7 @@ export default ContactPage
 
 const InputField:FC<InputFieldInterface> = ({type, label, className, handleChange, name, value, placeholder}) => {
     return(
-        <div className={`flex flex-col w-full text-sm ${className}`}>
+        <div className={`flex flex-col w-full gap-2 text-sm ${className}`}>
             <label htmlFor={label} className={`${value !== "" ? "font-bold text-primary" : "text-gray-600"}`}>{label}</label>
 
 
@@ -187,8 +159,8 @@ const InputField:FC<InputFieldInterface> = ({type, label, className, handleChang
                 type={type}
                 onChange={(e) => handleChange(e)}
                 name={name}
-                placeholder={placeholder}
-                className={`p-2 bg-transparent outline-none border-b ${value !== "" ? "border-b-2 focus:border-primary" : " border-gray-400"} hover:border-b-2 hover:border-primary cursor-pointer`}
+                placeholder={placeholder || label}
+                className={`p-2 rounded-tl-xl rounded-br-xl bg-transparent outline-none border ${value !== "" ? "border focus:border-primary" : " border-gray-400"} hover:border hover:border-primary cursor-pointer`}
             />
         </div>
     )

@@ -12,7 +12,14 @@ function App() {
         dispatch(toggleScrolledDown(document.documentElement.scrollTop > 200 ? true : false))
     })
     document.removeEventListener('scroll', () => null)
-}, [])
+  }, [])
+
+  useEffect(() => {
+    scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+  }, [window.URL])
 
 
 

@@ -11,8 +11,9 @@ import paris from "../../assets/images/paris.jpg"
 import canada from "../../assets/images/canada.jpg"
 import newYork from "../../assets/images/new york.jpg"
 import { Button } from "../../assets/components/Button"
+import { BeforeFooter } from "../../assets/components/BeforeFooter"
 
-const visitablePlaces = [
+export const visitablePlaces = [
     {
         img: dubai,
         text: "Dubai"
@@ -34,7 +35,7 @@ const visitablePlaces = [
 
 const HomePage: React.FC = () => {
     return(
-        <div className="center bg-white flex-col mb-[10vh]">
+        <div className="center bg-white flex-col">
             <Hero />
             <ImageListing data={visitablePlaces} heading="Travel anywhere, anytime!"/>
 
@@ -82,10 +83,18 @@ const HomePage: React.FC = () => {
 
             <CardParent 
                 data={coursesList}
-                heading="We train"
+                heading="Our Courses"
                 description="View all our cources to secure your space in the air-space"
-                parentNav={"trainings"}
+                parentNav={"courses"}
             />
+
+
+           <BeforeFooter 
+            text="Contact us now to book your next flight"
+           />
+
+
+
             {/* 
                 Visitable Places
 

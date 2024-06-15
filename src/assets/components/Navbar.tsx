@@ -23,7 +23,7 @@ export const Navbar = () => {
     return(
         <>
            <>
-        <header className={`fixed center w-full left-0 top-0 h-[8vh] md:h-[10vh] z-50 transition-all duration-1000 ${scrolledDown ? "shadow-xl" : ""} bg-white`}>
+        <header className={`fixed center w-full left-0 top-0 h-[8vh] md:h-[10vh] z-50 transition-all duration-1000 ${scrolledDown ? "shadow-xl " : ""} bg-secondary`}>
             <div className="flex items-center justify-between w-11/12 lg:w-10/12">
 
                 <Link to={'/'} className='w-3/12 md:w-2/12' onClick={() => {
@@ -33,13 +33,13 @@ export const Navbar = () => {
                     }
                     dispatch(setCurrentDropDown(""))
                 }}>
-                    <p className='w-5/12 md:w-3/12 text-xl font-bold text-black'>
+                    <p className='w-5/12 md:w-3/12 text-xl font-bold text-white'>
                         EdenTT
                     </p>
                     {/* <img src={logo} alt="Macmay Logo" className='w-5/12 md:w-2/12'/> */}
                 </Link>
 
-                <div className={`bi bi-${showNav ? 'x-lg' : 'list'} text-blue text-3xl lg:hidden cursor-pointer text-black`}  onClick={() => dispatch(toggleShowNav())}>
+                <div className={`bi bi-${showNav ? 'x-lg' : 'list'} text-blue text-3xl lg:hidden cursor-pointer text-white`}  onClick={() => dispatch(toggleShowNav())}>
                     {
                         showNav ? 
                         <BiX /> :
@@ -55,7 +55,7 @@ export const Navbar = () => {
                                 NavInfo?.map((nav :any , i: number) => (
                                     <div key={i} className={`flex flex-col transition-all duration-1000 justify-between w-full text-blue lg:border-0 relative lg:w-fit`}>
 
-                                        <div className={`flex w-full lg:w-fit py-5 px-[5%] lg:p-0 justify-between lg:justify-end lg:items-center cursor-pointer lg:text-black text-gray-200 bg-secondary lg:bg-transparent
+                                        <div className={`flex w-full lg:w-fit py-5 px-[5%] lg:p-0 justify-between lg:justify-end lg:items-center cursor-pointer text-gray-200 bg-secondary lg:bg-transparent
                                         ${currentNav === i ? 
                                             'font-bold lg:bg-transparent' 
                                         : 'hover:bg-opacity-90 lg:hover:bg-transparent hover:font-bold'} hover:bg-opacity-10 hover:bg-pri mary`} 
