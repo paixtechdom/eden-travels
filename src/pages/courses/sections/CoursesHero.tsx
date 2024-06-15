@@ -33,7 +33,7 @@ export const CoursesHero:FC<HeroComponentInterface> = ({heroHeader, desc, img, d
                         </div>
                     </div>
 
-                    <img src={img} alt="Hero Image" className={`w-full ${type == "row" ? "w-full lg:w-5/12" : "md:w-10/12 xl:w-9/12"} `}/>
+                    <img src={img} alt="Hero Image" className={`w-full ${type == "row" ? "w-full lg:w-5/12" : "md:w-10/12 xl:w-9/12"} shadow-xl rounded-xl`}/>
                 </div>
 
 
