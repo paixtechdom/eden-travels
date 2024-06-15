@@ -6,7 +6,7 @@ import { CardParent } from "../../assets/components/Card/CardParent"
 import { ImageExtras } from "../../assets/components/ImageExtras"
 import { FaPlaneDeparture } from "react-icons/fa"
 import { PiCheck } from "react-icons/pi"
-import hero from "../../assets/images/hero1.jpg"
+import hero from "../../assets/images/accommodationBooking.jpg"
 import { BeforeFooter } from "../../assets/components/BeforeFooter"
 
 

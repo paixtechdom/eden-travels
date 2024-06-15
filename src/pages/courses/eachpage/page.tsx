@@ -55,7 +55,7 @@ const EachCoursesPage = () => {
                         data={coursesList[coursesPageIndex].sub}
                         dataHeader={`Get started with ${coursesList[coursesPageIndex].title} courses`}
                         breadLinks={["Home", "Courses",`${coursesList[coursesPageIndex].title}`]}
-
+                        type="row"
                     />
 
                     {

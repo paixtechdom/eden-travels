@@ -74,6 +74,7 @@ const EachServicePage = () => {
                         data={servicesList[servicePageIndex].sub}
                         dataHeader={`Explore our ${servicesList[servicePageIndex].title} services`}
                         breadLinks={["Home", "Services", servicesList[servicePageIndex].title]}
+                        type="row"
                     />
 
                     {

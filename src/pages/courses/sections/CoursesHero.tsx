@@ -8,7 +8,7 @@ import { BreadCrumbs } from "../../../assets/components/BreadCrumbs"
 export const CoursesHero:FC<HeroComponentInterface> = ({heroHeader, desc, img, data, dataHeader, type, breadLinks}) => {
     return(
         <>
-            <section className={`min-h-[70vh] lg:min-h-[90vh] bg-white w-full flex items-start lg:items-center justify-center relative  ${type == "row" ? "pt-[15vh] lg:pt-[10vh]" : "pt-[15vh] md:pt-[10vh] lg:pt-[20vh]"}`}> 
+            <section className={`min-h-[70vh] bg-white w-full flex items-start lg:items-center justify-center relative  ${type == "row" ? "pt-[15vh] lg:pt-[10vh]" : "pt-[15vh] md:pt-[10vh] lg:pt-[20vh]"}`}> 
                 <div className={`w-11/12 lg:w-10/12 flex ${type == "row" ? "flex-col lg:flex-row" : "flex-col text-center"}   items-center justify-center z-10 gap-[50px]`}>
                     <div className={`${type == "row" ? "flex items-start " : "center" }  flex-col gap-5 w-full xl:w-9/12`}>
                         <h1 className="font-bold text-4xl md:text-5xl text-primary">{heroHeader}</h1>
