@@ -12,6 +12,7 @@ import canada from "../../assets/images/canada.jpg"
 import newYork from "../../assets/images/new york.jpg"
 import { Button } from "../../assets/components/Button"
 import { BeforeFooter } from "../../assets/components/BeforeFooter"
+import { Helmet } from "react-helmet-async"
 
 export const visitablePlaces = [
     {
@@ -35,7 +36,14 @@ export const visitablePlaces = [
 
 const HomePage: React.FC = () => {
     return(
-        <div className="center bg-white flex-col">
+        <>
+         <Helmet>
+                <title>
+                Eden Travels and Tours
+                </title>
+                <meta name="description" content="Explore the world with Eden Travels and Tours - personalized tour packages, flight bookings, travel insurance, and professional training. Discover seamless journeys and exceptional travel experiences. Contact us today!" />
+            </Helmet>
+        <main className="center bg-white flex-col">
             <Hero />
             <ImageListing data={visitablePlaces} heading="Travel anywhere, anytime!"/>
 
@@ -108,7 +116,8 @@ const HomePage: React.FC = () => {
 
                 jobs - read more            
             */}
-        </div>
+        </main>
+        </>
     )
 }
 

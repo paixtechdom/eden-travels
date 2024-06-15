@@ -1,6 +1,7 @@
 import { FaBriefcase, FaRegCalendarCheck, FaMoneyCheckAlt, FaCheckCircle } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
 import { BeforeFooter } from '../../assets/components/BeforeFooter';
+import { Helmet } from 'react-helmet-async';
 
 const JobsPage = () => {
   // Scroll to top on page load
@@ -87,83 +88,91 @@ const JobsPage = () => {
     .filter(group => group.jobs.length > 0);
 
   return (
-    <main className="bg-gray-100 w-full center flex-col">
-      <section className="bg-primary w-full min-h-[45vh] text-white pt-[20vh] pb-[10vh] px-4">
-        <div className="text-center w-11/12">
-          <h1 className="text-4xl font-bold mb-4 tracking-wide leading-[45px]">Explore Exciting Job Opportunities</h1>
-          <p className="text-lg">Secure a job and obtain a work permit with our professional guidance.</p>
-        </div>
-      </section>
-      
-      {/* Job Listings Section */}
-      <section className="w-11/12 lg:w-10/12 py-12">
-        <h2 className="text-2xl font-bold mb-6">Available Jobs</h2>
-        <div className="w-full lg:w-8/12 flex mb-6">
-          <input
-            type="text"
-            placeholder="Search for a job..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full p-3 rounded-lg focus:outline-none focus:border-primary shadow-lg"
-          />
-        </div>
+    <>
+       <Helmet>
+          <title>
+            Jobs - Eden Travels and Tours
+          </title>
+          <meta name="description" content="Explore a variety of job opportunities in Canada and the Republic of Ireland with a focus on work permits. Roles include sales, nursing, cyber security, and more. Start your journey today!" />
+      </Helmet>
+      <main className="bg-gray-100 w-full center flex-col">
+        <section className="bg-primary w-full min-h-[45vh] text-white pt-[20vh] pb-[10vh] px-4">
+          <div className="text-center w-11/12">
+            <h1 className="text-4xl font-bold mb-4 tracking-wide leading-[45px]">Explore Exciting Job Opportunities</h1>
+            <p className="text-lg">Secure a job and obtain a work permit with our professional guidance.</p>
+          </div>
+        </section>
+        
+        {/* Job Listings Section */}
+        <section className="w-11/12 lg:w-10/12 py-12">
+          <h2 className="text-2xl font-bold mb-6">Available Jobs</h2>
+          <div className="w-full lg:w-8/12 flex mb-6">
+            <input
+              type="text"
+              placeholder="Search for a job..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full p-3 rounded-lg focus:outline-none focus:border-primary shadow-lg"
+            />
+          </div>
 
-        {filteredJobGroups.length > 0 ? (
-          filteredJobGroups.map((group, index) => (
-            <div key={index} className="my-9">
-              <div className="bg-white rounded-lg shadow-md p-6 mb-4">
-                <div className="flex items-center mb-4">
-                  <FaBriefcase className="text-3xl text-primary mr-3" />
-                  <h3 className="text-xl font-bold">{group.location}</h3>
-                </div>
-                <div className="flex items-center text-sm">
-                  <FaRegCalendarCheck className="text-gray-600 mr-2" />
-                  <span className="text-gray-600">{`Approval Timeline: ${group.approvalTime}`}</span>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
-                {group.jobs.map((job, idx) => (
-                  <div key={idx} className="bg-white rounded-lg shadow-md p-3">
-                    <h4 className="">{job}</h4>
+          {filteredJobGroups.length > 0 ? (
+            filteredJobGroups.map((group, index) => (
+              <div key={index} className="my-9">
+                <div className="bg-white rounded-lg shadow-md p-6 mb-4">
+                  <div className="flex items-center mb-4">
+                    <FaBriefcase className="text-3xl text-primary mr-3" />
+                    <h3 className="text-xl font-bold">{group.location}</h3>
                   </div>
-                ))}
+                  <div className="flex items-center text-sm">
+                    <FaRegCalendarCheck className="text-gray-600 mr-2" />
+                    <span className="text-gray-600">{`Approval Timeline: ${group.approvalTime}`}</span>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
+                  {group.jobs.map((job, idx) => (
+                    <div key={idx} className="bg-white rounded-lg shadow-md p-3">
+                      <h4 className="">{job}</h4>
+                    </div>
+                  ))}
+                </div>
               </div>
+            ))
+          ) : (
+            <p className="text-center text-lg">No jobs found.</p>
+          )}
+        </section>
+
+        {/* Requirements and Fees Section */}
+        <section className="w-11/12 lg:w-10/12 p-6 bg-white rounded-lg shadow-md">
+          <h2 className="text-xl font-bold mb-6">Requirements and Fees</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Requirements */}
+            <div>
+              <h3 className="text-lg font-bold mb-4">Basic Requirements</h3>
+              <ul className="list-disc list-inside text-sm flex flex-col gap-2">
+                <li>High Diploma or equivalent</li>
+                <li>Training Certificate (Trade Test)</li>
+                <li>Age: 21-55 years</li>
+                <li>English or French proficiency (for PR eligibility)</li>
+              </ul>
             </div>
-          ))
-        ) : (
-          <p className="text-center text-lg">No jobs found.</p>
-        )}
-      </section>
 
-      {/* Requirements and Fees Section */}
-      <section className="w-11/12 lg:w-10/12 p-6 bg-white rounded-lg shadow-md">
-        <h2 className="text-xl font-bold mb-6">Requirements and Fees</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Requirements */}
-          <div>
-            <h3 className="text-lg font-bold mb-4">Basic Requirements</h3>
-            <ul className="list-disc list-inside text-sm flex flex-col gap-2">
-              <li>High Diploma or equivalent</li>
-              <li>Training Certificate (Trade Test)</li>
-              <li>Age: 21-55 years</li>
-              <li>English or French proficiency (for PR eligibility)</li>
-            </ul>
+            {/* Fees */}
+            <div>
+              <h3 className="text-lg font-bold mb-4">Installment Payment for Work Permit</h3>
+              <ul className="list-disc list-inside text-sm flex flex-col gap-2">
+                <li>Initial deposit: 50% (covers resume and cover letter)</li>
+                <li>Second deposit: 50% (after work permit is granted)</li>
+              </ul>
+            </div>
           </div>
+        </section>
 
-          {/* Fees */}
-          <div>
-            <h3 className="text-lg font-bold mb-4">Installment Payment for Work Permit</h3>
-            <ul className="list-disc list-inside text-sm flex flex-col gap-2">
-              <li>Initial deposit: 50% (covers resume and cover letter)</li>
-              <li>Second deposit: 50% (after work permit is granted)</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <BeforeFooter text={'Ready to Take the Next Step?'}/>
-    </main>
+        <BeforeFooter text={'Ready to Take the Next Step?'}/>
+      </main>
+    </>
   );
 };
 

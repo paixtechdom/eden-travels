@@ -4,6 +4,7 @@ import { ChangeEvent, FC, useState } from "react"
 import { Button } from "../../assets/components/Button"
 import { FaFacebook } from "react-icons/fa6"
 import { BreadCrumbs } from "../../assets/components/BreadCrumbs"
+import { Helmet } from "react-helmet-async"
 
 const contactInfo = [
     {
@@ -42,111 +43,120 @@ const ContactPage = () => {
 
 
     return(
-        <main className="center flex-col w-full pt-[20vh] pb-[10vh] bg-white">
-            <div className="w-11/12 lg:w-10/12 center flex-col text-primary">
-                <div className="center gap-3 text-center">
-                    <BsEnvelopeFill className="text-4xl"/>
-                    <h1 className="font-bold text-4xl">
-                        Contact Us
-                    </h1>
-                </div>
+        <>
+            <Helmet>
+                <title>
+                    Contact Eden Travels and Tours
+                </title>
+                <meta name="description" content={`Connect with Eden Travels and Tours through our contact information. Reach us by phone at ${contactInfo[0].contact}, email us at  ${contactInfo[1].contact}, or visit us at  ${contactInfo[2].contact}. We're here to help!`} />
+            </Helmet>            
 
-                <BreadCrumbs links={["Home", "Contact Us"]} />
+            <main className="center flex-col w-full pt-[20vh] pb-[10vh] bg-white">
+                <div className="w-11/12 lg:w-10/12 center flex-col text-primary">
+                    <div className="center gap-3 text-center">
+                        <BsEnvelopeFill className="text-4xl"/>
+                        <h1 className="font-bold text-4xl">
+                            Contact Us
+                        </h1>
+                    </div>
 
-                <div className="w-full flex flex-col lg:flex-row gap-[50px] lg:gap-[25px] xl:gap-[50px] p-2 rounded-xl bg-white min-h-[80vh] shadow-2xl">
-                    <div className="bg-secondary flex flex-col justify-start text-gray-300 p-9 py-[6vh] rounded-t-xl lg:rounded-r-none lg:rounded-l-xl relative overflow-hidden w-full lg:w-4/12  gap-[10vh]">
-                        <div className="flex flex-col gap-2">
-                            <h2 className="text-primary text-2xl font-semibold">Contact Information</h2>
-                            <div className="flex gap-4 ">
+                    <BreadCrumbs links={["Home", "Contact Us"]} />
+
+                    <div className="w-full flex flex-col lg:flex-row gap-[50px] lg:gap-[25px] xl:gap-[50px] p-2 rounded-xl bg-white min-h-[80vh] shadow-2xl">
+                        <div className="bg-secondary flex flex-col justify-start text-gray-300 p-9 py-[6vh] rounded-t-xl lg:rounded-r-none lg:rounded-l-xl relative overflow-hidden w-full lg:w-4/12  gap-[10vh]">
+                            <div className="flex flex-col gap-2">
+                                <h2 className="text-primary text-2xl font-semibold">Contact Information</h2>
+                                <div className="flex gap-4 ">
+                                    {
+                                        socialLinks.map((link, i) => (
+                                            <div key={i} className="center h-8 w-8 rounded-xl text-white hover:bg-white hover:text-black transition-all duration-500 cursor-pointer">
+                                                {link}
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-5">
                                 {
-                                    socialLinks.map((link, i) => (
-                                        <div key={i} className="center h-8 w-8 rounded-xl text-white hover:bg-white hover:text-black transition-all duration-500 cursor-pointer">
-                                            {link}
+                                    contactInfo.map((contact, i) => (
+                                        <div key={i} className="flex gap-3 items-start">
+                                            <div className="text-xl text-white">
+                                                {contact.icon}
+                                            </div>
+
+                                            <p>{contact.contact}</p>
                                         </div>
                                     ))
                                 }
                             </div>
-                        </div>
-                        <div className="flex flex-col gap-5">
-                            {
-                                contactInfo.map((contact, i) => (
-                                    <div key={i} className="flex gap-3 items-start">
-                                        <div className="text-xl text-white">
-                                            {contact.icon}
-                                        </div>
 
-                                        <p>{contact.contact}</p>
-                                    </div>
-                                ))
-                            }
+                            
                         </div>
 
-                        
-                    </div>
 
-
-                    <div className="w-full lg:w-7/12 flex flex-col p-9 py-[6vh]">
-                        <form className="flex flex-col md:grid md:grid-cols-2 gap-6 gap-y-9">
-                            <InputField 
-                                label="First Name"
-                                type="text"
-                                name="firstName"
-                                handleChange={handleChange}
-                                value={formInputs.firstName}
-                            />
-                            <InputField 
-                                label="Last Name"
-                                type="text"
-                                name="lastName"
-                                handleChange={handleChange}
-                                value={formInputs.lastName}
-                            />
-                            <InputField 
-                                label="Email"
-                                type="email"
-                                name="email"
-                                handleChange={handleChange}
-                                value={formInputs.email}
-                            />
-                            <InputField 
-                                label="Phone Number"
-                                type="number"
-                                name="phoneNumber"
-                                handleChange={handleChange}
-                                value={formInputs.phoneNumber}
-                            />
-                            <InputField 
-                                label="Subject"
-                                type="subject"
-                                name="subject"
-                                className="col-span-2"
-                                handleChange={handleChange}
-                                value={formInputs.phoneNumber}
-                            />
-
-                            <InputField 
-                                className="col-span-2"
-                                label="Message"
-                                type="text"
-                                name="message"
-                                placeholder="Write your message"
-                                handleChange={handleChange}
-                                value={formInputs.message}
-                            />
-
-                            <div className="flex items-center lg:justify-end w-full lg:col-span-2">
-                                <Button 
-                                    className="text-primary bg-secondary flex items-center h-fit py-3 font-bold w-fit px-9"
-                                    text="Send Message" 
-                                    icon={<BsArrowRight className="ml-3 "/>}
+                        <div className="w-full lg:w-7/12 flex flex-col p-9 py-[6vh]">
+                            <form className="flex flex-col md:grid md:grid-cols-2 gap-6 gap-y-9">
+                                <InputField 
+                                    label="First Name"
+                                    type="text"
+                                    name="firstName"
+                                    handleChange={handleChange}
+                                    value={formInputs.firstName}
                                 />
-                            </div>
+                                <InputField 
+                                    label="Last Name"
+                                    type="text"
+                                    name="lastName"
+                                    handleChange={handleChange}
+                                    value={formInputs.lastName}
+                                />
+                                <InputField 
+                                    label="Email"
+                                    type="email"
+                                    name="email"
+                                    handleChange={handleChange}
+                                    value={formInputs.email}
+                                />
+                                <InputField 
+                                    label="Phone Number"
+                                    type="number"
+                                    name="phoneNumber"
+                                    handleChange={handleChange}
+                                    value={formInputs.phoneNumber}
+                                />
+                                <InputField 
+                                    label="Subject"
+                                    type="subject"
+                                    name="subject"
+                                    className="col-span-2"
+                                    handleChange={handleChange}
+                                    value={formInputs.phoneNumber}
+                                />
 
-                        </form>
+                                <InputField 
+                                    className="col-span-2"
+                                    label="Message"
+                                    type="text"
+                                    name="message"
+                                    placeholder="Write your message"
+                                    handleChange={handleChange}
+                                    value={formInputs.message}
+                                />
+
+                                <div className="flex items-center lg:justify-end w-full lg:col-span-2">
+                                    <Button 
+                                        className="text-primary bg-secondary flex items-center h-fit py-3 font-bold w-fit px-9"
+                                        text="Send Message" 
+                                        icon={<BsArrowRight className="ml-3 "/>}
+                                    />
+                                </div>
+
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </main>
+            </main>
+        </>
     )
 }
 

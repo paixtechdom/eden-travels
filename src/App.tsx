@@ -3,6 +3,7 @@ import { AppRouter } from "./AppRouter";
 import { useDispatch } from "react-redux";
 import { toggleScrolledDown } from "./assets/store/navigation/navigationSlice";
 
+
 export const DocscrollTop = () => {
   scrollTo({
     top: 0,

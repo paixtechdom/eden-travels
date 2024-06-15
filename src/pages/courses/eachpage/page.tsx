@@ -11,6 +11,7 @@ import customer from "../../../assets/images/customer.jpg"
 import airlinemarketing from "../../../assets/images/airlinemarketing.jpg"
 import operationss from "../../../assets/images/operationss.jpg"
 import { BeforeFooter } from "../../../assets/components/BeforeFooter"
+import { Helmet } from "react-helmet-async"
 
 
 
@@ -41,9 +42,31 @@ const EachCoursesPage = () => {
         })
 
     }, [currentDropDownIndex, document.URL])
+
+    const metaConstants = [
+        {
+            title: "Professional Aviation Courses",
+            desc: "Elevate your aviation career with our professional aviation courses. Learn from industry experts and gain the skills needed to excel in the aviation industry."
+        },
+        {
+            title: "Advanced Travel and Tourism Courses",
+            desc: "Advance your career in travel and tourism with our comprehensive courses. Gain in-depth knowledge and practical skills to thrive in the travel industry."
+        },
+        {
+            title: "Expert-Led Tour Guide Courses",
+            desc: "Become a certified tour guide with our expert-led courses. Learn how to create memorable experiences and lead tours with confidence and expertise."
+        }
+    ];
+    
     
     return(
         <>
+              <Helmet>
+                    <title>
+                        {`${metaConstants[coursesPageIndex].title} -  Eden Travels and Tours`}
+                    </title>
+                    <meta name="description" content={`${metaConstants[coursesPageIndex].desc}`} />
+                </Helmet>
             {
                     coursesPageIndex == 6 ?
                     <div className="min-h-screen"></div> : 

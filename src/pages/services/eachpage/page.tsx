@@ -12,6 +12,7 @@ import planaTakeOff from "../../../assets/images/planaTakeOff.jpg"
 import girlTour from "../../../assets/images/girlTour.jpg"
 import travelDoc from "../../../assets/images/travelDoc.jpg"
 import { BeforeFooter } from "../../../assets/components/BeforeFooter"
+import { Helmet } from "react-helmet-async"
 
 const serviceImageExtras = [
     {
@@ -61,8 +62,32 @@ const EachServicePage = () => {
 
     }, [currentDropDownIndex, document.URL])
     
+    const metaConstants = [
+        {
+            title: "Professional Aviation Services",
+            desc: "Discover top-notch aviation services including flight training, aircraft maintenance, and charter services. Enhance your aviation career with our expert solutions."
+        },
+        {
+            title: "Comprehensive Travelling Solutions",
+            desc: "Explore our comprehensive travelling solutions. From flight bookings to travel insurance, we offer everything you need for a seamless travel experience."
+        },
+        {
+            title: "Exciting Tour Packages",
+            desc: "Uncover exciting tour packages to the world's most beautiful destinations. Enjoy curated experiences with our guided tours and travel packages."
+        }
+    ];
+    
+    
     return(
         <>
+              <Helmet>
+                    <title>
+                        {`${metaConstants[servicePageIndex].title} -  Eden Travels and Tours`}
+                    </title>
+                    <meta name="description" content={`${metaConstants[servicePageIndex].desc}`} />
+                </Helmet>
+
+
             {
                     servicePageIndex == 6 ?
                     <div className="min-h-screen"></div> : 
