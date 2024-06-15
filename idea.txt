@@ -1,7 +1,7 @@
 7. Blur images - all images
-8. Services and training image listing
+
+react lazy load image 
 
 
 
 
-4. Jobs

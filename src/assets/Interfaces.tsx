@@ -118,7 +118,11 @@ export interface sub {
 
 
 
-
+export interface parallaxInterface {
+    id: string,
+    children: JSX.Element,
+    className?: string
+}
 
 
 
