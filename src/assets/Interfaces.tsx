@@ -22,7 +22,7 @@ export interface imageListInterface {
 }
 
 export interface BreadCrumbsInterface { 
-    links: string[]
+    links: string[] | any
 }
 
 

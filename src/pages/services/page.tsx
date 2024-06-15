@@ -30,6 +30,7 @@ const servicesImages = [
    },
 ]
 
+let links = ["Home", "Services"]
 
 const ServicesPage = () => {
    return(
@@ -42,7 +43,7 @@ const ServicesPage = () => {
             data={servicesList}
             dataHeader="Explore our services"
             type={"row"}
-            breadLinks={["Home", "Services"]}
+            breadLinks={links}
 
          />
 
