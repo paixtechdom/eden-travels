@@ -11,7 +11,6 @@ import customer from "../../../assets/images/customer.jpg"
 import airlinemarketing from "../../../assets/images/airlinemarketing.jpg"
 import operationss from "../../../assets/images/operationss.jpg"
 import { BeforeFooter } from "../../../assets/components/BeforeFooter"
-import { BreadCrumbs } from "../../../assets/components/BreadCrumbs"
 
 
 
