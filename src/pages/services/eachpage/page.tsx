@@ -49,8 +49,8 @@ const EachServicePage = () => {
         servicesList.forEach((service, i) => {
             if(document.URL.includes(service.title.replace(" ", "-").replace(" ", "-").replace(" ", "-").replace(" ", "-").toLowerCase()) ){
                 setServicePageIndex(i)
-                dispatch(setCurrentNav(1))
-                dispatch(setCurrentDropDownIndex(i))
+                dispatch(setCurrentNav(2))
+                dispatch(setCurrentDropDownIndex(2))
                 dispatch(setCurrentDropDown(""))
             }        
         })

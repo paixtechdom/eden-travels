@@ -25,12 +25,12 @@ const EachCoursesPage = () => {
     const currentDropDownIndex = navigation.currentDropDownIndex
 
     useEffect(() => {
-        setCoursesPageIndex(currentNav == 2 ? currentDropDownIndex : 0)
+        setCoursesPageIndex(currentNav == 3 ? currentDropDownIndex : 0)
 
         coursesList.forEach((courses, i) => {
             if(document.URL.includes(courses.title.replace(" ", "-").replace(" ", "-").replace(" ", "-").replace(" ", "-").toLowerCase()) ){
                 setCoursesPageIndex(i)
-                dispatch(setCurrentNav(2))
+                dispatch(setCurrentNav(3))
                 dispatch(setCurrentDropDownIndex(i))
                 dispatch(setCurrentDropDown(""))
             }        

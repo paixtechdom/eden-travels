@@ -36,7 +36,7 @@ export const CoursesHero:FC<HeroComponentInterface> = ({heroHeader, desc, img, d
                 </div>
             </section>
 
-            <section id={"pageLinks"} className="bg-primary py-[10vh] mt-[20vh] center text-center flex-col gap-5 min-h-[30vh] w-full">
+            <section id={"pageLinks"} className="bg-primary py-[10vh] mt-[10vh] center text-center flex-col gap-5 min-h-[30vh] w-full">
                     <h2 className="text-seconary font-semibold text-4xl md:text-5/12 w-11/12 lg:w-6/12">
                         {dataHeader}
                     </h2>

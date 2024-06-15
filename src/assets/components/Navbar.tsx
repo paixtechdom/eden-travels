@@ -5,6 +5,8 @@ import { RiArrowDropDownFill, RiArrowDropUpFill } from "react-icons/ri"
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../store/AppStore"
 import { setCurrentDropDown, setCurrentDropDownIndex, setCurrentNav, toggleShowNav } from "../store/navigation/navigationSlice"
+import { DocscrollTop } from "../../App"
+import { useEffect } from "react"
 
 
 export const Navbar = () => {
@@ -18,6 +20,22 @@ export const Navbar = () => {
 
 
     const navigate = useNavigate()
+
+    useEffect(() => {
+
+        NavInfo.forEach((nav, i) => {
+            if(document.URL.toLowerCase().includes(nav.link.toLowerCase()) ){
+                dispatch(setCurrentNav(i))
+            }        
+        })
+        scrollTo({
+            top: 0,
+            behavior: "smooth" 
+        })
+
+    }, [document.URL])
+
+
     
 
     return(
@@ -32,6 +50,7 @@ export const Navbar = () => {
                         dispatch(toggleShowNav())
                     }
                     dispatch(setCurrentDropDown(""))
+                    DocscrollTop()
                 }}>
                     <p className='w-5/12 md:w-3/12 text-xl font-bold text-white'>
                         EdenTT
@@ -57,7 +76,7 @@ export const Navbar = () => {
 
                                         <div className={`flex w-full lg:w-fit py-5 px-[5%] lg:p-0 justify-between lg:justify-end lg:items-center cursor-pointer text-gray-200 bg-secondary lg:bg-transparent
                                         ${currentNav === i ? 
-                                            'font-bold lg:bg-transparent' 
+                                            'font-bold text-primary lg:bg-transparent' 
                                         : 'hover:bg-opacity-90 lg:hover:bg-transparent hover:font-bold'} hover:bg-opacity-10 hover:bg-pri mary`} 
 
                                         onClick={() => {
@@ -69,6 +88,7 @@ export const Navbar = () => {
                                                 dispatch(setCurrentNav(i))
                                                 dispatch(toggleShowNav())
                                                 dispatch(setCurrentDropDown(""))
+                                                DocscrollTop()
                                             }
                                         
                                         }}>
@@ -91,11 +111,11 @@ export const Navbar = () => {
         
                                                 {   
                                                     nav?.sublinks?.map((sublink:any, j:number) => (
-                                                        <Link to={`/${nav.title}/${sublink.link == "" ? "" : sublink.title.replaceAll(" ", "-")?.toLowerCase()}`} key={j} className={`flex gap-5 py-3 lg:py-5 bg-secondary bg-opacity-[0.35] lg:bg-opacity-[1] hover:bg-opacity-[0] lg:hover:bg-opacity-[0.95] text-gray-200
-                                                        w-full px-8 lg:px-5 lg:p-2 text-sm transition-all duration-500
+                                                        <Link to={`/${nav.title}/${sublink.link == "" ? "" : sublink.title.replaceAll(" ", "-")?.toLowerCase()}`} key={j} className={`flex gap-5 py-5 bg-secondary bg-opacity-[0.35] lg:bg-opacity-[1] hover:bg-opacity-[0] lg:hover:bg-opacity-[0.95] text-gray-200
+                                                        w-full px-8 lg:px-5 text-sm transition-all duration-500
                                                         ${
                                                             currentNav == i && 
-                                                            currentDropDownIndex == j ? 'font-bold' :
+                                                            currentDropDownIndex == j ? 'font-bold text-primary' :
                                                             ``
                                                         }
                                                          `} 
@@ -104,6 +124,7 @@ export const Navbar = () => {
                                                             dispatch(setCurrentNav(i))
                                                             dispatch(setCurrentDropDownIndex(j))
                                                             dispatch(setCurrentDropDown(""))
+                                                            DocscrollTop()
                                                         }}>
                                                         <p className={``}>{sublink.title}</p>
                                                     </Link>

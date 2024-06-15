@@ -3,6 +3,13 @@ import { AppRouter } from "./AppRouter";
 import { useDispatch } from "react-redux";
 import { toggleScrolledDown } from "./assets/store/navigation/navigationSlice";
 
+export const DocscrollTop = () => {
+  scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+}
+
 function App() {
   const dispatch = useDispatch()
 
@@ -14,11 +21,9 @@ function App() {
     document.removeEventListener('scroll', () => null)
   }, [])
 
+
   useEffect(() => {
-    scrollTo({
-      top: 0,
-      behavior: "smooth"
-    })
+    DocscrollTop()
   }, [window.URL])
 
 

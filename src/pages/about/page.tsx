@@ -101,7 +101,7 @@ const AboutPage = () => {
 
 
             <section className="w-full center flex flex-col pt-[10vh]">
-                <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row gap-[50px] shadow-xl p-2 rounded-xl bg-secondary items-center">
+                <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row gap-9 md:gap-[50px] shadow-xl p-2 rounded-xl bg-secondary items-center">
                     
                     <img src={manager} alt="Simisoluwa Joseph" className="rounded-t-xl lg:rounded-r-none lg:rounded-l-xl w-full lg:w-6/12 h-fit"/>
                     

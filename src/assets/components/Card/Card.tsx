@@ -4,7 +4,7 @@ import { Button } from "../Button"
 
 export const Card:FC<CardInterface> = ({data}) => {
     return(
-        <div className="flex flex-col gap-6 w-full shadow-lg rounded-xl p-2 bg-gray-100">
+        <div className="flex flex-col gap-6 w-full shadow-lg rounded-xl p-2 bg-gray-100 h-full">
             <div className="center w-full overflow-hidden rounded-t-xl">
                 <img src={data?.img} alt={data?.title} className="w-full transition-all duration-500 hover:scale-110 active:scale-110"/>
             </div>
