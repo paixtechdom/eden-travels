@@ -11,11 +11,11 @@ export const BreadCrumbs:FC<BreadCrumbsInterface> = ({links}) => {
 
     return(
         <section className="w-full center mt-[10vh]">
-            <div className="bor der border- blue w-11/12 lg:w-10/12 xl:w-9/12 flex justify-start items-center p-9 py-4 lg:pl-[50px] rounded-full mb-[10vh] flex-wrap shadow-xl ">
+            <div className="bor der border- blue w-11/12 lg:w-10/12 xl:w-9/12 flex justify-start items-center gap-3 p-9 py-4 lg:pl-[50px] rounded-full mb-[10vh] flex-wrap shadow-xl ">
                 {
                     links.map((link : any, i : number) => (
                         i !== links.length - 1 ?
-                        <Link key={i} to={`/${i == 0 ? "" : link}`} className="text-sm text-blue flex items-center gap-1 mr-3" onClick={() => {
+                        <Link key={i} to={`/${i == 0 ? "" : link}`} className="text-sm text-blue flex items-center gap-1" onClick={() => {
                             dispatch(setCurrentDropDown(""))
                         }}>
                             {link}
