@@ -1,5 +1,4 @@
 import { FaBriefcase, FaRegCalendarCheck, FaMoneyCheckAlt, FaCheckCircle } from 'react-icons/fa';
-import { BsClockHistory } from 'react-icons/bs';
 import { useEffect, useState } from 'react';
 import { BeforeFooter } from '../../assets/components/BeforeFooter';
 
