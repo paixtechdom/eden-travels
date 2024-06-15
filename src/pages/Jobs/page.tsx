@@ -77,12 +77,14 @@ const JobsPage = () => {
   ];
 
   // Filtered job listings based on search term
-  const filteredJobGroups = jobGroups.map(group => ({
-    ...group,
-    jobs: group.jobs.filter(job =>
-      job.toLowerCase().includes(searchTerm.toLowerCase())
-    ).sort()
-  }));
+  const filteredJobGroups = jobGroups
+    .map(group => ({
+      ...group,
+      jobs: group.jobs.filter(job =>
+        job.toLowerCase().includes(searchTerm.toLowerCase())
+      ).sort()
+    }))
+    .filter(group => group.jobs.length > 0);
 
   return (
     <main className="bg-gray-100 w-full center flex-col">
@@ -92,10 +94,11 @@ const JobsPage = () => {
           <p className="text-lg">Secure a job and obtain a work permit with our professional guidance.</p>
         </div>
       </section>
+      
       {/* Job Listings Section */}
       <section className="w-11/12 lg:w-10/12 py-12">
-          <h2 className="text-2xl font-bold mb-6">Available Jobs</h2>
-        <div className="w-full lg:w-8/12 flex ">
+        <h2 className="text-2xl font-bold mb-6">Available Jobs</h2>
+        <div className="w-full lg:w-8/12 flex mb-6">
           <input
             type="text"
             placeholder="Search for a job..."
@@ -105,27 +108,31 @@ const JobsPage = () => {
           />
         </div>
 
-        {filteredJobGroups.map((group, index) => (
-          <div key={index} className="my-9">
-            <div className="bg-white rounded-lg shadow-md p-6 mb-4">
-              <div className="flex items-center mb-4">
-                <FaBriefcase className="text-3xl text-primary mr-3" />
-                <h3 className="text-xl font-bold">{group.location}</h3>
-              </div>
-              <div className="flex items-center text-sm">
-                <FaRegCalendarCheck className="text-gray-600 mr-2" />
-                <span className="text-gray-600">{`Approval Timeline: ${group.approvalTime}`}</span>
-              </div>
-            </div>
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
-              {group.jobs.sort().map((job, idx) => (
-                <div key={idx} className="bg-white rounded-lg shadow-md p-3">
-                    <h4 className="">{job}</h4>
+        {filteredJobGroups.length > 0 ? (
+          filteredJobGroups.map((group, index) => (
+            <div key={index} className="my-9">
+              <div className="bg-white rounded-lg shadow-md p-6 mb-4">
+                <div className="flex items-center mb-4">
+                  <FaBriefcase className="text-3xl text-primary mr-3" />
+                  <h3 className="text-xl font-bold">{group.location}</h3>
                 </div>
-              ))}
+                <div className="flex items-center text-sm">
+                  <FaRegCalendarCheck className="text-gray-600 mr-2" />
+                  <span className="text-gray-600">{`Approval Timeline: ${group.approvalTime}`}</span>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
+                {group.jobs.map((job, idx) => (
+                  <div key={idx} className="bg-white rounded-lg shadow-md p-3">
+                    <h4 className="">{job}</h4>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          <p className="text-center text-lg">No jobs found.</p>
+        )}
       </section>
 
       {/* Requirements and Fees Section */}
