@@ -17,20 +17,20 @@ const serviceImageExtras = [
     {
         icon: <FaPlane className="text-lg" />,
         iconBg: "bg-blue-700",
-        topText: <p className="font-bold">Easy Booking</p>,
-        bottomText: <p className="text-gray-400">Flights, Accommodations, Transportation</p>
+        topText: <p className="font-bold">100%</p>,
+        bottomText: <p className="text-gray-400">Easy Booking</p>
       },
       {
         icon: <FaSuitcase className="text-lg" />,
         iconBg: "bg-yellow-700",
-        topText: <p className="font-bold">Comprehensive Packages</p>,
-        bottomText: <p className="text-gray-400">Tailored Trips & Insurance</p>
+        topText: <p className="font-bold">100%</p>,
+        bottomText: <p className="text-gray-400">Comprehensive Packages</p>
       },
       {
         icon: <FaPassport className="text-lg" />,
         iconBg: "bg-red-700",
-        topText: <p className="font-bold">Efficient Services</p>,
-        bottomText: <p className="text-gray-400">Visas, Passports, Corporate Travel</p>
+        topText: <p className="font-bold">100%</p>,
+        bottomText: <p className="text-gray-400">Efficient Services</p>
       }
     ]
 

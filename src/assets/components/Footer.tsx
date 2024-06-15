@@ -99,7 +99,7 @@ const Footer = () => {
                
 
                 <div className="justify-between items-center flex flex-col lg:flex-row gap-3 mt-[10vh]">
-                    <p className="w-full lg:w-fit">Copyright © 2022 BRIX Templates</p>
+                    <p className="w-full lg:w-fit">Copyright © {new Date().getFullYear()}</p>
 
                     <p className="w-full lg:w-fit">All Rights Reserved | <span className="underline">Terms and Conditions</span> | <span className="underline">Privacy Policy</span> </p>
                 </div>

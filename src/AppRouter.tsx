@@ -12,9 +12,11 @@ import EachCoursesPage from './pages/courses/eachpage/page';
 import CoursesPage from './pages/courses/page';
 import { FaPlaneDeparture } from 'react-icons/fa6';
 
+
 const HomePage = lazy(() => delayLoad(import("./pages/home/page")))
 const AboutPage = lazy(() => delayLoad(import('./pages/about/page')))
 const ServicesPage = lazy(() => delayLoad(import('./pages/services/page')))
+const JobsPage = lazy(() => delayLoad(import('./pages/Jobs/page')))
 const ContactPage = lazy(() => delayLoad(import('./pages/contact/page')))
 
 
@@ -29,6 +31,7 @@ export const AppRouter = () => {
                         <Route path="/home" element={<HomePage />}/>
                         <Route path="/about" element={<AboutPage />}/>
                         <Route path="/services" element={<ServicesPage />}/>
+                        <Route path="/jobs" element={<JobsPage />}/>
                         {
                             servicesList.map((l, i) => (
                                 <Route key={i} path={"services/"+l?.title?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-").toLowerCase()} element={<EachServicePage />}/>
