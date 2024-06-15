@@ -2,42 +2,23 @@ import { coursesList } from "../../assets/Constants"
 import { ImageText } from "../../assets/components/ImageText"
 import { CoursesHero } from "./sections/CoursesHero"
 import travellers from "../../assets/images/female travellers.jpg"
-import plane from "../../assets/images/planeRun.jpg"
 import { CardParent } from "../../assets/components/Card/CardParent"
 import { ImageExtras } from "../../assets/components/ImageExtras"
-import { ImageListing } from "../../assets/components/ImageListing"
 import { FaPlaneDeparture } from "react-icons/fa"
 import { PiCheck } from "react-icons/pi"
 import hero from "../../assets/images/hero1.jpg"
+import { BeforeFooter } from "../../assets/components/BeforeFooter"
 
 
-const coursesImages = [
-   {
-       img: travellers,
-       text: "Dubai"
-   },
-   {
-       img: plane,
-       text: "Paris"
-   },
-   {
-       img: travellers,
-       text: "Canada"
-   },
-   {
-       img: plane,
-       text: "New York"
-   },
-]
 
 
 const CoursesPage = () => {
    return(
-      <main className="center w-full flex-col pb-[15vh]">
+      <main className="center w-full flex-col">
          
          <CoursesHero 
             heroHeader="Our Professional Courses"
-            desc=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa alias libero a nulla ab et quisquam beatae nobis repellat. Inventore, praesentium sapiente dolor fugiat repellendus tempore quasi aliquam unde itaque?"
+            desc="Enhance your skills and advance your career with our professional courses. Whether mastering new technologies, developing business acumen, or gaining certifications, our programs help you achieve your goals. Join us and take the next step towards success with confidence"
             img={hero}
             data={coursesList}
             dataHeader="Explore our courses"
@@ -59,8 +40,8 @@ const CoursesPage = () => {
             ))
          }
          <ImageText 
-            heading="Lorem lorem is a lorem"
-            desc="Lorem is hated by lorem and then Lorem ipsum dolor, sit amet consectetur adipisicing elit. A ipsa eos nemo assumenda optio."
+            heading="Unlock Your Potential with Expert-Led Training"
+            desc="Our courses are designed to equip you with the skills needed to excel in today's job market. Led by industry experts, each course offers practical experience and theoretical learning. Explore our courses and start your journey towards professional excellence"
             img={travellers}>
                <>
                   <div className="absolute -bottom-5 right-[50%]">
@@ -99,11 +80,8 @@ const CoursesPage = () => {
 
             ))
          }
-         <ImageListing 
-            data={coursesImages}
-            heading={"Lorem ipsum dolor sit amet."}
-         />
-         
+     
+         <BeforeFooter text="Elevate Your Skills Today!"/>
          
    
 

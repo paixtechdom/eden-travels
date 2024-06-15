@@ -104,7 +104,7 @@ const JobsPage = () => {
             placeholder="Search for a job..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary"
+            className="w-full p-3 rounded-lg focus:outline-none focus:border-primary shadow-lg"
           />
         </div>
 
