@@ -68,13 +68,13 @@ export const Navbar = () => {
                 
                 
 
-                <div className={`fixed w-full flex overflow -auto lg:o verflow-hidden justify-center items-start  transition-all duration-1000 top-[8vh] md:top-[10vh] h-screen lg:relative lg:top-0 lg:w-9/12 lg:h-fit ${showNav ? ' left-0 z-40' : '-left-[100%] lg:-left-0'} bg-zinc-900 lg:bg-transparent`}>
+                <div className={`fixed w-full flex overflow-auto lg:overflow-hidden justify-center items-start  transition-all duration-1000 top-[8vh] md:top-[10vh] h-screen lg:relative lg:top-0 lg:w-9/12 lg:h-fit ${showNav ? ' left-0 z-40' : '-left-[100%] lg:-left-0'} bg-zinc-900 lg:bg-transparent`}>
                         <nav className={`flex flex-col lg:flex-row items-center w-full h-screen lg:gap-9 lg:h-fit lg:bg-transparent lg:justify-end transition-all duration-1000`}>
                             {
                                 NavInfo?.map((nav :any , i: number) => (
                                     <div key={i} className={`flex flex-col transition-all duration-1000 justify-between w-full text-blue lg:border-0 relative lg:w-fit`}>
 
-                                        <div className={`flex w-full lg:w-fit py-5 px-[5%] lg:p-0 justify-between lg:justify-end lg:items-center cursor-pointer text-gray-200 bg-secondary lg:bg-transparent
+                                        <div className={`flex w-full lg:w-fit py-4 px-[5%] lg:p-0 justify-between lg:justify-end lg:items-center cursor-pointer text-gray-200 bg-secondary lg:bg-transparent
                                         ${currentNav === i ? 
                                             'font-bold text-primary lg:bg-transparent' 
                                         : 'hover:bg-opacity-90 lg:hover:bg-transparent hover:font-bold'} hover:bg-opacity-10 hover:bg-pri mary`} 
@@ -111,7 +111,7 @@ export const Navbar = () => {
         
                                                 {   
                                                     nav?.sublinks?.map((sublink:any, j:number) => (
-                                                        <Link to={`/${nav.title}/${sublink.link == "" ? "" : sublink.title.replaceAll(" ", "-")?.toLowerCase()}`} key={j} className={`flex gap-5 py-5 bg-secondary bg-opacity-[0.35] lg:bg-opacity-[1] hover:bg-opacity-[0] lg:hover:bg-opacity-[0.95] text-gray-200
+                                                        <Link to={`/${nav.title}/${sublink.link == "" ? "" : sublink.title.replaceAll(" ", "-")?.toLowerCase()}`} key={j} className={`flex gap-5 py-4 bg-secondary bg-opacity-[0.35] lg:bg-opacity-[1] hover:bg-opacity-[0] lg:hover:bg-opacity-[0.95] text-gray-200
                                                         w-full px-8 lg:px-5 text-sm transition-all duration-500
                                                         ${
                                                             currentNav == i && 

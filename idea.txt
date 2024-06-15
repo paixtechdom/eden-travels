@@ -1,6 +1,3 @@
-4. Footer Links
-
-
 7. Blur images - all images
 8. Services and training image listing
 

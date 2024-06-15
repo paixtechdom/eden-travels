@@ -44,13 +44,13 @@ const EachServicePage = () => {
     const currentDropDownIndex = navigation.currentDropDownIndex
 
     useEffect(() => {
-        setServicePageIndex(currentNav == 1 ? currentDropDownIndex : 0)
+        setServicePageIndex(currentNav == 2 ? currentDropDownIndex : 0)
 
         servicesList.forEach((service, i) => {
             if(document.URL.includes(service.title.replace(" ", "-").replace(" ", "-").replace(" ", "-").replace(" ", "-").toLowerCase()) ){
                 setServicePageIndex(i)
                 dispatch(setCurrentNav(2))
-                dispatch(setCurrentDropDownIndex(2))
+                dispatch(setCurrentDropDownIndex(i))
                 dispatch(setCurrentDropDown(""))
             }        
         })
