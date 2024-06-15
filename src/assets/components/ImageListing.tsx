@@ -4,7 +4,7 @@ import { imageListInterface } from "../Interfaces"
 export const ImageListing : FC <imageListInterface> =  ({data, heading}) => {
     return(
 <>
-            <section id="imagelisting" className="w-full center flex-col text-center gap-9 pt-[20vh] lg:mt-0">
+            <section id="imagelisting" className="w-full center flex-col text-center gap-9 pt-[10vh] lg:pt-[20vh]">
                 <h2 className="text-3xl font-semibold tracking-[1.2px] leading-[35px] w-11/12">
                     {heading}
                 </h2>

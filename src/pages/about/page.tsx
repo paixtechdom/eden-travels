@@ -74,7 +74,7 @@ const AboutPage = () => {
                             <Button
                                 text="Learn more"
                                 className="border border-white bg-transparent text-white lg:w-fit"
-                                scrollTo="imagelisting"
+                                scrollTo="manager"
                             />
 
                         </div>
@@ -84,7 +84,7 @@ const AboutPage = () => {
 
             <BreadCrumbs links={["Home", "About Us"]} />
 
-            <section className="center bg-white py-16 mb-[10vh]">
+            <section id="manager" className="center bg-white py-16 mb-[10vh]">
                 <div className="max-11/12 lg:w-10/12 mx-auto px-4">
                     <h2 className="text-3xl font-bold text-center mb-8 text-secondary">Our Values</h2>
  
@@ -131,16 +131,16 @@ const AboutPage = () => {
                 </div>
             </section>
 
-            <BeforeFooter text="Our team is here to help. Get in touch with us today!"/>
+            <BeforeFooter text="Our team is here to help"/>
 
             <ImageText 
                 img={img}
                 span="Seamless Travel Documentation"
                 desc="Ensure your travel plans are smooth and hassle-free with our expert visa and passport services. Let us handle the paperwork so you can focus on your journey"
 
-                />
+            />
 
-        <ImageListing data={visitablePlaces} heading="Explore breathtaking destinations with our curated travel packages"/>
+            <ImageListing data={visitablePlaces} heading="Explore breathtaking destinations"/>
 
         </main>
     )

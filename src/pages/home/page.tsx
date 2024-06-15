@@ -41,7 +41,7 @@ const HomePage: React.FC = () => {
 
             <section className="bg-secondary py-[10vh] center text-center flex-col gap-5 min-h-[30vh] w-full mt-[20vh] mb-[10vh] lg:mb-0">
                     <h2 className="text-primary font-semibold text-4xl md:text-5/12 w-11/12 lg:w-6/12">
-                        Services Expertly Planned for Your Next Journey
+                        Start Planning for Your Next Journey
                     </h2>
 
                     <Button 
