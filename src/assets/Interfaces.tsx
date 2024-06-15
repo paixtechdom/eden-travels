@@ -21,6 +21,11 @@ export interface imageListInterface {
     heading: string
 }
 
+export interface BreadCrumbsInterface { 
+    links: string[]
+}
+
+
 export interface button {
     text: string,
     navigateTo?: string,
@@ -53,6 +58,7 @@ export interface HeroComponentInterface{
     data: any, 
     dataHeader: string
     type?: string,
+    breadLinks?: string[]
 }
 
 

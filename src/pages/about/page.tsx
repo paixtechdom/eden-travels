@@ -8,6 +8,7 @@ import { Button } from "../../assets/components/Button";
 import { BsTelephoneFill } from "react-icons/bs";
 import { FaHeart, FaUsers, FaHandsHelping } from 'react-icons/fa'; // Import icons as needed
 import { FaPlane } from "react-icons/fa6";
+import { BreadCrumbs } from "../../assets/components/BreadCrumbs";
 
 
 
@@ -40,7 +41,7 @@ const values = [
 const AboutPage = () => {
     return(
         <main className="mb-[15vh]">
-            <section className="w-full center bg-primary flex-col flex pt-[20vh] pb-[10vh]">
+            <section className="w-full center min-h-[90vh] bg-primary flex-col flex pt-[20vh] pb-[10vh]">
                 <div className="flex flex-col w-11/12 lg:w-10/12 gap-6">
                     <div className="flex flex-col w-full lg:w-9/12 gap-6">
 
@@ -80,6 +81,8 @@ const AboutPage = () => {
                     </div>
                 </div>
             </section>
+
+            <BreadCrumbs links={["Home", "About Us"]} />
 
             <section className="center bg-white py-16 mb-[10vh]">
                 <div className="max-11/12 lg:w-10/12 mx-auto px-4">

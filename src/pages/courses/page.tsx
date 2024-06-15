@@ -9,6 +9,7 @@ import { ImageListing } from "../../assets/components/ImageListing"
 import { FaPlaneDeparture } from "react-icons/fa"
 import { PiCheck } from "react-icons/pi"
 import hero from "../../assets/images/hero1.jpg"
+import { BreadCrumbs } from "../../assets/components/BreadCrumbs"
 
 
 const coursesImages = [
@@ -42,6 +43,7 @@ const CoursesPage = () => {
             data={coursesList}
             dataHeader="Explore our courses"
             type={"row"}
+            breadLinks={["Home", "Courses"]}
          />
 
          {

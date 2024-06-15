@@ -42,6 +42,8 @@ const ServicesPage = () => {
             data={servicesList}
             dataHeader="Explore our services"
             type={"row"}
+            breadLinks={["Home", "Services"]}
+
          />
 
          {

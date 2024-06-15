@@ -1,10 +1,11 @@
 import { FC } from "react"
 import { Button } from "../../../assets/components/Button"
 import { HeroComponentInterface } from "../../../assets/Interfaces"
+import { BreadCrumbs } from "../../../assets/components/BreadCrumbs"
 
 
 
-export const CoursesHero:FC<HeroComponentInterface> = ({heroHeader, desc, img, data, dataHeader, type}) => {
+export const CoursesHero:FC<HeroComponentInterface> = ({heroHeader, desc, img, data, dataHeader, type, breadLinks}) => {
     return(
         <>
             <section className={`min-h-[90vh] bg-white w-full flex items-start lg:items-center justify-center relative  ${type == "row" ? "pt-[15vh] lg:pt-[10vh]" : "pt-[15vh] md:pt-[10vh] lg:pt-[20vh]"}`}> 
@@ -34,8 +35,14 @@ export const CoursesHero:FC<HeroComponentInterface> = ({heroHeader, desc, img, d
 
                     <img src={img} alt="Hero Image" className={`w-full ${type == "row" ? "w-full lg:w-5/12" : "md:w-10/12 xl:w-9/12"} `}/>
                 </div>
+
+
+
             </section>
 
+            <BreadCrumbs links={breadLinks} />
+
+            
             <section id={"pageLinks"} className="bg-primary py-[10vh] mt-[10vh] center text-center flex-col gap-5 min-h-[30vh] w-full">
                     <h2 className="text-seconary font-semibold text-4xl md:text-5/12 w-11/12 lg:w-6/12">
                         {dataHeader}

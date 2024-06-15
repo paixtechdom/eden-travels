@@ -73,6 +73,7 @@ const EachServicePage = () => {
                         img={servicesList[servicePageIndex].img}
                         data={servicesList[servicePageIndex].sub}
                         dataHeader={`Explore our ${servicesList[servicePageIndex].title} services`}
+                        breadLinks={["Home", "Services", servicesList[servicePageIndex].title]}
                     />
 
                     {
