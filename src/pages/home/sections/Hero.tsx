@@ -9,7 +9,7 @@ export const Hero: React.FC = () => {
         <div className="min-h-screen bg-secondary w-full center relative pt-[15vh] pb-[10vh] lg:py-0"> 
             <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row items-center justify-between z-10 gap-[50px]">
                 <div className="flex flex-col gap-5 w-full lg:w-6/12">
-                    <h1 className="font-bold text-4xl tracking-wide md:text-5xl text-primary">The Travel Agency Your Next Journey</h1>
+                    <h1 className="font-bold text-4xl tracking-wide md:text-5xl text-primary">The Travel Agency For Your Next Journey</h1>
 
                     <p className="leading-relaxed tracking-wide text-gray-100">
                         From personalized tour packages and hassle-free bookings to professional training in travel services, we offer everything you need for an exceptional travel experience. Let us guide you on your next adventure.
