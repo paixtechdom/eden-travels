@@ -29,7 +29,7 @@ const EachCoursesPage = () => {
         setCoursesPageIndex(currentNav == 3 ? currentDropDownIndex : 0)
 
         coursesList.forEach((courses, i) => {
-            if(document.URL.includes(courses.title.replace(" ", "-").replace(" ", "-").replace(" ", "-").replace(" ", "-").toLowerCase()) ){
+            if(document.URL.includes(courses?.title.replace(" ", "-").replace(" ", "-").replace(" ", "-").replace(" ", "-").toLowerCase()) ){
                 setCoursesPageIndex(i)
                 dispatch(setCurrentNav(3))
                 dispatch(setCurrentDropDownIndex(i))
@@ -63,9 +63,9 @@ const EachCoursesPage = () => {
         <>
               <Helmet>
                     <title>
-                        {`${metaConstants[coursesPageIndex].title} -  Eden Travels and Tours`}
+                        {`${metaConstants[coursesPageIndex]?.title} -  Eden Travels and Tours`}
                     </title>
-                    <meta name="description" content={`${metaConstants[coursesPageIndex].desc}`} />
+                    <meta name="description" content={`${metaConstants[coursesPageIndex]?.desc}`} />
                 </Helmet>
             {
                     coursesPageIndex == 6 ?
@@ -85,8 +85,8 @@ const EachCoursesPage = () => {
                     coursesList[coursesPageIndex]?.sub?.map((courses, i) => (
                     <ListingCardParent 
                         key={i}
-                        data={courses.sub}
-                        heading={courses.title}
+                        data={courses?.sub}
+                        heading={courses?.title}
                         parentNav={"courses/"+courses.title.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-").toLowerCase()}
                     />
 

@@ -47,7 +47,7 @@ const EachServicePage = () => {
     useEffect(() => {
         setServicePageIndex(currentNav == 2 ? currentDropDownIndex : 0)
 
-        servicesList.forEach((service, i) => {
+        servicesList?.forEach((service, i) => {
             if(document.URL.includes(service.title.replace(" ", "-").replace(" ", "-").replace(" ", "-").replace(" ", "-").toLowerCase()) ){
                 setServicePageIndex(i)
                 dispatch(setCurrentNav(2))
@@ -82,9 +82,9 @@ const EachServicePage = () => {
         <>
               <Helmet>
                     <title>
-                        {`${metaConstants[servicePageIndex].title} -  Eden Travels and Tours`}
+                        {`${metaConstants[servicePageIndex]?.title} -  Eden Travels and Tours`}
                     </title>
-                    <meta name="description" content={`${metaConstants[servicePageIndex].desc}`} />
+                    <meta name="description" content={`${metaConstants[servicePageIndex]?.desc}`} />
                 </Helmet>
 
 
