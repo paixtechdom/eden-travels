@@ -133,10 +133,11 @@ const ContactPage = () => {
                                     value={formInputs.phoneNumber}
                                 />
 
-                                <InputField 
+
+
+                                <MessageField 
                                     className="col-span-2"
                                     label="Message"
-                                    type="text"
                                     name="message"
                                     placeholder="Write your message"
                                     handleChange={handleChange}
@@ -177,6 +178,25 @@ const InputField:FC<InputFieldInterface> = ({type, label, className, handleChang
                 placeholder={placeholder || label}
                 className={`p-2 rounded-tl-xl rounded-br-xl bg-transparent outline-none border ${value !== "" ? "border focus:border-secondary" : " border-secondary"} hover:border hover:border-secondary cursor-pointer`}
             />
+        </div>
+    )
+}
+
+
+const MessageField:FC<InputFieldInterface> = ({label, className, handleChange, name, value, placeholder}) => {
+    return(
+        <div className={`flex flex-col w-full gap-2 text-sm ${className}`}>
+            <label htmlFor={label} className={`${value !== "" ? "font-bold text-secondary" : "text-gray-600"}`}>{label}</label>
+
+
+            <textarea 
+                onChange={(e) => handleChange(e)}
+                name={name}
+                placeholder={placeholder || label}
+                className={`p-2 min-h-28 max-h-28 rounded-tl-xl rounded-br-xl bg-transparent outline-none border ${value !== "" ? "border focus:border-secondary" : " border-secondary"} hover:border hover:border-secondary cursor-pointer`}
+            >
+
+            </textarea>
         </div>
     )
 }

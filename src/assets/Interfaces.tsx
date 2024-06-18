@@ -142,9 +142,9 @@ export interface ContactInfoInterface {
 
 
 export interface InputFieldInterface {
-    label: string,
-    type: string,
-    name: string,
+    label?: string,
+    type?: string,
+    name?: string,
     className?: string
     handleChange: Function,
     value: string,
