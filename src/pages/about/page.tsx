@@ -57,8 +57,9 @@ const AboutPage = () => {
                                     Learn About Us and <span className="font-bold">Our Commitment to Excellence</span>
                             </h1>
 
-                            <div className="flex flex-col gap-3 text-gray-200">
-                                <p>
+                            <div className="flex flex-col gap-3 text-gray-200 tracking-wide leading-relaxed">
+                                <p
+                                >
                                     Our dedicated team of travel professionals is passionate about creating unforgettable journeys for our clients. With years of experience, we offer personalized services tailored to meet all your travel needs. From seamless flight bookings to comfortable accommodations and comprehensive travel packages, we ensure every aspect of your trip is meticulously planned and executed.
                                 </p>
 
@@ -103,7 +104,7 @@ const AboutPage = () => {
                                 {value.icon}
                             </div>
                             <h3 className="text-lg font-bold mt-4 text-r">{value.title}</h3>
-                            <p className="text-gray-700 mt-3 text-sm ">{value.desc}</p>
+                            <p className="text-gray-700 mt-3 text-sm tracking-wide leading-relaxed">{value.desc}</p>
                             </div>
                         ))}
                         </div>
