@@ -302,7 +302,7 @@ const StudyAbroadPage = () => {
                         <div className="flex flex-col w-full lg:w-9/12 gap-6">
 
                             <h1 className="text-4xl text-primary">
-                            Explore Study Abroad Opportunities
+                            Explore Opportunities to Study Abroad 
                             </h1>
 
                             <p className="text-gray-100 tracking-wide leading-relaxed">
