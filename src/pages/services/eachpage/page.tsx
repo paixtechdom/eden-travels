@@ -25,7 +25,7 @@ const serviceImageExtras = [
         icon: <FaSuitcase className="text-lg" />,
         iconBg: "bg-yellow-700",
         topText: <p className="font-bold">100%</p>,
-        bottomText: <p className="text-gray-400">Comprehensive Packages</p>
+        bottomText: <p className="text-gray-400">Insurance</p>
       },
       {
         icon: <FaPassport className="text-lg" />,
