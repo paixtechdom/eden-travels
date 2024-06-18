@@ -53,7 +53,7 @@ export const Navbar = () => {
                     DocscrollTop()
                 }}>
                     <p className='w-5/12 md:w-2/12 text-xl font-bold text-white'>
-                        EdenTT
+                        EdenClassic
                     </p>
                     {/* <img src={logo} alt="Macmay Logo" className='w-5/12 md:w-2/12'/> */}
                 </Link>

@@ -9,7 +9,7 @@ export default {
         "hero": "url('/src/assets/images/hero.jpg')",  
         // "heroGradient": "linear-gradient(to top right, #000, #0a131b, #264d73)"
         // "heroGradient": "linear-gradient(to bottom right, #000, #0a131b, #264d73)"
-        "heroGradient": "linear-gradient(to bottom right, rgba(0,0,0, 0.9), rgba(0,0,0, 0.9)), url(/src/assets/images/travelArrangements1.jpg)"
+        "heroGradient": "linear-gradient(to bottom right, rgba(0,0,0, 0.8), rgba(0,0,0, 0.8)), url(/src/assets/images/travelArrangements1.jpg)"
 
       },
       colors:{
