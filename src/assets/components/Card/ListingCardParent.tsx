@@ -8,13 +8,13 @@ export const ListingCardParent:FC<ListingCardParentInterface> = ({data, heading,
         <div id={heading?.replace(" ", "")?.replace(" ", "")?.replace(" ", "")?.replace(" ", "")} className="w-full center flex-col gap-9 pt-[20vh]">
             <div className="flex flex-col items-center gap-2 w-11/12 lg:w-10/12 text-secondary">   
                 <h2 className="font-semibold text-left text-4xl w-full">{heading}</h2>  
-                <div className="flex flex-col gap-3 w-full tracking-wide leading-relaxed">
+                <div className="flex flex-col gap-3 w-full tracking-wide leading-relaxed mt-5">
                     {
                         typeof(desc) == "string" ? 
-                        <p className="w-full">{desc}</p>
+                        <p className="w-full ">{desc}</p>
                         : 
                         desc?.map((d, i) => (
-                            <p key={i} className="w-full">{d}</p>
+                            <p key={i} className="w-full ">{d}</p>
                         ))
                     }
                 </div>

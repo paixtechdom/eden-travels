@@ -9,7 +9,7 @@ export const ListingCard:FC<ListingCardInterface> = ({data}) => {
                 <img src={data?.img} alt={data?.title} className="w-full transition-all duration-500 hover:scale-110 active:scale-110"/>
             </div>
 
-            <div className="flex flex-col gap-3 p-3 px-4 pb-7">
+            <div className="flex flex-col gap-3 p-3 px-6 pb-8">
                 <h3 className="font-semibold text-lg">{data?.title}</h3>
 
                 <div className="flex flex-col gap-3">

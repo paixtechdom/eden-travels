@@ -10,7 +10,7 @@ export const Card:FC<CardInterface> = ({data}) => {
                 <img src={data?.img} alt={data?.title} className="w-full transition-all duration-500 hover:scale-110 active:scale-110"/>
             </div>
 
-            <div className="flex flex-col gap-3 p-3">
+            <div className="flex flex-col gap-3 p-3 px-4 pb-8">
                 <h3 className="font-bold">{data?.title}</h3>
 
                 <div className="flex flex-wrap lg:flex-row gap-3">
