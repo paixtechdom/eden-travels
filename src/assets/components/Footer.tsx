@@ -24,15 +24,18 @@ const FooterLinks = [
 export const ContactInfo = [
     {
         icon: <BiEnvelope />,
-        contact: 'contact@edentravels.com'
+        contact: 'contact@edentravels.com',
+        link: "mailto:contact@edentravels.com"
     },
     {
         icon: <BsTelephone />,
-        contact: '+234 912 939 7179'
+        contact: '+234 912 939 7179',
+        link: "tel:+2349129397179"
     },
     {
         icon: <BsGeoAlt />,
-        contact: 'Lagos, Nigeria'
+        contact: 'Lagos, Nigeria',
+        link: "#"
     },
 ]
 
@@ -53,7 +56,7 @@ const Footer = () => {
                                 <div key={i} className="flex items-center gap-2">
                                     {info.icon}
 
-                                    <a href="">{info.contact}</a>
+                                    <a href={info.link}>{info.contact}</a>
                                 </div>
                             ))
                     }
