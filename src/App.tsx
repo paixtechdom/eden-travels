@@ -3,7 +3,6 @@ import { AppRouter } from "./AppRouter";
 import { useDispatch } from "react-redux";
 import { toggleScrolledDown } from "./assets/store/navigation/navigationSlice";
 import { RiWhatsappFill } from "react-icons/ri";
-import { BsArrowUp } from "react-icons/bs";
 
 
 export const DocscrollTop = () => {
