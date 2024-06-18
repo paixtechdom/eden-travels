@@ -83,7 +83,7 @@ const Footer = () => {
                
 
             </div>
-            <div className="justify-center w-full items-center flex flex-col gap-3 mt-[10vh] py-6 bg-black border-t border-primary text-white">
+            <div className="justify-center w-full items-center text-center flex flex-col gap-3 mt-[10vh] py-6 bg-black border-t border-primary text-white">
                 <p className="w-full lg:w-fit">Copyright © {new Date().getFullYear()}</p>
 
                 <p className="w-full lg:w-fit">All Rights Reserved </p>
