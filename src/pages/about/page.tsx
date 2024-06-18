@@ -49,11 +49,11 @@ const AboutPage = () => {
                 <meta name="description" content="Welcome to our travel agency, Eden Travels and Tours. Our dedicated team offers personalized travel services, seamless flight bookings, and expert visa assistance. Let us create unforgettable journeys for you!" />
             </Helmet>
             <main className="mb-[15vh]">
-                <section className="w-full center min-h-[90vh] bg-primary flex-col flex pt-[20vh] pb-[10vh]">
+                <section className="w-full center min-h-[90vh] bg-secondary flex-col flex pt-[20vh] pb-[10vh]">
                     <div className="flex flex-col w-11/12 lg:w-10/12 gap-6">
                         <div className="flex flex-col w-full lg:w-9/12 gap-6">
 
-                            <h1 className="text-4xl">
+                            <h1 className="text-4xl text-primary">
                                     Learn About Us and <span className="font-bold">Our Commitment to Excellence</span>
                             </h1>
 
@@ -72,7 +72,7 @@ const AboutPage = () => {
                             <div className="flex gap-3 items-center md:w-9/12">
                                 <Button
                                     text="Contact us"
-                                    className="bg-secondary text-white lg:w-fit"
+                                    className="bg-black text-white lg:w-fit"
                                     navigateTo="contact"
                                     icon={
                                         <BsTelephoneFill />
@@ -81,7 +81,7 @@ const AboutPage = () => {
 
                                 <Button
                                     text="Learn more"
-                                    className="border border-white bg-transparent text-white lg:w-fit"
+                                    className="border border-primary bg-transparent text-white lg:w-fit"
                                     scrollTo="manager"
                                 />
 

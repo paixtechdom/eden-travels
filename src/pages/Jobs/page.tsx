@@ -96,10 +96,10 @@ const JobsPage = () => {
           <meta name="description" content="Explore a variety of job opportunities in Canada and the Republic of Ireland with a focus on work permits. Roles include sales, nursing, cyber security, and more. Start your journey today!" />
       </Helmet>
       <main className="bg-gray-100 w-full center flex-col">
-        <section className="bg-primary w-full min-h-[45vh] text-white pt-[20vh] pb-[10vh] px-4">
+        <section className="bg-secondary w-full min-h-[45vh] text-primary pt-[20vh] pb-[10vh] px-4">
           <div className="text-center w-11/12">
             <h1 className="text-4xl font-bold mb-4 tracking-wide leading-[45px]">Explore Exciting Job Opportunities</h1>
-            <p className="text-lg">Secure a job and obtain a work permit with our professional guidance.</p>
+            <p className="text-lg text-gray-100">Secure a job and obtain a work permit with our professional guidance.</p>
           </div>
         </section>
         

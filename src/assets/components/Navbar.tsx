@@ -41,10 +41,10 @@ export const Navbar = () => {
     return(
         <>
            <>
-        <header className={`fixed center w-full left-0 top-0 h-[8vh] md:h-[10vh] z-50 transition-all duration-1000 ${scrolledDown ? "shadow-xl " : ""} bg-secondary`}>
+        <header className={`fixed center w-full left-0 top-0 h-[8vh] md:h-[10vh] z-50 transition-all duration-1000 ${scrolledDown ? "shadow-xl" : ""} bg-secondary`}>
             <div className="flex items-center justify-between w-11/12 lg:w-10/12">
 
-                <Link to={'/'} className='w-3/12 md:w-2/12' onClick={() => {
+                <Link to={'/'} className='w-2/12' onClick={() => {
                     dispatch(setCurrentNav(0))
                     if(showNav){
                         dispatch(toggleShowNav())
@@ -52,7 +52,7 @@ export const Navbar = () => {
                     dispatch(setCurrentDropDown(""))
                     DocscrollTop()
                 }}>
-                    <p className='w-5/12 md:w-3/12 text-xl font-bold text-white'>
+                    <p className='w-5/12 md:w-2/12 text-xl font-bold text-white'>
                         EdenTT
                     </p>
                     {/* <img src={logo} alt="Macmay Logo" className='w-5/12 md:w-2/12'/> */}
@@ -68,8 +68,8 @@ export const Navbar = () => {
                 
                 
 
-                <div className={`fixed w-full flex justify-center items-start  transition-all duration-1000 top-[8vh] md:top-[10vh] h-screen lg:relative lg:top-0 lg:w-9/12 lg:h-fit ${showNav ? ' left-0 z-40' : '-left-[100%] lg:-left-0'} bg-zinc-900 lg:bg-transparent`}>
-                        <nav className={`flex flex-col lg:flex-row items-center w-full h-screen lg:gap-9 lg:h-fit lg:bg-transparent lg:justify-end transition-all duration-1000`}>
+                <div className={`fixed w-full flex justify-center items-start  transition-all duration-1000 top-[8vh] md:top-[10vh] h-screen lg:relative lg:top-0 lg:w-12/12 lg:h-fit ${showNav ? ' left-0 z-40' : '-left-[100%] lg:-left-0'} bg-black lg:bg-transparent`}>
+                        <nav className={`flex flex-col lg:flex-row items-center w-full h-screen lg:gap-6 xl:gap-9 lg:h-fit lg:bg-transparent lg:justify-end transition-all duration-1000`}>
                             {
                                 NavInfo?.map((nav :any , i: number) => (
                                     <div key={i} className={`flex flex-col transition-all duration-1000 justify-between w-full text-blue lg:border-0 relative lg:w-fit`}>

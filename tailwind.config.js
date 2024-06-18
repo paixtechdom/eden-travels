@@ -7,10 +7,14 @@ export default {
     extend: {
       backgroundImage: {
         "hero": "url('/src/assets/images/hero.jpg')",  
+        // "heroGradient": "linear-gradient(to top right, #000, #0a131b, #264d73)"
+        // "heroGradient": "linear-gradient(to bottom right, #000, #0a131b, #264d73)"
+        "heroGradient": "linear-gradient(to bottom right, rgba(0,0,0, 0.9), rgba(0,0,0, 0.9)), url(/src/assets/images/travelArrangements1.jpg)"
+
       },
       colors:{
-        "primary" : "rgb(150,100,15)",
-        "secondary": "rgb(17,18,22)",
+        "primary": "#66CCFF",
+        "secondary" : "#0e1925",
         "tertiary" : "rgb(150,100,0)"
       }
     },

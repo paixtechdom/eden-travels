@@ -1,7 +1,7 @@
 import { servicesList } from "../../assets/Constants"
 import { ImageText } from "../../assets/components/ImageText"
 import { ServicesHero } from "./sections/ServicesHero"
-import travellers from "../../assets/images/female travellers.jpg"
+import visa from "../../assets/images/visa.jpg"
 import { CardParent } from "../../assets/components/Card/CardParent"
 import { ImageExtras } from "../../assets/components/ImageExtras"
 import { PiCheck } from "react-icons/pi"
@@ -52,7 +52,7 @@ const ServicesPage = () => {
             <ImageText 
                heading="Premium Aviation, Travel, and Tour Services"
                desc="Discover the world effortlessly with our specialized aviation, travel, and tour services. From flight bookings to guided tours, we ensure a smooth and memorable journey."
-               img={travellers}>
+               img={visa}>
                   <>
                      <div className="absolute -bottom-5 right-[50%]">
                         <ImageExtras 

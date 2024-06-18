@@ -4,13 +4,13 @@ import { Link } from "react-router-dom"
 import { BiEnvelope } from "react-icons/bi"
 import { RiInstagramFill, RiLinkedinFill } from "react-icons/ri"
 
-const icons = [
-    <FaFacebookF />,
-    <FaXTwitter />,
-    <RiInstagramFill />,
-    <RiLinkedinFill />,
-    <BsYoutube />
-]
+// const icons = [
+//     <FaFacebookF />,
+//     <FaXTwitter />,
+//     <RiInstagramFill />,
+//     <RiLinkedinFill />,
+//     <BsYoutube />
+// ]
 const FooterLinks = [
     {
         header: "Links",
@@ -36,7 +36,7 @@ export const ContactInfo = [
     },
     {
         icon: <BsTelephone />,
-        contact: '(414) 687 - 5892'
+        contact: '+234 912 939 7179'
     },
     {
         icon: <BsGeoAlt />,
@@ -47,13 +47,13 @@ export const ContactInfo = [
 
 const Footer = () => {
     return(
-        <footer className="w-full center bg-secondary pt-[10vh] pb-[5vh] lg:pt-[15vh] border-t-2 border-primary">
+        <footer className="w-full center flex-col bg-secondary pt-[10vh] lg:pt-[15vh] border-t-2 border-primary">
             <div className="w-11/12 lg:w-10/12 flex flex-col gap-6 text-gray-200">
                 <div className="flex flex-col md:grid md:grid-cols-4 xl:grid-cols-8 gap-y-9 md:gap-9">
 
                     <div className="flex flex-col gap-2 col-span-2 xl:col-span-3">
                         <h2 className="text-3xl text-primary font-bold">Eden Travels and Tours</h2>
-                        <div className="flex gap-3 items-center ">
+                        {/* <div className="flex gap-3 items-center ">
                             {
                                 icons.map((icon, i) => (
                                     <div key={i} className="text-xl">
@@ -61,7 +61,7 @@ const Footer = () => {
                                     </div>
                                 ))
                             }
-                        </div>
+                        </div> */}
 
                         <div className="flex flex-col gap-3 mt-6 ">
                         {
@@ -98,11 +98,11 @@ const Footer = () => {
 
                
 
-                <div className="justify-center items-center flex flex-col gap-3 mt-[10vh]">
-                    <p className="w-full lg:w-fit">Copyright © {new Date().getFullYear()}</p>
+            </div>
+            <div className="justify-center w-full items-center flex flex-col gap-3 mt-[10vh] py-6 bg-black border-t border-primary text-white">
+                <p className="w-full lg:w-fit">Copyright © {new Date().getFullYear()}</p>
 
-                    <p className="w-full lg:w-fit">All Rights Reserved </p>
-                </div>
+                <p className="w-full lg:w-fit">All Rights Reserved </p>
             </div>
         </footer>
     )

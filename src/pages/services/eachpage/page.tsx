@@ -108,6 +108,7 @@ const EachServicePage = () => {
                         key={i}
                         data={service.sub}
                         heading={service.title}
+                        desc={service.desc}
                         parentNav={"services/"+service.title.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-").toLowerCase()}
                     />
 

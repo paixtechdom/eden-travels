@@ -1,6 +1,7 @@
 import { FC } from "react"
 import { CardInterface } from "../../Interfaces"
 import { Button } from "../Button"
+import { BsArrowRight } from "react-icons/bs"
 
 export const Card:FC<CardInterface> = ({data}) => {
     return(
@@ -26,7 +27,10 @@ export const Card:FC<CardInterface> = ({data}) => {
                             i == 0 &&
                             sub?.title ?
                             <Button key={i} text="Read more"
-                                className="bg-primary text-white font-semibold w-fit mt-4 text-sm"
+                                className="bg-secondary text-white font-semibold w-fit mt-4 text-sm"
+                                icon={
+                                    <BsArrowRight />
+                                }
                             /> : ""
                            
                         ))

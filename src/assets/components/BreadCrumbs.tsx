@@ -19,9 +19,9 @@ export const BreadCrumbs:FC<BreadCrumbsInterface> = ({links}) => {
                             dispatch(setCurrentDropDown(""))
                         }}>
                             {link}
-                            <BiChevronRight />
+                            <BiChevronRight className="text-primary"/>
                         </Link>  :
-                        <div key={i} className="text-primary font-bold cursor-pointer">
+                        <div key={i} className="text-secondary font-bold cursor-pointer">
                             {link}
                         </div> 
                     ))

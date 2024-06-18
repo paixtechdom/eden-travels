@@ -17,6 +17,7 @@ const HomePage = lazy(() => delayLoad(import("./pages/home/page")))
 const AboutPage = lazy(() => delayLoad(import('./pages/about/page')))
 const ServicesPage = lazy(() => delayLoad(import('./pages/services/page')))
 const JobsPage = lazy(() => delayLoad(import('./pages/Jobs/page')))
+const StudyAbroadPage = lazy(() => delayLoad(import('./pages/studyabroad/page')))
 const ContactPage = lazy(() => delayLoad(import('./pages/contact/page')))
 
 
@@ -32,6 +33,7 @@ export const AppRouter = () => {
                         <Route path="/about" element={<AboutPage />}/>
                         <Route path="/services" element={<ServicesPage />}/>
                         <Route path="/jobs" element={<JobsPage />}/>
+                        <Route path="/study-abroad" element={<StudyAbroadPage />}/>
                         {
                             servicesList.map((l, i) => (
                                 <Route key={i} path={"services/"+l?.title?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-").toLowerCase()} element={<EachServicePage />}/>

@@ -83,6 +83,7 @@ export interface cardObject {
 
 
 export interface ListingCardParentInterface {
+    desc?: string[] | string
     data?: ListingCardObject[],
     heading: string,
     description?: string,
@@ -93,7 +94,7 @@ export interface ListingCardParentInterface {
 
 export interface ListingCardInterface {
     data?: ListingCardObject,
-    navigateTo?: string
+    navigateTo?: string,
 }
 
 

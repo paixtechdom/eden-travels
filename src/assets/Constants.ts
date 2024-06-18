@@ -118,6 +118,10 @@ export const NavInfo = [
         
     },
     {
+        title: 'Study Abroad',
+        link: 'study-abroad',
+    },
+    {
         title: 'Jobs',
         link: 'jobs',
     },
@@ -134,7 +138,8 @@ export const servicesList = [
         sub: [
             {
                 title: "Flight Booking",
-                img: flightBooking,                
+                img: flightBooking,
+                desc: "Efficient booking solutions for domestic and international flights, group bookings, and charter flights.",
                 sub: [
                     {
                         title: "Domestic Flights",
@@ -178,6 +183,7 @@ export const servicesList = [
             {
                 title: "Accommodation Booking",
                 img: accommodationBooking,
+                desc: "Convenient booking options for hotels, vacation rentals, and budget lodging.",
                 sub: [
                     {
                         title: "Hotel Reservations",
@@ -212,6 +218,7 @@ export const servicesList = [
             {
                 title: "Transportation Services",
                 img: transportationServices,
+                desc: "Comprehensive transportation solutions including car rentals, airport transfers, train and bus tickets, and cruise bookings.",
                 sub: [
                     {
                         title: "Car Rentals",
@@ -262,6 +269,7 @@ export const servicesList = [
             {
                 title: "Tour Packages",
                 img: tourPackages,
+                desc: "Explore customizable travel packages, group tours, adventure tours, and cultural heritage tours.",
                 sub: [
                     {
                         title: "Customizable Travel Packages",
@@ -305,6 +313,7 @@ export const servicesList = [
             {
                 title: "Travel Insurance",
                 img: travelInsurance,
+                desc: "Protect your travel with medical, trip cancellation, and baggage loss insurance.",
                 sub: [
                     {
                         title: "Medical Travel Insurance",
@@ -345,6 +354,7 @@ export const servicesList = [
             {
                 title: "Visa and Passport Services",
                 img: visaandPassportServices,
+                desc: "Simplify your travel with visa application assistance, passport renewal services, and travel document guidance.",
                 sub: [
                     {
                         title: "Visa Application Assistance",
@@ -379,6 +389,7 @@ export const servicesList = [
             {
                 title: "Corporate Travel",
                 img: corporateTravel,
+                desc: "Efficient business travel management, conference and event planning, and incentive travel programs.",
                 sub: [
                     {
                         title: "Business Travel Management",
@@ -411,7 +422,9 @@ export const servicesList = [
             },
         ]
     },
-]
+];
+
+
 export const coursesList = [
     {
         title: "Customer and Sales",
@@ -454,6 +467,7 @@ export const coursesList = [
             {
                 title: "Sales and Marketing",
                 img: salesAndMarketing,
+                desc: "Develop effective sales techniques and marketing strategies.",
                 sub: [
                     {
                         title: "Sales Techniques",
@@ -491,7 +505,7 @@ export const coursesList = [
     {
         title: "Operational and Crisis Management",
         img: operations,
-        desc: "Improve operational efficiency and crisis management.",
+        desc: "Improve operational efficiency and crisis management skills.",
         sub: [
             {
                 title: "Travel Operations",
@@ -530,6 +544,7 @@ export const coursesList = [
             {
                 title: "Crisis Management",
                 img: crisisManagement,
+                desc: "Learn strategies for effective crisis response and communication.",
                 sub: [
                     {
                         title: "Emergency Response Planning",
@@ -537,7 +552,7 @@ export const coursesList = [
                         sub: [
                             "Developing response plans",
                             "Identifying potential risks",
-                            " staff"
+                            "Staff training"
                         ]
                     },
                     {
@@ -606,6 +621,7 @@ export const coursesList = [
             {
                 title: "Travel Technology",
                 img: travelTechnology,
+                desc: "Explore travel booking software, popular travel apps, and technology trends.",
                 sub: [
                     {
                         title: "Booking Software",
@@ -638,5 +654,6 @@ export const coursesList = [
             },
         ]
     }
-    
-]
+];
+
+

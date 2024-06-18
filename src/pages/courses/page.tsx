@@ -1,7 +1,7 @@
 import { coursesList } from "../../assets/Constants"
 import { ImageText } from "../../assets/components/ImageText"
 import { CoursesHero } from "./sections/CoursesHero"
-import travellers from "../../assets/images/female travellers.jpg"
+import agent from "../../assets/images/agent.jpg"
 import { CardParent } from "../../assets/components/Card/CardParent"
 import { ImageExtras } from "../../assets/components/ImageExtras"
 import { FaPlaneDeparture } from "react-icons/fa"
@@ -18,7 +18,7 @@ const CoursesPage = () => {
       <>
           <Helmet>
                 <title>
-                    Our Service at Eden Travels and Tours
+                    Aviation Courses at Eden Travels and Tours
                 </title>
                 <meta name="description" content={"Elevate your skills and advance your career with our professional courses at Brave. Master new technologies, develop business acumen, or gain certifications in various fields. Join us and unlock your potential today!"} />
             </Helmet>  
@@ -50,7 +50,7 @@ const CoursesPage = () => {
             <ImageText 
                heading="Unlock Your Potential with Expert-Led Training"
                desc="Our courses are designed to equip you with the skills needed to excel in today's job market. Led by industry experts, each course offers practical experience and theoretical learning. Explore our courses and start your journey towards professional excellence"
-               img={travellers}>
+               img={agent}>
                   <>
                      <div className="absolute -bottom-5 right-[50%]">
                         <ImageExtras 

@@ -54,7 +54,7 @@ const HomePage: React.FC = () => {
 
                     <Button 
                         text="Contact us now"
-                        className="bg-transparent border border-white text-white w-[200px]"
+                        className="bg-black border border-secondary text-primary w-[200px]"
                         navigateTo="contact"
                     />
             </section>
@@ -91,7 +91,7 @@ const HomePage: React.FC = () => {
 
             <CardParent 
                 data={coursesList}
-                heading="Our Courses"
+                heading="Our Aviation Courses"
                 description="View all our cources to secure your space in the air-space"
                 parentNav={"courses"}
             />

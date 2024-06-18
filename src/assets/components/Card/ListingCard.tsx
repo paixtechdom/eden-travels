@@ -15,8 +15,8 @@ export const ListingCard:FC<ListingCardInterface> = ({data}) => {
                 <div className="flex flex-col gap-3">
                     {
                         data?.sub?.map((sub: any, i) => (
-                            <p key={i} className="center text-gray-700 w-fit text-sm">
-                                <span><BsFillCheckCircleFill className="mr-2"/></span>
+                            <p key={i} className="flex items-start text-gray-700 w-fit text-sm">
+                                <span><BsFillCheckCircleFill className="mr-2 mt-1"/></span>
                                 {sub}
                             </p>
                         ))

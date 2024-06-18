@@ -87,6 +87,7 @@ const EachCoursesPage = () => {
                         key={i}
                         data={courses?.sub}
                         heading={courses?.title}
+                        desc={courses?.desc}
                         parentNav={"courses/"+courses.title.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-").toLowerCase()}
                     />
 
