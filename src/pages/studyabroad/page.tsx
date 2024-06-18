@@ -324,7 +324,7 @@ const StudyAbroadPage = () => {
                                 <Button
                                     text="Learn more"
                                     className="border border-primary bg-transparent text-white lg:w-fit"
-                                    scrollTo="manager"
+                                    scrollTo="unis"
                                 />
 
                             </div>
@@ -333,7 +333,7 @@ const StudyAbroadPage = () => {
                 </section>
 
 
-                <section className="mb-8 center flex-col gap-9 mt-[10vh]">
+                <section id="unis" className="mb-8 center flex-col gap-9 pt-[15vh]">
                     <h2 className="font-bold -mb-[10vh] text-3xl">Featured Institutions</h2>
                     <div className="flex flex-col gap-[10vh]">
                         {
