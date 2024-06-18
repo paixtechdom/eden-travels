@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { servicesList } from "../../../assets/Constants"
 import { ListingCardParent } from "../../../assets/components/Card/ListingCardParent"
-import { ServicesHero } from "../sections/ServicesHero"
+import { OtherHeros } from "../../../assets/components/OtherHeros"
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../../../assets/store/AppStore"
 import { ImageText } from "../../../assets/components/ImageText"
@@ -92,7 +92,7 @@ const EachServicePage = () => {
                     servicePageIndex == 6 ?
                     <div className="min-h-screen"></div> : 
                 <>
-                    <ServicesHero
+                    <OtherHeros
                         heroHeader={servicesList[servicePageIndex].title}
                         desc={servicesList[servicePageIndex].desc}
                         img={servicesList[servicePageIndex].img}
@@ -142,10 +142,10 @@ const EachServicePage = () => {
                             <ImageExtras 
                                 icon={serviceImageExtras[servicePageIndex].icon}
                                 iconBg={serviceImageExtras[servicePageIndex].iconBg}
-                                topText={<p className="font-bold">{serviceImageExtras[servicePageIndex].topText}</p>}
-                                bottomText={<p className="text-gray-400">
+                                topText={<span className="font-bold">{serviceImageExtras[servicePageIndex].topText}</span>}
+                                bottomText={<span className="text-gray-400">
                                     {serviceImageExtras[servicePageIndex].bottomText}
-                                </p>}
+                                </span>}
                             />
                         </div>
                     </>

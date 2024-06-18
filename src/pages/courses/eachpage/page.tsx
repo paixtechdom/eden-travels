@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../../../assets/store/AppStore"
 import { ImageText } from "../../../assets/components/ImageText"
 import { setCurrentDropDown, setCurrentDropDownIndex, setCurrentNav } from "../../../assets/store/navigation/navigationSlice"
-import { CoursesHero } from "../sections/CoursesHero"
+import { OtherHeros } from "../../../assets/components/OtherHeros"
 
 import customer from "../../../assets/images/customer.jpg"
 import airlinemarketing from "../../../assets/images/airlinemarketing.jpg"
@@ -71,7 +71,7 @@ const EachCoursesPage = () => {
                     coursesPageIndex == 6 ?
                     <div className="min-h-screen"></div> : 
                 <>
-                    <CoursesHero
+                    <OtherHeros
                         heroHeader={coursesList[coursesPageIndex].title}
                         desc={coursesList[coursesPageIndex].desc}
                         img={coursesList[coursesPageIndex].img}

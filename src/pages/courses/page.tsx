@@ -1,6 +1,6 @@
 import { coursesList } from "../../assets/Constants"
 import { ImageText } from "../../assets/components/ImageText"
-import { CoursesHero } from "./sections/CoursesHero"
+import { OtherHeros } from "../../assets/components/OtherHeros"
 import agent from "../../assets/images/agent.jpg"
 import { CardParent } from "../../assets/components/Card/CardParent"
 import { ImageExtras } from "../../assets/components/ImageExtras"
@@ -24,7 +24,7 @@ const CoursesPage = () => {
             </Helmet>  
          <main className="center w-full flex-col">
             
-            <CoursesHero 
+            <OtherHeros 
                heroHeader="Our Professional Courses"
                desc="Enhance your skills and advance your career with our professional courses. Whether mastering new technologies, developing business acumen, or gaining certifications, our programs help you achieve your goals. Join us and take the next step towards success with confidence"
                img={hero}

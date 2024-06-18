@@ -13,11 +13,16 @@ import newYork from "../../assets/images/new york.jpg"
 import { Button } from "../../assets/components/Button"
 import { BeforeFooter } from "../../assets/components/BeforeFooter"
 import { Helmet } from "react-helmet-async"
+import { Parallax } from "../../assets/components/Parallax"
 
 export const visitablePlaces = [
     {
         img: dubai,
         text: "Dubai"
+    },
+    {
+        img: newYork,
+        text: "USA"
     },
     {
         img: paris,
@@ -26,10 +31,6 @@ export const visitablePlaces = [
     {
         img: canada,
         text: "Canada"
-    },
-    {
-        img: newYork,
-        text: "New York"
     },
 ]
 
@@ -48,15 +49,19 @@ const HomePage: React.FC = () => {
             <ImageListing data={visitablePlaces} heading="Travel anywhere, anytime!"/>
 
             <section className="bg-secondary py-[10vh] center text-center flex-col gap-5 min-h-[30vh] w-full mt-[20vh] mb-[10vh] lg:mb-0">
+                    <Parallax id="atartplanning" className="w-full center">
                     <h2 className="text-primary font-semibold text-4xl md:text-5/12 w-11/12 lg:w-6/12">
                         Start Planning for Your Next Journey
                     </h2>
+                    </Parallax>
 
+                    <Parallax id="atartplanningbtn" className="w-full center">
                     <Button 
                         text="Contact us now"
                         className="bg-black border border-secondary text-primary w-[200px]"
                         navigateTo="contact"
-                    />
+                        />
+                    </Parallax>
             </section>
 
 

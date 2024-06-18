@@ -9,6 +9,7 @@ export const ImageText:FC<ImageTextInterface> = ({heading, span, desc, children,
                 
                     <div className="w-11/12 lg:w-6/12 flex items-center justify-end">
                         <div className="flex flex-col gap-5  w-full lg:w-10/12">
+
                             <h2 className="text-3xl text-secondary">
                                 {heading}<span className="font-bold">
                                     {span}
@@ -18,6 +19,7 @@ export const ImageText:FC<ImageTextInterface> = ({heading, span, desc, children,
                             <p className="leading-relaxed tracking-wide text-secondary">
                                 {desc}
                             </p>
+
 
                             <Button 
                                 className="text-primary bg-black flex items-center h-fit py-3 font-bold w-fit px-9"

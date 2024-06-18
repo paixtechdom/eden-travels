@@ -8,7 +8,7 @@ export const ImageExtras:FC<imageextras> = ({iconBg, icon, topText, bottomText})
                 {icon}
             </div>
             
-            <div className="flex flex-col text-sm ">
+            <div className="flex flex-col text-sm">
                 {topText}
                 {bottomText}
             </div>

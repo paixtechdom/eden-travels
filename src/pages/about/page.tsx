@@ -10,6 +10,7 @@ import { FaHeart, FaUsers, FaHandsHelping } from 'react-icons/fa'; // Import ico
 import { FaPlane } from "react-icons/fa6";
 import { BreadCrumbs } from "../../assets/components/BreadCrumbs";
 import { Helmet } from "react-helmet-async";
+import { Parallax } from "../../assets/components/Parallax";
 
 
 
@@ -53,19 +54,26 @@ const AboutPage = () => {
                     <div className="flex flex-col w-11/12 lg:w-10/12 gap-6">
                         <div className="flex flex-col w-full lg:w-9/12 gap-6">
 
+                            <Parallax id="abouthone">
+
                             <h1 className="text-4xl text-primary">
                                     Learn About Us and <span className="font-bold">Our Commitment to Excellence</span>
                             </h1>
+                            </Parallax>
 
                             <div className="flex flex-col gap-3 text-gray-200 tracking-wide leading-relaxed">
+                                <Parallax id="aboutpon">
                                 <p
                                 >
                                     Our dedicated team of travel professionals is passionate about creating unforgettable journeys for our clients. With years of experience, we offer personalized services tailored to meet all your travel needs. From seamless flight bookings to comfortable accommodations and comprehensive travel packages, we ensure every aspect of your trip is meticulously planned and executed.
                                 </p>
+                                </Parallax>
 
+                                <Parallax id="abouthtwo">
                                 <p>
                                     We also provide expert visa and passport services, making your travel documentation hassle-free. Whether you're planning a family vacation, a business trip, or an adventure to a new destination, we are here to make your travel experience smooth and enjoyable.
                                 </p>
+                                </Parallax>
                             </div>
 
 
@@ -117,7 +125,9 @@ const AboutPage = () => {
                         
                         <img src={manager} alt="Simisoluwa Joseph" className="rounded-t-xl lg:rounded-r-none lg:rounded-l-xl w-full lg:w-6/12 h-fit"/>
                         
+                        <Parallax id="ourmanager">
                         <div className="flex flex-col justify-center w-full lg:w-6/12 gap-1 text-gray-200 py-6 px-3">
+
                             <h2 className="font-semi-bold text-2xl ">
                                 Our Manager
                             </h2>
@@ -127,6 +137,7 @@ const AboutPage = () => {
                             <p className="text-sm">
                                 Manager, Eden Travels
                             </p>
+
                             <p className="tracking-wide leading-relaxed mt-5">
                                 Certified Customer Support <br />
                                 Expert Educational Consultant <br />
@@ -135,6 +146,7 @@ const AboutPage = () => {
                             
 
                         </div>
+                        </Parallax>
 
 
                     </div>

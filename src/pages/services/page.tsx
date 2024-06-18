@@ -1,6 +1,6 @@
 import { servicesList } from "../../assets/Constants"
 import { ImageText } from "../../assets/components/ImageText"
-import { ServicesHero } from "./sections/ServicesHero"
+import { OtherHeros } from "../../assets/components/OtherHeros"
 import visa from "../../assets/images/visa.jpg"
 import { CardParent } from "../../assets/components/Card/CardParent"
 import { ImageExtras } from "../../assets/components/ImageExtras"
@@ -25,7 +25,7 @@ const ServicesPage = () => {
             </Helmet>   
          <main className="center w-full flex-col">
             
-            <ServicesHero 
+            <OtherHeros 
                heroHeader="Explore Our Services"
                desc="From seamless flight bookings and comfortable accommodations to reliable transportation and tailored travel packages, our expert team is dedicated to making your travel experience exceptional. Discover the wide range of services we offer to make your journey unforgettable."
                img={hero}
