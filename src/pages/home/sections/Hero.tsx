@@ -1,6 +1,5 @@
 import { BsTelephoneFill } from "react-icons/bs"
 import { Button } from "../../../assets/components/Button"
-import hero from "../../../assets/images/hero.png"
 
 
 
@@ -9,7 +8,6 @@ export const Hero: React.FC = () => {
         <div className="min-h-screen bg-heroGradient bg-cover bg-center w-full center relative pt-[15vh] pb-[10vh] lg:py-0"> 
             <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row items-center justify-center z-10 gap-[50px]">
                 <div className="flex flex-col gap-2 w-full md:w-9/12 text-center">
-                    {/* <h1 className="font-bold text-4xl tracking-wide md:text-5xl text-primary">The Travel Agency For Your Next Journey</h1> */}
                     <p className="leading-relaxed text-xl tracking-wide text-gray-400">
                     Your adventure begins at
                     </p>
@@ -40,7 +38,6 @@ export const Hero: React.FC = () => {
 
                     </div>
                 </div>
-                {/* <img src={hero} alt="Hero Image" className="w-full lg:w-4/12 rounded-xl border-2 border-white"/> */}
 
                
 

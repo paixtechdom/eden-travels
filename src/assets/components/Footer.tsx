@@ -1,16 +1,8 @@
-import { BsGeoAlt, BsTelephone, BsYoutube } from "react-icons/bs"
-import { FaFacebookF, FaXTwitter } from "react-icons/fa6"
+import { BsGeoAlt, BsTelephone } from "react-icons/bs"
 import { Link } from "react-router-dom"
 import { BiEnvelope } from "react-icons/bi"
-import { RiInstagramFill, RiLinkedinFill } from "react-icons/ri"
 
-// const icons = [
-//     <FaFacebookF />,
-//     <FaXTwitter />,
-//     <RiInstagramFill />,
-//     <RiLinkedinFill />,
-//     <BsYoutube />
-// ]
+
 const FooterLinks = [
     {
         header: "Links",
@@ -53,15 +45,7 @@ const Footer = () => {
 
                     <div className="flex flex-col gap-2 col-span-2 xl:col-span-3">
                         <h2 className="text-3xl text-primary font-bold">Eden Travels and Tours</h2>
-                        {/* <div className="flex gap-3 items-center ">
-                            {
-                                icons.map((icon, i) => (
-                                    <div key={i} className="text-xl">
-                                        {icon}
-                                    </div>
-                                ))
-                            }
-                        </div> */}
+                     
 
                         <div className="flex flex-col gap-3 mt-6 ">
                         {
