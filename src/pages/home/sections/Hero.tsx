@@ -58,13 +58,13 @@ export const Hero: React.FC = () => {
                 <div className="w-11/12 center lg:w-8/12 relative">
                     <img src={airplane} alt="ee" className="w-full z-[50]"/>
 
-                    <div className="absolute top-5 right-[55%] z-[50]">
+                    <div className="absolute top-5 right-[50%] z-[50]">
                         <ImageExtras 
                               icon={<PiCheck className="text-lg"/>}
                               iconBg={"bg-green-700"}
                               topText={<p className="font-bold">100+</p>}
                               bottomText={<p className="text-gray-400">
-                                Flights
+                                Successful Flights
                               </p>}
                         />
                      </div>
