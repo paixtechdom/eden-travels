@@ -68,7 +68,7 @@ export const OtherHeros:FC<HeroComponentInterface> = ({heroHeader, desc, img, da
 
                     <Button 
                         text="Get started"
-                        className="bg-blue-200 shadow-xl text-black"
+                        className="bg-white border border-secondary shadow-xl text-black"
                         navigateTo="contact"
                         icon={
                             <BsTelephoneFill />

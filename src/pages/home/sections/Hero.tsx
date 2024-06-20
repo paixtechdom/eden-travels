@@ -64,7 +64,7 @@ export const Hero: React.FC = () => {
                               iconBg={"bg-green-700"}
                               topText={<p className="font-bold">100+</p>}
                               bottomText={<p className="text-gray-400">
-                                 Successful Flights
+                                Flights
                               </p>}
                         />
                      </div>
