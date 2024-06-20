@@ -59,9 +59,9 @@ export const AppRouter = () => {
 
   const Loader = () => {
     return(
-        <section className='h-screen w-full bg-secondary  center flex-col text-4xl  text-center gap-4 text-gray-200'>
+        <section className='h-screen w-full bg-white  center flex-col text-4xl  text-center gap-4 text-gray-900'>
             <FaPlaneDeparture className='animate-pulse text-6xl  mb-3'/>
-            <p className='text-primary w-11/12 uppercase font-bold'>Eden Travels and Tour</p>
+            <p className='text-secondary w-11/12 uppercase font-bold'>Eden Travels and Tour</p>
             <p className="text-sm">Seamless Travel, Planned for Your Next Journey</p>
         </section>
     )
