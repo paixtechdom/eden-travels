@@ -48,14 +48,14 @@ export const OtherHeros:FC<HeroComponentInterface> = ({heroHeader, desc, img, da
             <BreadCrumbs links={breadLinks} />
 
 
-            <section id={"pageLinks"} className="bg-secondary py-[10vh] mt-[10vh] center text-center flex-col gap-5 min-h-[30vh] w-full">
-                    <h2 className="text-primary font-semibold text-4xl md:text-5/12 w-11/12 lg:w-6/12">
+            <section id={"pageLinks"} className="bg-white py-[10vh] mt-[10vh] center text-center flex-col gap-5 min-h-[30vh] w-full border-y border-primary">
+                    <h2 className="text-secondary font-semibold text-4xl md:text-5/12 w-11/12 lg:w-6/12">
                         {dataHeader}
                     </h2>
                     <div className="center gap-4 w-11/12 flex-wrap">
                         {
                             data.map((d: any, i:number) => (
-                                <p key={i} className="text-white underline cursor-pointer" onClick={() => {
+                                <p key={i} className="text-black underline cursor-pointer" onClick={() => {
                                     document.querySelector(`#${d.title.replaceAll(" ", "")}`)?.scrollIntoView({
                                         behavior: "smooth"
                                     })
@@ -68,7 +68,7 @@ export const OtherHeros:FC<HeroComponentInterface> = ({heroHeader, desc, img, da
 
                     <Button 
                         text="Get started"
-                        className="bg-black text-primary w-[200px]"
+                        className="bg-blue-200 shadow-xl text-black"
                         navigateTo="contact"
                         icon={
                             <BsTelephoneFill />

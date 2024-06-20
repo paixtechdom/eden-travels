@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async"
-import { Button } from "../../assets/components/Button"
-import { BsTelephoneFill } from "react-icons/bs"
+import { Parallax } from '../../assets/components/Parallax';
+import { Button } from '../../assets/components/Button';
+import { BsTelephoneFill } from 'react-icons/bs';
 import { ListingCardParent } from "../../assets/components/Card/ListingCardParent"
 import harvard from "../../assets/images/harvard.jpg"
 import stanford from "../../assets/images/stanford.jpg"
@@ -22,10 +23,10 @@ import HeriotWatt from "../../assets/images/Heriot-Watt.jpg"
 import Sorbonne from "../../assets/images/Sorbonne.jpg"
 import Polytechnique from "../../assets/images/Polytechnique.jpg"
 import HEC from "../../assets/images/HEC.jpg"
-import Munich from "../../assets/images/Munich.jpg"
 import Heidelberg from "../../assets/images/Heidelberg.jpg"
 import Berlin from "../../assets/images/Berlin.jpg"
 import { BeforeFooter } from "../../assets/components/BeforeFooter"
+import Munich from "../../assets/images/Munich.jpg"
 
 const StudyAbroadPage = () => {
     const universities = [
@@ -297,57 +298,57 @@ const StudyAbroadPage = () => {
 
 
             <main>
-                <section className="w-full center min-h-[70vh] bg-secondary flex-col flex pt-[20vh] pb-[10vh]">
-                    <div className="flex flex-col w-11/12 lg:w-10/12 gap-6">
-                        <div className="flex flex-col w-full lg:w-9/12 gap-6">
+            <section className={`min-h-[75vh] bg-white w-full flex items-start lg:items-center justify-center relative  pt-[15vh] lg:pt-[10vh] `}> 
+          <div className={`w-11/12 lg:w-10/12 flex flex-col lg:flex-row items-center justify-center z-10 gap-[50px]`}>
+              <Parallax id={"Explore Exciting Job Opportunities"} className="w-full xl:w-9/12">
 
-                            <h1 className="text-4xl text-primary">
-                            Explore Opportunities to Study Abroad 
-                            </h1>
+                  <div className={` flex items-start  flex-col gap-5 w-full`}>
+                      <h1 className="font-bold text-4xl md:text-5xl text-secondary"> Explore Opportunities to Study Abroad </h1>
 
-                            <p className="text-gray-100 tracking-wide leading-relaxed">
-                                Embark on a transformative educational journey with our study abroad programs. Discover a world of academic excellence, cultural immersion, and personal growth. Whether you're seeking language proficiency, specialized coursework, or international experience, we provide comprehensive guidance and support to help you navigate every step of your study abroad adventure.
-                            </p>
+                      <p className="leading-relaxed tracking-wide w-full">
+                      Embark on a transformative educational journey with our study abroad programs. Discover a world of academic excellence, cultural immersion, and personal growth. Whether you're seeking language proficiency, specialized coursework, or international experience, we provide comprehensive guidance and support to help you navigate every step of your study abroad adventure.
+                      </p>
+
+                      <div className={`flex gap-3 w-full md:w-9/12`}>
+                          <Button
+                              text="Learn more"
+                              className="bg-secondary text-white "
+                              scrollTo="unis"
+                          />
+
+                          <Button
+                              text="Contact us"
+                              className="border border-secondary bg-transparent text-secondary "
+                              navigateTo="contact"
+                              icon={
+                                  <BsTelephoneFill />
+                              }
+                          />
+
+                      </div>
+                  </div>
+              </Parallax>
+
+              <img src={Munich} alt="Hero Image" className={`w-full lg:w-5/12 shadow-xl rounded-xl`}/>
+          </div>
+        </section>
 
 
-
-                            <div className="flex gap-3 items-center md:w-9/12">
-                                <Button
-                                    text="Contact us"
-                                    className="bg-black text-white lg:w-fit"
-                                    navigateTo="contact"
-                                    icon={
-                                        <BsTelephoneFill />
-                                    }
-                                />
-
-                                <Button
-                                    text="Learn more"
-                                    className="border border-primary bg-transparent text-white lg:w-fit"
-                                    scrollTo="unis"
-                                />
-
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-
-                <section id="unis" className="mb-8 center flex-col gap-9 pt-[15vh]">
-                    <h2 className="font-bold -mb-[10vh] text-3xl">Featured Institutions</h2>
-                    <div className="flex flex-col gap-[10vh]">
-                        {
-                            universities.map((uni, i) => (
-                                <ListingCardParent  
-                                    key={i}
-                                    data={uni.sub}
-                                    heading={uni.heading}
-                                    desc={uni.desc}
-                                />
-                            ))
-                        }
-                    </div>
-            </section>
+        <section id="unis" className="mb-8 center flex-col gap-9 pt-[15vh]">
+            <h2 className="font-bold -mb-[10vh] text-3xl">Featured Institutions</h2>
+            <div className="flex flex-col gap-[10vh]">
+                {
+                    universities.map((uni, i) => (
+                        <ListingCardParent  
+                            key={i}
+                            data={uni.sub}
+                            heading={uni.heading}
+                            desc={uni.desc}
+                        />
+                    ))
+                }
+            </div>
+        </section>
                 
             <BeforeFooter
                 text="Study in any school of your choice"

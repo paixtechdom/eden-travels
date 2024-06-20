@@ -50,18 +50,18 @@ const AboutPage = () => {
                 <meta name="description" content="Welcome to our travel agency, Eden Travels and Tours. Our dedicated team offers personalized travel services, seamless flight bookings, and expert visa assistance. Let us create unforgettable journeys for you!" />
             </Helmet>
             <main className="mb-[15vh]">
-                <section className="w-full center min-h-[90vh] bg-secondary flex-col flex pt-[20vh] pb-[10vh]">
+                <section className="w-full center min-h-[90vh] bg-white flex-col flex pt-[20vh] pb-[10vh]">
                     <div className="flex flex-col w-11/12 lg:w-10/12 gap-6">
                         <div className="flex flex-col w-full lg:w-9/12 gap-6">
 
                             <Parallax id="abouthone">
 
-                            <h1 className="text-4xl text-primary">
+                            <h1 className="text-4xl text-secondary">
                                     Learn About Us and <span className="font-bold">Our Commitment to Excellence</span>
                             </h1>
                             </Parallax>
 
-                            <div className="flex flex-col gap-3 text-gray-200 tracking-wide leading-relaxed">
+                            <div className="flex flex-col gap-3 text-gray-900 tracking-wide leading-relaxed">
                                 <Parallax id="aboutpon">
                                 <p
                                 >
@@ -81,7 +81,7 @@ const AboutPage = () => {
                             <div className="flex gap-3 items-center md:w-9/12">
                                 <Button
                                     text="Contact us"
-                                    className="bg-black text-white lg:w-fit"
+                                    className="bg-secondary shadow-xl text-white lg:w-fit"
                                     navigateTo="contact"
                                     icon={
                                         <BsTelephoneFill />
@@ -90,7 +90,7 @@ const AboutPage = () => {
 
                                 <Button
                                     text="Learn more"
-                                    className="border border-primary bg-transparent text-white lg:w-fit"
+                                    className="border border-secondary bg-transparent text-black  lg:w-fit"
                                     scrollTo="manager"
                                 />
 
@@ -125,8 +125,8 @@ const AboutPage = () => {
                         
                         <img src={manager} alt="Simisoluwa Joseph" className="rounded-t-xl lg:rounded-r-none lg:rounded-l-xl w-full lg:w-6/12 h-fit"/>
                         
-                        <Parallax id="ourmanager">
-                        <div className="flex flex-col justify-center w-full lg:w-6/12 gap-1 text-gray-200 py-6 px-3">
+                        <Parallax id="ourmanager" className="lg:w-6/12 w-full">
+                        <div className="flex flex-col justify-center w-full gap-1 text-gray-200 py-6 px-3">
 
                             <h2 className="font-semi-bold text-2xl ">
                                 Our Manager

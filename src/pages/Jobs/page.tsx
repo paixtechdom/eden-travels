@@ -2,6 +2,10 @@ import { FaBriefcase, FaRegCalendarCheck, FaMoneyCheckAlt, FaCheckCircle } from 
 import { useEffect, useState } from 'react';
 import { BeforeFooter } from '../../assets/components/BeforeFooter';
 import { Helmet } from 'react-helmet-async';
+import agent from "../../assets/images/agent.jpg"
+import { Parallax } from '../../assets/components/Parallax';
+import { Button } from '../../assets/components/Button';
+import { BsTelephoneFill } from 'react-icons/bs';
 
 const JobsPage = () => {
   // Scroll to top on page load
@@ -95,16 +99,47 @@ const JobsPage = () => {
           </title>
           <meta name="description" content="Explore a variety of job opportunities in Canada and the Republic of Ireland with a focus on work permits. Roles include sales, nursing, cyber security, and more. Start your journey today!" />
       </Helmet>
-      <main className="bg-gray-100 w-full center flex-col">
-        <section className="bg-secondary w-full min-h-[45vh] text-primary pt-[20vh] pb-[10vh] px-4">
-          <div className="text-center w-11/12">
-            <h1 className="text-4xl font-bold mb-4 tracking-wide leading-[45px]">Explore Exciting Job Opportunities</h1>
-            <p className="text-lg text-gray-100">Secure a job and obtain a work permit with our professional guidance.</p>
+      <main className=" w-full center flex-col">
+        <section className={`min-h-[75vh] bg-white w-full flex items-start lg:items-center justify-center relative  pt-[15vh] lg:pt-[10vh] `}> 
+          <div className={`w-11/12 lg:w-10/12 flex flex-col lg:flex-row items-center justify-center z-10 gap-[50px]`}>
+              <Parallax id={"Explore Exciting Job Opportunities"} className="w-full xl:w-9/12">
+
+                  <div className={` flex items-start  flex-col gap-5 w-full`}>
+                      <h1 className="font-bold text-4xl md:text-5xl text-secondary">Explore Exciting Job Opportunities</h1>
+
+                      <p className="leading-relaxed tracking-wide w-full">
+                      Secure a job and obtain a work permit with our professional guidance.
+                      </p>
+
+                      <div className={`flex gap-3 w-full md:w-9/12`}>
+                          <Button
+                              text="Learn more"
+                              className="bg-secondary text-white "
+                              scrollTo="jobs"
+                          />
+
+                          <Button
+                              text="Contact us"
+                              className="border border-secondary bg-transparent text-secondary "
+                              navigateTo="contact"
+                              icon={
+                                  <BsTelephoneFill />
+                              }
+                          />
+
+                      </div>
+                  </div>
+              </Parallax>
+
+              <img src={agent} alt="Hero Image" className={`w-full lg:w-5/12 shadow-xl rounded-xl`}/>
           </div>
         </section>
+
+
+
         
         {/* Job Listings Section */}
-        <section className="w-11/12 lg:w-10/12 py-12">
+        <section id='jobs' className="w-11/12 lg:w-10/12 py-12">
           <h2 className="text-2xl font-bold mb-6">Available Jobs</h2>
           <div className="w-full lg:w-8/12 flex mb-6">
             <input

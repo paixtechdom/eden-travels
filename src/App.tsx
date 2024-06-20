@@ -18,7 +18,7 @@ function App() {
 
   useEffect(() => {
     document.addEventListener('scroll', () => {
-        dispatch(toggleScrolledDown(document.documentElement.scrollTop > 200 ? true : false))
+        dispatch(toggleScrolledDown(document.documentElement.scrollTop > 100 ? true : false))
         setShowWhatsappButton(document.documentElement.scrollTop > 1000 ? true : false)
     })
     document.removeEventListener('scroll', () => null)

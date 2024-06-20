@@ -42,12 +42,12 @@ export const ContactInfo = [
 
 const Footer = () => {
     return(
-        <footer className="w-full center flex-col bg-secondary pt-[10vh] lg:pt-[15vh] border-t-2 border-primary">
-            <div className="w-11/12 lg:w-10/12 flex flex-col gap-6 text-gray-200">
+        <footer className="w-full center flex-col bg-white pt-[10vh] lg:pt-[15vh] border-t border-primary">
+            <div className="w-11/12 lg:w-10/12 flex flex-col gap-6 text-gray-900 z-10">
                 <div className="flex flex-col md:grid md:grid-cols-4 xl:grid-cols-8 gap-y-9 md:gap-9">
 
                     <div className="flex flex-col gap-2 col-span-2 xl:col-span-3">
-                        <h2 className="text-3xl text-primary font-bold">Eden Travels and Tours</h2>
+                        <h2 className="text-3xl text-black font-bold">Eden Travels and Tours</h2>
                      
 
                         <div className="flex flex-col gap-3 mt-6 ">
@@ -67,9 +67,9 @@ const Footer = () => {
                     {
                         FooterLinks.map((link, i) => (
                             <div key={i} className={`flex flex-col gap-4 w-full ${i ==0 ? "" : "col-span-2"}`}>
-                                <h3 className="text-gray-100 font-semibold text-lg">{link.header}</h3>
+                                <h3 className="text-black font-semibold text-lg">{link.header}</h3>
 
-                                <div className="flex flex-col gap-4 text-sm text-gray-200">
+                                <div className="flex flex-col gap-4 text-sm text-gray-900">
                                     {
                                         link.links.map((l, i) => (
                                             <Link key={i} to={`${link.to}/${l.replace(" ", "-").replace(" ", "-").replace(" ", "-").replace(" ", "-").toLowerCase()}`}>
@@ -86,7 +86,7 @@ const Footer = () => {
                
 
             </div>
-            <div className="justify-center w-full items-center text-center flex flex-col gap-3 mt-[10vh] py-6 bg-black border-t border-primary text-white">
+            <div className="justify-center w-full items-center text-center flex flex-col gap-3 mt-[10vh] py-6 bg-secondary border-t border-primary text-white">
                 <p className="w-full lg:w-fit">Copyright © {new Date().getFullYear()}</p>
 
                 <p className="w-full lg:w-fit">All Rights Reserved </p>

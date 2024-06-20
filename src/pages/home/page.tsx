@@ -1,7 +1,5 @@
 import { ImageExtras } from "../../assets/components/ImageExtras"
 import { ImageText } from "../../assets/components/ImageText"
-import { ImageListing } from "../../assets/components/ImageListing"
-import { Hero } from "./sections/Hero"
 import planeRun from "./../../assets/images/planeRun.jpg"
 import { CardParent } from "../../assets/components/Card/CardParent"
 import { servicesList, coursesList } from "../../assets/Constants"
@@ -14,6 +12,9 @@ import { Button } from "../../assets/components/Button"
 import { BeforeFooter } from "../../assets/components/BeforeFooter"
 import { Helmet } from "react-helmet-async"
 import { Parallax } from "../../assets/components/Parallax"
+import { BsTelephoneFill } from "react-icons/bs"
+import { Hero } from "./sections/Hero"
+import { ImageListing } from "../../assets/components/ImageListing"
 
 export const visitablePlaces = [
     {
@@ -48,22 +49,29 @@ const HomePage: React.FC = () => {
             <Hero />
             <ImageListing data={visitablePlaces} heading="Travel anywhere, anytime!"/>
 
-            <section className="bg-secondary py-[10vh] center text-center flex-col gap-5 min-h-[30vh] w-full mt-[20vh] mb-[10vh] lg:mb-0">
-                    <Parallax id="atartplanning" className="w-full center">
-                    <h2 className="text-primary font-semibold text-4xl md:text-5/12 w-11/12 lg:w-6/12">
+            <section className="bg-white blue-50 border-y border-primary shado w-xl py-[10vh] center text-center flex-col gap-5 min-h-[30vh] w-full mt-[20vh] mb-[10vh] lg:mb-0 relative">
+
+
+                    <Parallax id="atartplanning" className="w-full center z-20">
+                    <h2 className="text-black font-semibold text-4xl md:text-5/12 w-11/12 lg:w-6/12">
                         Start Planning for Your Next Journey
                     </h2>
                     </Parallax>
 
-                    <Parallax id="atartplanningbtn" className="w-full center">
+                    <Parallax id="atartplanningbtn" className="w-full center z-20">
                     <Button 
                         text="Contact us now"
-                        className="bg-black border border-secondary text-primary w-[200px]"
+                        className="bg-white border border-secondary shadow-xl text-black w-fit"
                         navigateTo="contact"
+                        icon={
+                            <BsTelephoneFill />
+                        }
                         />
-                    </Parallax>
-            </section>
 
+                    </Parallax>
+
+
+            </section>
 
             <CardParent 
                 data={servicesList}
@@ -71,8 +79,7 @@ const HomePage: React.FC = () => {
                 description="View all services tailored to your needs"
                 parentNav={"services"}
             />
-            
-            
+                 
             <ImageText
                 heading={"Elevate Your Travel Experience with Our"} 
                 span={" Expert Services"}
