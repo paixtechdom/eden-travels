@@ -12,8 +12,8 @@ import { FC } from "react"
 export const Hero: React.FC = () => {
     return(
         <div className="min-h-screen bg-white heroGradient2 md:bg-white -heroGradient bg-cover bg-center w-full center relative pt-[15vh] lg:py-0 "> 
-            <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row items- center justify-center z-10 gap-[50px]">
-                <div className="flex flex-col gap-2 w-full md:w-9/12 text-ce nter">
+            <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row items- center justify-center z-10 gap-[50px] lg:gap-[150px]">
+                <div className="flex flex-col gap-2 w-full md:w-9/12">
                     <Parallax id="heroadve">
 
                     <p className="leading-relaxed text-xl tracking-wide text-gray-800">
@@ -55,7 +55,7 @@ export const Hero: React.FC = () => {
                 </div>
 
 
-                <div className="w-9/12 md:w-10/12 center lg:w-5/12 relative">
+                <div className="w-9/12 md:w-10/12 center lg:w-6/12 relative">
                     <img src={airplane} alt="ee" className="w-full z-[50]"/>
 
                     <div className="absolute top-5 right-[50%] z-[50]">
