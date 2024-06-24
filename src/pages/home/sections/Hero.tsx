@@ -55,7 +55,7 @@ export const Hero: React.FC = () => {
                 </div>
 
 
-                <div className="w-11/12 center lg:w-8/12 relative">
+                <div className="w-9/12 md:w-10/12 center lg:w-5/12 relative">
                     <img src={airplane} alt="ee" className="w-full z-[50]"/>
 
                     <div className="absolute top-5 right-[50%] z-[50]">
@@ -80,7 +80,7 @@ export const Hero: React.FC = () => {
                      </div>
 
                     <div className="absolute top-10 -z-[5] w-full">
-                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full scale-[2] opacity-50 backdrop-blur-lg">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full scale-[2] opacity-20 backdrop-blur-lg">
                             <path fill="#93C5FD" d="M37.5,-49.2C50.5,-42.2,64.1,-33.8,72.5,-20.6C80.9,-7.4,84,10.4,77.4,23.4C70.7,36.3,54.4,44.4,39.9,44.5C25.4,44.7,12.7,36.9,1,35.6C-10.8,34.3,-21.6,39.4,-33.5,38.4C-45.4,37.4,-58.5,30.4,-63.5,19.6C-68.5,8.8,-65.3,-5.7,-59.7,-18.2C-54,-30.8,-45.9,-41.4,-35.5,-49.2C-25.2,-57,-12.6,-61.9,-0.2,-61.7C12.3,-61.5,24.6,-56.1,37.5,-49.2Z" transform="translate(100 100)" />
                         </svg>
 
