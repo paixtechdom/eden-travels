@@ -62,7 +62,7 @@ export const Hero: React.FC = () => {
                         <ImageExtras 
                               icon={<PiCheck className="text-lg"/>}
                               iconBg={"bg-green-700"}
-                              topText={<p className="font-bold">100+</p>}
+                              topText={<p className="font-bold">100%</p>}
                               bottomText={<p className="text-gray-400">
                                 Successful Flights
                               </p>}

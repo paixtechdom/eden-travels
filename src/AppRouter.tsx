@@ -10,7 +10,7 @@ import { servicesList, coursesList } from './assets/Constants';
 import EachServicePage from './pages/services/eachpage/page';
 import EachCoursesPage from './pages/courses/eachpage/page';
 import CoursesPage from './pages/courses/page';
-import { FaPlaneDeparture } from 'react-icons/fa6';
+import logo from "./assets/images/Eden travels sm.png"
 
 
 const HomePage = lazy(() => delayLoad(import("./pages/home/page")))
@@ -60,8 +60,7 @@ export const AppRouter = () => {
   const Loader = () => {
     return(
         <section className='h-screen w-full bg-white  center flex-col text-4xl  text-center gap-4 text-gray-900'>
-            <FaPlaneDeparture className='animate-pulse text-6xl  mb-3'/>
-            <p className='text-secondary w-11/12 uppercase font-bold'>Eden Travels and Tour</p>
+           <img src={logo} alt="Eden travels Logo" className='animate-bounce w-6/12 md:w-5/12 lg:w-3/12'/>
             <p className="text-sm">Seamless Travel, Planned for Your Next Journey</p>
         </section>
     )

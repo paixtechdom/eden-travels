@@ -7,6 +7,7 @@ import { RootState } from "../store/AppStore"
 import { setCurrentDropDown, setCurrentDropDownIndex, setCurrentNav, toggleShowNav } from "../store/navigation/navigationSlice"
 import { DocscrollTop } from "../../App"
 import { useEffect } from "react"
+import logo from "../images/Eden travels sm.png"
 
 
 export const Navbar = () => {
@@ -52,10 +53,8 @@ export const Navbar = () => {
                     dispatch(setCurrentDropDown(""))
                     DocscrollTop()
                 }}>
-                    <p className='w-5/12 md:w-2/12 text-xl font-bold text-black'>
-                        EdenClassic
-                    </p>
-                    {/* <img src={logo} alt="Macmay Logo" className='w-5/12 md:w-2/12'/> */}
+                    <img src={logo} alt="Eden travels Logo" className='w-9/12 md:w-7/12'/>
+                    
                 </Link>
 
                 <div className={`bi bi-${showNav ? 'x-lg' : 'list'} text-blue text-3xl lg:hidden cursor-pointer text-black`}  onClick={() => dispatch(toggleShowNav())}>
