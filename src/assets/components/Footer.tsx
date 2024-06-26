@@ -1,4 +1,4 @@
-import { BsGeoAlt, BsTelephone } from "react-icons/bs"
+import { BsGeoAlt, BsTelephone, BsTelephonePlus } from "react-icons/bs"
 import { Link } from "react-router-dom"
 import { BiEnvelope } from "react-icons/bi"
 
@@ -27,10 +27,16 @@ export const ContactInfo = [
         contact: 'contact@edentravels.com',
         link: "mailto:contact@edentravels.com"
     },
+    
     {
         icon: <BsTelephone />,
-        contact: '+234 912 939 7179',
-        link: "tel:+2349129397179"
+        contact: '+234 815 788 6733',
+        link: "tel:+2348157886733"
+    },
+    {
+        icon: <BsTelephonePlus />,
+        contact: 'Customer Service',
+        link: "tel:+2349129397279"
     },
     {
         icon: <BsGeoAlt />,
