@@ -27,6 +27,9 @@ import Heidelberg from "../../assets/images/Heidelberg.jpg"
 import Berlin from "../../assets/images/Berlin.jpg"
 import { BeforeFooter } from "../../assets/components/BeforeFooter"
 import Munich from "../../assets/images/Munich.jpg"
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import  "react-lazy-load-image-component/src/effects/blur.css"
+import  "react-lazy-load-image-component/src/effects/opacity.css"
 
 const StudyAbroadPage = () => {
     const universities = [
@@ -281,9 +284,7 @@ const StudyAbroadPage = () => {
         }
         // Add more countries and universities as needed
     ];
-    
-    
-    
+     
     
     
 
@@ -298,7 +299,7 @@ const StudyAbroadPage = () => {
 
 
             <main>
-            <section className={`min-h-[75vh] bg-white w-full flex items-start lg:items-center justify-center relative  pt-[15vh] lg:pt-[10vh] `}> 
+            <section className={`min-h-[85vh] bg-white w-full flex items-start lg:items-center justify-center relative  pt-[15vh] lg:pt-[10vh] `}> 
           <div className={`w-11/12 lg:w-10/12 flex flex-col lg:flex-row items-center justify-center z-10 gap-[50px]`}>
               <Parallax id={"Explore Exciting Job Opportunities"} className="w-full xl:w-9/12">
 
@@ -328,8 +329,12 @@ const StudyAbroadPage = () => {
                       </div>
                   </div>
               </Parallax>
-
-              <img src={Munich} alt="Hero Image" className={`w-full lg:w-5/12 shadow-xl rounded-xl`}/>
+              <LazyLoadImage 
+                    src={Munich} 
+                    placeholderSrc={"Hero Image"} 
+                    effect='blur'
+                    className={`w-full shadow-xl rounded-xl`}
+                />
           </div>
         </section>
 

@@ -89,7 +89,7 @@ const HomePage: React.FC = () => {
 
 
 
-                <div className="absolute -bottom-5 left-[50%]">
+                <div className="absolute -bottom-5 left-[50%] z-10">
                     <ImageExtras 
                         icon={<FaPlaneArrival className="text-lg"/>}
                         iconBg={"bg-secondary"}

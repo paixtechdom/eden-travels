@@ -6,6 +6,9 @@ import agent from "../../assets/images/agent.jpg"
 import { Parallax } from '../../assets/components/Parallax';
 import { Button } from '../../assets/components/Button';
 import { BsTelephoneFill } from 'react-icons/bs';
+// import { LazyLoadImage } from "react-lazy-load-image-component"
+// import  "react-lazy-load-image-component/src/effects/blur.css"
+// import  "react-lazy-load-image-component/src/effects/opacity.css"
 
 const JobsPage = () => {
   // Scroll to top on page load
@@ -100,11 +103,11 @@ const JobsPage = () => {
           <meta name="description" content="Explore a variety of job opportunities in Canada and the Republic of Ireland with a focus on work permits. Roles include sales, nursing, cyber security, and more. Start your journey today!" />
       </Helmet>
       <main className=" w-full center flex-col">
-        <section className={`min-h-[75vh] bg-white w-full flex items-start lg:items-center justify-center relative  pt-[15vh] lg:pt-[10vh] `}> 
-          <div className={`w-11/12 lg:w-10/12 flex flex-col lg:flex-row items-center justify-center z-10 gap-[50px]`}>
-              <Parallax id={"Explore Exciting Job Opportunities"} className="w-full xl:w-9/12">
+      <section className={`min-h-[75vh] bg-white w-full flex items-start lg:items-center justify-center relative  pt-[15vh] lg:pt-[10vh] `}> 
+        <div className={`w-11/12 lg:w-10/12 flex flex-col lg:flex-row items-center justify-between z-10 gap-[50px]`}>
+              <Parallax id={"Explore Exciting Job Opportunities"} className="w-full">
 
-                  <div className={` flex items-start  flex-col gap-5 w-full`}>
+                  <div className={`flex items-start  flex-col gap-5 w-full`}>
                       <h1 className="font-bold text-4xl md:text-5xl text-secondary">Explore Exciting Job Opportunities</h1>
 
                       <p className="leading-relaxed tracking-wide w-full">
@@ -129,9 +132,12 @@ const JobsPage = () => {
 
                       </div>
                   </div>
-              </Parallax>
-
-              <img src={agent} alt="Hero Image" className={`w-full lg:w-5/12 shadow-xl rounded-xl`}/>
+              </Parallax> 
+              <img 
+                    src={agent} 
+                    alt={"Hero Image"} 
+                    className={`w-full lg:w-6/12 shadow-xl rounded-xl`}
+                />
           </div>
         </section>
 

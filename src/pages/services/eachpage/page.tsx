@@ -117,7 +117,7 @@ const EachServicePage = () => {
 
 
                  <ImageText 
-                    heading={ servicePageIndex === 0
+                    span={ servicePageIndex === 0
                         ? "Effortless Travel Arrangements"
                         : servicePageIndex === 1
                         ? "Tailored Travel Packages and Comprehensive Insurance"

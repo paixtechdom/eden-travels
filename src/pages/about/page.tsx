@@ -2,7 +2,7 @@ import { BeforeFooter } from "../../assets/components/BeforeFooter";
 import { ImageListing } from "../../assets/components/ImageListing";
 import { ImageText } from "../../assets/components/ImageText";
 import { visitablePlaces } from "../home/page";
-import img from "../../assets/images/travelDoc.jpg"
+import img from "../../assets/images/visa.jpg"
 import manager from "../../assets/images/manager.jpg"
 import { Button } from "../../assets/components/Button";
 import { BsTelephoneFill } from "react-icons/bs";
@@ -11,7 +11,9 @@ import { FaPlane } from "react-icons/fa6";
 import { BreadCrumbs } from "../../assets/components/BreadCrumbs";
 import { Helmet } from "react-helmet-async";
 import { Parallax } from "../../assets/components/Parallax";
-
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import  "react-lazy-load-image-component/src/effects/blur.css"
+import  "react-lazy-load-image-component/src/effects/opacity.css"
 
 
 const values = [
@@ -122,10 +124,14 @@ const AboutPage = () => {
 
                 <section className="w-full center flex flex-col pt-[10vh]">
                     <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row gap-9 md:gap-[50px] shadow-xl p-2 rounded-xl bg-secondary items-center">
+                        <LazyLoadImage 
+                            src={manager} 
+                            placeholderSrc={"Simisoluwa Joseph"} 
+                            effect='blur'
+                            className="rounded-t-xl lg:rounded-r-none lg:rounded-l-xl w-full h-fit"
+                        />
                         
-                        <img src={manager} alt="Simisoluwa Joseph" className="rounded-t-xl lg:rounded-r-none lg:rounded-l-xl w-full lg:w-6/12 h-fit"/>
-                        
-                        <Parallax id="ourmanager" className="lg:w-6/12 w-full">
+                        <Parallax id="ourmanager" className=" w-full">
                         <div className="flex flex-col justify-center w-full gap-1 text-gray-200 py-6 px-3">
 
                             <h2 className="font-semi-bold text-2xl ">
@@ -158,8 +164,8 @@ const AboutPage = () => {
                     img={img}
                     span="Seamless Travel Documentation"
                     desc="Ensure your travel plans are smooth and hassle-free with our expert visa and passport services. Let us handle the paperwork so you can focus on your journey"
-
-                />
+                >
+                </ImageText>
 
                 <ImageListing data={visitablePlaces} heading="Explore breathtaking destinations"/>
 

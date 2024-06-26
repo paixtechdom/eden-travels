@@ -6,6 +6,9 @@ import { ImageExtras } from "../../../assets/components/ImageExtras"
 import { PiCheck } from "react-icons/pi"
 import { FaPlane } from "react-icons/fa6"
 import { FC } from "react"
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import  "react-lazy-load-image-component/src/effects/blur.css"
+import  "react-lazy-load-image-component/src/effects/opacity.css"
 
 
 
@@ -56,7 +59,13 @@ export const Hero: React.FC = () => {
 
 
                 <div className="w-9/12 md:w-10/12 center lg:w-6/12 relative">
-                    <img src={airplane} alt="ee" className="w-full z-[50]"/>
+                    <LazyLoadImage 
+                            src={airplane} 
+                            placeholderSrc={"Airplane and destinations"} 
+                            effect='blur'
+                            className="w-full z-[50]"
+                    
+                    />
 
                     <div className="absolute top-5 right-[50%] z-[50]">
                         <ImageExtras 

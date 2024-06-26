@@ -4,7 +4,9 @@ import { HeroComponentInterface } from "../Interfaces"
 import { BreadCrumbs } from "./BreadCrumbs"
 import { BsTelephoneFill } from "react-icons/bs"
 import { Parallax } from "./Parallax"
-
+// import { LazyLoadImage } from "react-lazy-load-image-component"
+// import  "react-lazy-load-image-component/src/effects/blur.css"
+// import  "react-lazy-load-image-component/src/effects/opacity.css"
 
 
 export const OtherHeros:FC<HeroComponentInterface> = ({heroHeader, desc, img, data, dataHeader, type, breadLinks}) => {
@@ -40,8 +42,11 @@ export const OtherHeros:FC<HeroComponentInterface> = ({heroHeader, desc, img, da
                             </div>
                         </div>
                     </Parallax>
-
-                    <img src={img} alt="Hero Image" className={`w-full ${type == "row" ? "w-full lg:w-5/12" : ""} shadow-xl rounded-xl`}/>
+                    <img 
+                        src={img} 
+                        alt={"Hero Image"} 
+                        className={`w-full lg:w-5/12 shadow-xl rounded-xl`}
+                    />
                 </div>
             </section>
 

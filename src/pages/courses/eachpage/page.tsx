@@ -96,7 +96,7 @@ const EachCoursesPage = () => {
 
 
                  <ImageText 
-                        heading={
+                        span={
                             coursesPageIndex === 0
                             ? "Master Customer Service Skills"
                             : coursesPageIndex === 1
