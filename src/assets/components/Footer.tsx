@@ -1,6 +1,7 @@
 import { BsGeoAlt, BsPerson, BsTelephone } from "react-icons/bs"
 import { Link } from "react-router-dom"
 import { BiEnvelope } from "react-icons/bi"
+import logo from "../images/Eden travels sm.png"
 
 
 const FooterLinks = [
@@ -53,7 +54,8 @@ const Footer = () => {
                 <div className="flex flex-col md:grid md:grid-cols-4 xl:grid-cols-8 gap-y-9 md:gap-9">
 
                     <div className="flex flex-col gap-2 col-span-2 xl:col-span-3">
-                        <h2 className="text-3xl text-black font-bold">Eden Travels and Tours</h2>
+                        <img src={logo} alt="Eden Travels and Tour Logo" className="w-4/12"/>
+                        {/* <h2 className="text-3xl text-black font-bold">Eden Travels and Tours</h2> */}
                      
 
                         <div className="flex flex-col gap-3 mt-6 ">

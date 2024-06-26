@@ -60,7 +60,7 @@ export const AppRouter = () => {
   const Loader = () => {
     return(
         <section className='h-screen w-full bg-white  center flex-col text-4xl  text-center gap-4 text-gray-900'>
-           <img src={logo} alt="Eden travels Logo" className='animate-bounce w-6/12 md:w-5/12 lg:w-3/12'/>
+           <img src={logo} alt="Eden Travels and Tour Logo" className='animate-bounce w-6/12 md:w-5/12 lg:w-3/12'/>
             <p className="text-sm">Seamless Travel, Planned for Your Next Journey</p>
         </section>
     )
