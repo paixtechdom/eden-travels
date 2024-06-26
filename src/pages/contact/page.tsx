@@ -1,8 +1,8 @@
-import { BsArrowRight, BsEnvelopeFill, BsGeoAltFill, BsInstagram, BsTelephoneOutboundFill, BsWhatsapp } from "react-icons/bs"
+import { BsArrowRight, BsEnvelopeFill, BsGeoAltFill, BsTelephoneOutboundFill } from "react-icons/bs"
 import { InputFieldInterface } from "../../assets/Interfaces"
 import { ChangeEvent, FC, useState } from "react"
 import { Button } from "../../assets/components/Button"
-import { FaFacebook } from "react-icons/fa6"
+// import { FaFacebook } from "react-icons/fa6"
 import { BreadCrumbs } from "../../assets/components/BreadCrumbs"
 import { Helmet } from "react-helmet-async"
 
@@ -10,19 +10,22 @@ const contactInfo = [
     {
         icon: <BsTelephoneOutboundFill />,
         contact: "+234 815 788 6733",
+        link: "tel+2348157886733"
     },
     {
         icon: <BsEnvelopeFill />,
         contact: "hello@edentravels.com",
+        link: "mailto:hello@hedentravels.com"
     },
     {
         icon: <BsGeoAltFill />,
         contact: "Lagos, Nigeria",
+        link: "#"
     }
 ]
-const socialLinks = [
-    <FaFacebook/>, <BsWhatsapp/>, <BsInstagram/>
-]
+// const socialLinks = [
+//     <FaFacebook/>, <BsWhatsapp/>, <BsInstagram/>
+// ]
 
 const ContactPage = () => {
     const [ formInputs, setFormInputs ] = useState({
@@ -66,7 +69,7 @@ const ContactPage = () => {
                         <div className="bg-secondary flex flex-col justify-start text-gray-300 p-9 py-[6vh] rounded-t-xl lg:rounded-r-none lg:rounded-l-xl relative overflow-hidden w-full lg:w-4/12  gap-[10vh]">
                             <div className="flex flex-col gap-2">
                                 <h2 className="text-primary text-2xl font-semibold">Contact Information</h2>
-                                <div className="flex gap-4 ">
+                                {/* <div className="flex gap-4 ">
                                     {
                                         socialLinks.map((link, i) => (
                                             <div key={i} className="center h-8 w-8 rounded-xl text-white hover:bg-white hover:text-black transition-all duration-500 cursor-pointer">
@@ -74,18 +77,18 @@ const ContactPage = () => {
                                             </div>
                                         ))
                                     }
-                                </div>
+                                </div> */}
                             </div>
                             <div className="flex flex-col gap-5">
                                 {
                                     contactInfo.map((contact, i) => (
-                                        <div key={i} className="flex gap-3 items-start">
+                                        <a href={`${contact.link}`} key={i} className="flex gap-3 items-start">
                                             <div className="text-xl text-white">
                                                 {contact.icon}
                                             </div>
 
                                             <p>{contact.contact}</p>
-                                        </div>
+                                        </a>
                                     ))
                                 }
                             </div>

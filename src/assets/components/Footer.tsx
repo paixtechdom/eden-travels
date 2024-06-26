@@ -1,4 +1,4 @@
-import { BsGeoAlt, BsTelephone, BsTelephonePlus } from "react-icons/bs"
+import { BsGeoAlt, BsPerson, BsTelephone } from "react-icons/bs"
 import { Link } from "react-router-dom"
 import { BiEnvelope } from "react-icons/bi"
 
@@ -34,8 +34,8 @@ export const ContactInfo = [
         link: "tel:+2348157886733"
     },
     {
-        icon: <BsTelephonePlus />,
-        contact: 'Customer Service',
+        icon: <BsPerson />,
+        contact: '+234 912 939 7279',
         link: "tel:+2349129397279"
     },
     {
