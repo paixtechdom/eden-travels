@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet-async"
 const contactInfo = [
     {
         icon: <BsTelephoneOutboundFill />,
-        contact: "+1 012 3826 781",
+        contact: "+234 815 788 6733",
     },
     {
         icon: <BsEnvelopeFill />,
@@ -17,7 +17,7 @@ const contactInfo = [
     },
     {
         icon: <BsGeoAltFill />,
-        contact: "152 Dartmouth Street Boston, Massachusetts 02156 United States",
+        contact: "Lagos, Nigeria",
     }
 ]
 const socialLinks = [
