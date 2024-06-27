@@ -34,7 +34,7 @@ export const ImageText:FC<ImageTextInterface> = ({heading, span, desc, children,
                         </div>
                     </div>
 
-                    <div className="w-full lg:w-6/12 relative">
+                    <div className="w-full lg:w-6/12 relative min-h-[30px]">
                         {children}
                         {/* <div className="-z-1"> */}
 

@@ -10,7 +10,7 @@ import { BsArrowRight } from "react-icons/bs"
 export const Card:FC<CardInterface> = ({data}) => {
     return(
         <div className="flex flex-col gap-6 w-full shadow-lg rounded-xl p-2 bg-white h-full">
-            <div className="center w-full overflow-hidden rounded-t-xl">
+            <div className="center w-full overflow-hidden rounded-t-xl min-h-[30px]">
             <img 
                     src={data?.img} 
                     alt={data?.title} 

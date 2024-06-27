@@ -58,12 +58,12 @@ export const Hero: React.FC = () => {
                 </div>
 
 
-                <div className="w-9/12 md:w-10/12 center lg:w-6/12 relative">
+                <div className="w-9/12 md:w-10/12 center lg:w-6/12 relative min-h-[30px]">
                     <LazyLoadImage 
                             src={airplane} 
                             placeholderSrc={"Airplane and destinations"} 
                             effect='blur'
-                            className="w-full z-[50]"
+                            className="w-full z-[50 min-h-[30px]"
                     
                     />
 
