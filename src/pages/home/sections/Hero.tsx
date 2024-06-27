@@ -67,7 +67,7 @@ export const Hero: React.FC = () => {
                     
                     />
 
-                    <div className="absolute top-5 right-[50%] z-[50]">
+                    <div className="absolute top-5 right-[45%] z-[50]">
                         <ImageExtras 
                               icon={<PiCheck className="text-lg"/>}
                               iconBg={"bg-green-700"}
@@ -77,7 +77,7 @@ export const Hero: React.FC = () => {
                               </p>}
                         />
                      </div>
-                    <div className="absolute bottom-0 left-[40%] z-[50]">
+                    <div className="absolute bottom-0 left-[35%] z-[50]">
                         <ImageExtras 
                               icon={<FaPlane className="text-lg"/>}
                               iconBg={"bg-purple-700"}

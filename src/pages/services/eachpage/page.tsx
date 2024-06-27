@@ -138,7 +138,7 @@ const EachServicePage = () => {
                         travelDoc
                     }>
                     <>
-                        <div className="absolute -bottom-5 right-[50%]">
+                        <div className="absolute -bottom-5 right-[45%]">
                             <ImageExtras 
                                 icon={serviceImageExtras[servicePageIndex].icon}
                                 iconBg={serviceImageExtras[servicePageIndex].iconBg}

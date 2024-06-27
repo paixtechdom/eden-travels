@@ -54,7 +54,7 @@ const ServicesPage = () => {
                desc="Discover the world effortlessly with our specialized aviation, travel, and tour services. From flight bookings to guided tours, we ensure a smooth and memorable journey."
                img={visa}>
                   <>
-                     <div className="absolute -bottom-5 right-[50%] z-10">
+                     <div className="absolute -bottom-5 right-[45%] z-10">
                         <ImageExtras 
                               icon={<PiCheck className="text-lg"/>}
                               iconBg={"bg-green-700"}
