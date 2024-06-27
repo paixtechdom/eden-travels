@@ -168,7 +168,7 @@ const ContactPage = () => {
 export default ContactPage
 
 
-const InputField:FC<InputFieldInterface> = ({type, label, className, handleChange, name, value, placeholder}) => {
+const InputField:FC<InputFieldInterface> = ({type, label, className, handleChange, name, value}) => {
     return(
         <div className={`flex flex-col w-full gap-2 text-sm ${className}`}>
             <label htmlFor={label} className={`${value !== "" ? "font-bold text-secondary" : "text-gray-600"}`}>{label}</label>
@@ -178,7 +178,6 @@ const InputField:FC<InputFieldInterface> = ({type, label, className, handleChang
                 type={type}
                 onChange={(e) => handleChange(e)}
                 name={name}
-                placeholder={placeholder || label}
                 className={`p-2 rounded-tl-xl rounded-br-xl bg-transparent outline-none border ${value !== "" ? "border focus:border-secondary" : " border-secondary"} hover:border hover:border-secondary cursor-pointer`}
             />
         </div>
