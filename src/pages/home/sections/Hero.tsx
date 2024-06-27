@@ -16,7 +16,7 @@ export const Hero: React.FC = () => {
     return(
         <div className="min-h-screen bg-white heroGradient2 md:bg-white -heroGradient bg-cover bg-center w-full center relative pt-[15vh] lg:py-0 "> 
             <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row items- center justify-center z-10 gap-[50px] lg:gap-[150px]">
-                <div className="flex flex-col gap-2 w-full md:w-9/12">
+                <div className="flex flex-col w-full md:w-9/12">
                     <Parallax id="heroadve">
 
                     <p className="leading-relaxed text-xl tracking-wide text-gray-800">
@@ -31,7 +31,7 @@ export const Hero: React.FC = () => {
                     
 
                     <Parallax id="heropdesc">
-                    <p className="leading-relaxed text-xl tracking-wide text-gray-900 mt-5">
+                    <p className="leading-relaxed text-xl tracking-wide text-gray-900 mt-6">
                     Embark on your adventure with curated travel experiences and aviation courses offered by Eden Classic Travels & Tours Ltd.
                     </p>
                     </Parallax>
