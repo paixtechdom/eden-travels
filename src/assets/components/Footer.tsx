@@ -30,8 +30,8 @@ export const ContactInfo = [
     },
     {
         icon: <BsEnvelopeFill />,
-        contact: 'contact@edenclassis.com',
-        link: "mailto:contact@edenclassic.com"
+        contact: 'hello@edenclassic.com',
+        link: "mailto:hello@edenclassic.com"
     },
     {
         icon: <BsTelephoneFill />,

@@ -72,7 +72,7 @@ const ContactPage = () => {
                     <BreadCrumbs links={["Home", "Contact Us"]} />
 
                     <div className="w-full flex flex-col lg:flex-row gap-[50px] lg:gap-[25px] xl:gap-[50px] p-2 rounded-xl bg-white min-h-[80vh] shadow-2xl">
-                        <div className="bg-secondary flex flex-col justify-start text-gray-300 p-9 py-[6vh] rounded-t-xl lg:rounded-r-none lg:rounded-l-xl relative overflow-hidden w-full lg:w-4/12  gap-[10vh]">
+                        <div className="bg-secondary flex flex-col justify-start text-gray-300 md:p-9 py-[6vh] rounded-t-xl lg:rounded-r-none lg:rounded-l-xl relative overflow-hidden w-full lg:w-4/12  gap-[10vh]">
                             <div className="flex flex-col gap-2">
                                 <h2 className="text-primary text-2xl font-semibold">Contact Information</h2>
                                 {/* <div className="flex gap-4 ">
