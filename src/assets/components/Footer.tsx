@@ -1,7 +1,7 @@
-import { BsGeoAlt, BsPerson, BsTelephone } from "react-icons/bs"
+import { BsEnvelopeFill, BsGeoAltFill, BsTelephoneFill } from "react-icons/bs"
 import { Link } from "react-router-dom"
-import { BiEnvelope } from "react-icons/bi"
 import logo from "../images/Eden travels sm.png"
+import { RiWhatsappFill } from "react-icons/ri"
 
 
 const FooterLinks = [
@@ -24,25 +24,24 @@ const FooterLinks = [
 
 export const ContactInfo = [
     {
-        icon: <BiEnvelope />,
-        contact: 'contact@edentravels.com',
-        link: "mailto:contact@edentravels.com"
-    },
-    
-    {
-        icon: <BsTelephone />,
-        contact: '+234 815 788 6733',
-        link: "tel:+2348157886733"
+        icon: <BsGeoAltFill />,
+        contact: 'Lagos, Nigeria',
+        link: "#"
     },
     {
-        icon: <BsPerson />,
+        icon: <BsEnvelopeFill />,
+        contact: 'contact@edenclassis.com',
+        link: "mailto:contact@edenclassic.com"
+    },
+    {
+        icon: <BsTelephoneFill />,
         contact: '+234 912 939 7279',
         link: "tel:+2349129397279"
     },
     {
-        icon: <BsGeoAlt />,
-        contact: 'Lagos, Nigeria',
-        link: "#"
+        icon: <RiWhatsappFill />,
+        contact: '+234 815 788 6733',
+        link: "https://api.whatsapp.com/send?phone=2348157886733"
     },
 ]
 

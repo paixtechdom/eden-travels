@@ -1,16 +1,17 @@
-import { BsArrowRight, BsEnvelopeFill, BsGeoAltFill, BsTelephoneOutboundFill } from "react-icons/bs"
+import { BsArrowRight, BsEnvelopeFill, BsGeoAltFill, BsTelephoneFill } from "react-icons/bs"
 import { InputFieldInterface } from "../../assets/Interfaces"
 import { ChangeEvent, FC, useState } from "react"
 import { Button } from "../../assets/components/Button"
 // import { FaFacebook } from "react-icons/fa6"
 import { BreadCrumbs } from "../../assets/components/BreadCrumbs"
 import { Helmet } from "react-helmet-async"
+import { RiWhatsappFill } from "react-icons/ri"
 
 const contactInfo = [
     {
-        icon: <BsTelephoneOutboundFill />,
-        contact: "+234 815 788 6733",
-        link: "tel+2348157886733"
+        icon: <BsGeoAltFill />,
+        contact: "Lagos, Nigeria",
+        link: "#"
     },
     {
         icon: <BsEnvelopeFill />,
@@ -18,10 +19,15 @@ const contactInfo = [
         link: "mailto:hello@edenclassic.com"
     },
     {
-        icon: <BsGeoAltFill />,
-        contact: "Lagos, Nigeria",
-        link: "#"
-    }
+        icon: <BsTelephoneFill />,
+        contact: "+234 912 939 7279",
+        link: "tel+2349129397279"
+    },
+    {
+        icon: <RiWhatsappFill />,
+        contact: "+234 815 788 6733",
+        link: "https://api.whatsapp.com/send?phone=2348157886733"
+    },
 ]
 // const socialLinks = [
 //     <FaFacebook/>, <BsWhatsapp/>, <BsInstagram/>
