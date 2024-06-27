@@ -1,7 +1,7 @@
 import { BsTelephoneFill } from "react-icons/bs"
 import { Button } from "../../../assets/components/Button"
 import { Parallax } from "../../../assets/components/Parallax"
-import airplane from "../../../assets/images/airplane.png"
+import airplane from "../../../assets/images/airplane.jpg"
 import { ImageExtras } from "../../../assets/components/ImageExtras"
 import { PiCheck } from "react-icons/pi"
 import { FaPlane } from "react-icons/fa6"
