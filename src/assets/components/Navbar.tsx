@@ -10,6 +10,7 @@ import { useEffect } from "react"
 import logo from "../images/Eden travels sm.png"
 
 
+
 export const Navbar = () => {
     const navigation = useSelector((state: RootState) => state.navigation)
     const dispatch = useDispatch()
@@ -135,6 +136,7 @@ export const Navbar = () => {
                                     </div>
                                 ))
                             }
+                            
                         </nav>
                     </div>
             </div>
