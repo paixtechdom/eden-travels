@@ -98,7 +98,7 @@ const JobsPage = () => {
     <>
        <Helmet>
           <title>
-            Jobs - Eden Travels and Tours
+            Jobs - Eden Classic Travel and Tours
           </title>
           <meta name="description" content="Explore a variety of job opportunities in Canada and the Republic of Ireland with a focus on work permits. Roles include sales, nursing, cyber security, and more. Start your journey today!" />
       </Helmet>

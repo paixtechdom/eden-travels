@@ -18,7 +18,7 @@ const CoursesPage = () => {
       <>
           <Helmet>
                 <title>
-                    Aviation Courses at Eden Travels and Tours
+                    Aviation Courses at Eden Classic Travel and Tours
                 </title>
                 <meta name="description" content={"Elevate your skills and advance your career with our professional courses at Brave. Master new technologies, develop business acumen, or gain certifications in various fields. Join us and unlock your potential today!"} />
             </Helmet>  
