@@ -75,23 +75,30 @@ export const NavInfo = [
         link: 'services',
         sublinks: [
             {
-                title: "Travel Arrangements",
+                title: "Flight Arrangements",
                 link: "travel-arrangements"
             },
             {
-                title: "Travel Packages and Insurance",
+                title: "Flight Packages and Insurance",
                 link: "travel-packages"
             },
             {
-                title: "Travel Documentation and Corporate Services",
+                title: "Flight Documentation and Corporate Services",
                 link: "documentation"
+            },
+            {
+                title: "Logistics Services",
+                link: "logistics"
+            },
+            {
+                title: "Interstate Travelling",
+                link: "interstate-travelling"
             },
             {
                 title: "View All",
                 link: ""
             }
         ]
-        
         
     },
     {
@@ -132,7 +139,7 @@ export const NavInfo = [
 ]
 export const servicesList = [
     {
-        title: "Travel Arrangements",
+        title: "Flight Arrangements",
         img: travelArrangements,
         desc: "Hassle-free booking for flights, accommodations, and transportation.",
         sub: [
@@ -262,7 +269,7 @@ export const servicesList = [
         ]
     },
     {
-        title: "Travel Packages and Insurance",
+        title: "Flight Packages and Insurance",
         img: familyTour,
         desc: "Tailored travel packages and comprehensive insurance coverage.",
         sub: [
@@ -347,7 +354,7 @@ export const servicesList = [
         ]
     },
     {
-        title: "Travel Documentation and Corporate Services",
+        title: "Flight Documentation and Corporate Services",
         img: passportServices,
         desc: "Visa, passport services, and efficient corporate travel solutions.",
         sub: [

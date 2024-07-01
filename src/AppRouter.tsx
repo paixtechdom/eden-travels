@@ -11,6 +11,8 @@ import EachServicePage from './pages/services/eachpage/page';
 import EachCoursesPage from './pages/courses/eachpage/page';
 import CoursesPage from './pages/courses/page';
 import logo from "./assets/images/Eden travels sm.png"
+import InterStateTrevellingPage from './pages/services/interstatetravelling/page';
+import LogisticsPage from './pages/services/logistics/page';
 
 
 const HomePage = lazy(() => delayLoad(import("./pages/home/page")))
@@ -32,13 +34,18 @@ export const AppRouter = () => {
                         <Route path="/home" element={<HomePage />}/>
                         <Route path="/about" element={<AboutPage />}/>
                         <Route path="/services" element={<ServicesPage />}/>
-                        <Route path="/jobs" element={<JobsPage />}/>
-                        <Route path="/study-abroad" element={<StudyAbroadPage />}/>
                         {
                             servicesList.map((l, i) => (
                                 <Route key={i} path={"services/"+l?.title?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-")?.replace(" ", "-").toLowerCase()} element={<EachServicePage />}/>
                             ))
                         }
+
+                        <Route path='/services/logistics-services' element={<LogisticsPage /> } />
+
+                        <Route path='/services/interstate-travelling' element={<InterStateTrevellingPage />}/>
+
+                        <Route path="/jobs" element={<JobsPage />}/>
+                        <Route path="/study-abroad" element={<StudyAbroadPage />}/>
                         <Route path="/courses" element={<CoursesPage />}/>
                         {
                             coursesList.map((l, i) => (
