@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
-import { delayLoad } from "./assets/Functions"
 import { HelmetProvider  } from 'react-helmet-async';
 import { PageNotFound } from './pages/PageNotFound';
 import { Navbar } from './assets/components/Navbar';
@@ -15,12 +14,12 @@ import InterStateTrevellingPage from './pages/services/interstatetravelling/page
 import LogisticsPage from './pages/services/logistics/page';
 
 
-const HomePage = lazy(() => delayLoad(import("./pages/home/page")))
-const AboutPage = lazy(() => delayLoad(import('./pages/about/page')))
-const ServicesPage = lazy(() => delayLoad(import('./pages/services/page')))
-const JobsPage = lazy(() => delayLoad(import('./pages/Jobs/page')))
-const StudyAbroadPage = lazy(() => delayLoad(import('./pages/studyabroad/page')))
-const ContactPage = lazy(() => delayLoad(import('./pages/contact/page')))
+const HomePage = lazy(() => import("./pages/home/page"))
+const AboutPage = lazy(() => import('./pages/about/page'))
+const ServicesPage = lazy(() => import('./pages/services/page'))
+const JobsPage = lazy(() => import('./pages/Jobs/page'))
+const StudyAbroadPage = lazy(() => import('./pages/studyabroad/page'))
+const ContactPage = lazy(() => import('./pages/contact/page'))
 
 
 export const AppRouter = () => {  
