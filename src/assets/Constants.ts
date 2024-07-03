@@ -7,28 +7,6 @@ import travelArrangements from "../assets/images/travelArrangements.jpg"
 import travelInsurance from "../assets/images/travelInsurance.jpg"
 import flightBooking from "../assets/images/flightBooking.jpg"
 import accommodationBooking from "../assets/images/accommodationBooking.jpg"
-// import domaesticFlights from "../assets/images/domaesticFlights.jpg"
-// import internationalFlights from "../assets/images/internationalFlights.jpg"
-// import groupBookings from "../assets/images/groupBookings.jpg"
-// import charterFlights from "../assets/images/charterFlights.jpg"
-// import hotelReservations from "../assets/images/hotelReservations.jpg"
-// import vacationRentals from "../assets/images/vacationRentals.jpg"
-// import budgetLodging from "../assets/images/budgetLodging.jpg"
-// import trainBusTickets from "../assets/images/trainBusTickets.jpg"
-// import cruiseBookings from "../assets/images/cruiseBookings.jpg"
-// import customizableTravel from "../assets/images/customizableTravel.jpg"
-// import groupTours from "../assets/images/groupTours.jpg"
-// import adventureTours from "../assets/images/adventureTours.jpg"
-// import culturalTours from "../assets/images/culturalTours.jpg"
-// import visaApplication from "../assets/images/visaApplication.jpg"
-// import passportRenewal from "../assets/images/passportRenewal.jpg"
-// import documentGuidance from "../assets/images/documentGuidance.jpg"
-// import businessTravel from "../assets/images/businessTravel.jpg"
-// import conferencePlanning from "../assets/images/conferencePlanning.jpg"
-// import incentiveTravel from "../assets/images/incentiveTravel.jpg"
-// import medicalInsurance from "../assets/images/medicalInsurance.jpg"
-// import tripCancellation from "../assets/images/tripCancellation.jpg"
-// import baggageLoss from "../assets/images/baggageLoss.jpg"
 import transportationServices from "../assets/images/transportationServices.jpg"
 import carRentals from "../assets/images/carRentals.jpg"
 import airportTransfers from "../assets/images/airportTransfers.jpg"
@@ -75,6 +53,7 @@ import trainServices from "../assets/images/trainServices.jpg"
 import adventureTourss from "../assets/images/adventureTourss.jpg"
 import cityTours from "../assets/images/cityTours.jpg"
 import naijaCulture from "../assets/images/naijaCulture.jpg"
+import logisticsImg from "../assets/images/logisticsImg.jpg"
 
 
 export const NavInfo = [
@@ -254,7 +233,7 @@ export const servicesList = [
         sub: [
             {
                 title: "Courier Services",
-                img: "courierServices",
+                img: domesticCourier,
                 desc: "Reliable and efficient courier solutions for local and international deliveries.",
                 sub: [
                     {
@@ -291,7 +270,7 @@ export const servicesList = [
             },
             {
                 title: "Freight Services",
-                img: "freightServices",
+                img: landFreight,
                 desc: "Efficient freight services for bulk goods and cargo.",
                 sub: [
                     {
@@ -328,7 +307,7 @@ export const servicesList = [
             },
             {
                 title: "Supply Chain Solutions",
-                img: "supplyChainSolutions",
+                img: inventoryManagement,
                 desc: "Comprehensive supply chain solutions to streamline your logistics operations.",
                 sub: [
                     {
@@ -372,7 +351,7 @@ export const servicesList = [
         sub: [
             {
                 title: "Travel Booking",
-                img: "travelBooking",
+                img: busServices,
                 desc: "Seamless booking services for interstate travel in Nigeria.",
                 sub: [
                     {
@@ -409,7 +388,7 @@ export const servicesList = [
             },
             {
                 title: "Tour Packages",
-                img: "tourPackages",
+                img: naijaCulture,
                 desc: "Discover Nigeria with our customizable tour packages.",
                 sub: [
                     {

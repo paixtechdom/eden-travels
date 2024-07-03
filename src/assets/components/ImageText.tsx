@@ -9,7 +9,7 @@ import { FC } from "react"
 
 export const ImageText:FC<ImageTextInterface> = ({heading, span, desc, children, img}) => {
     return(
-        <section className={`w-full center py-[10vh] pb-[15vh] lg:pb-[25vh] lg:py-[20vh] overflow-hidden relative flex-col lg:flex-row gap-[50px] lg:gap-[25px] xl:gap-[50px]`}>
+        <section className={`w-full center py-[10vh] pb-[15vh] lg:pb-[25vh] lg:py-[20vh] overflow-hidden relative flex-col lg:flex-row gap-[50px] lg:gap-[25px] xl:gap-[50px] bg-primary bg-opacity-5 shadow-lg`}>
                 
                     <div className="w-11/12 lg:w-6/12 flex items-center justify-end">
                         <div className="flex flex-col gap-5  w-full lg:w-10/12">
