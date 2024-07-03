@@ -48,7 +48,7 @@ export const ContactInfo = [
 
 const Footer = () => {
     return(
-        <footer className="w-full center flex-col bg-white pt-[10vh] lg:pt-[15vh] border-t border-primary">
+        <footer className="w-full center flex-col bg-primary bg-opacity-5 pt-[10vh] lg:pt-[15vh] border-t border-primary">
             <div className="w-11/12 lg:w-10/12 flex flex-col gap-6 text-gray-900 z-10">
                 <div className="flex flex-col md:grid md:grid-cols-4 xl:grid-cols-8 gap-y-9 md:gap-9">
 

@@ -10,8 +10,8 @@ export const BreadCrumbs:FC<BreadCrumbsInterface> = ({links}) => {
 
 
     return(
-        <section className="w-full center mt-[10vh]">
-            <div className="bor der border- blue w-11/12 lg:w-10/12 xl:w-9/12 flex justify-start items-center gap-3 p-9 py-4 lg:pl-[50px] rounded-full mb-[10vh] flex-wrap shadow-xl ">
+        <section className="w-full center mt-[10vh] ">
+            <div className="bg-primary bg-opacity-5 w-11/12 lg:w-10/12 xl:w-9/12 flex justify-start items-center gap-3 p-9 py-4 lg:pl-[50px] rounded-full mb-[10vh] flex-wrap shadow-xl ">
                 {
                     links.map((link : any, i : number) => (
                         i !== links.length - 1 ?

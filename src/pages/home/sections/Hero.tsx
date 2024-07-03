@@ -14,24 +14,25 @@ import  "react-lazy-load-image-component/src/effects/opacity.css"
 
 export const Hero: React.FC = () => {
     return(
-        <div className="min-h-screen bg-white heroGradient2 md:bg-white -heroGradient bg-cover bg-center w-full center relative pt-[15vh] lg:py-0 "> 
-            <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row items- center justify-center z-10 gap-[100px] lg:gap-[150px]">
+        <div className="min-h-screen bg-white heroGradient2 md:bg-white -heroGradient bg-cover bg-center w-full center relative pb-[15vh] lg:pb-0 pt-[15vh] lg:py-0 "> 
+            <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row items- center justify-center z-10 gap-[150px]">
                 <div className="flex flex-col w-full md:w-9/12">
                     <Parallax id="heroadve">
 
-                    <p className="leading-relaxed text-xl tracking-wide text-gray-800">
+                    <p className="leading-relaxed tracking-wide text-gray-800">
                     Your adventure begins at
                     </p>
                     </Parallax>
 
                     <Parallax id="herohone">
 
-                    <h1 className="font-semibold text-4xl tracking-wide lg:leading-[60px] md:text-5xl text-secondary"><span className="font-bold">Onidson travels and tours Ltd</span></h1>
+                    <h1 className="font-semibold text-4xl tracking-wide lg:leading-[60px] md:text-5xl text-secondary"><span className="font-bold">Onidson travels and tours Ltd</span>
+                    </h1>
                     </Parallax>
                     
 
                     <Parallax id="heropdesc">
-                    <p className="leading-relaxed text-xl tracking-wide text-gray-900 mt-6">
+                    <p className="leading-relaxed tracking-wide text-gray-900 mt-6">
                     Embark on your adventure with curated travel experiences and aviation courses offered by Onidson travels and tours Ltd.
                     </p>
                     </Parallax>
@@ -58,7 +59,7 @@ export const Hero: React.FC = () => {
                 </div>
 
 
-                <div className="w-9/12 md:w-10/12 center lg:w-6/12 relative min-h-[30px]">
+                <div className="w-10/12 md:w-10/12 center lg:w-6/12 relative min-h-[30px]">
                     <LazyLoadImage 
                             src={airplane} 
                             placeholderSrc={"Airplane and destinations"} 
@@ -67,7 +68,7 @@ export const Hero: React.FC = () => {
                     
                     />
 
-                    <div className="absolute top-5 right-[45%] z-[50]">
+                    <div className="absolute -top-5 right-[45%] z-[50]">
                         <ImageExtras 
                               icon={<PiCheck className="text-lg"/>}
                               iconBg={"bg-green-700"}
@@ -77,7 +78,7 @@ export const Hero: React.FC = () => {
                               </p>}
                         />
                      </div>
-                    <div className="absolute bottom-0 left-[35%] z-[50]">
+                    <div className="absolute -bottom-10 left-[35%] z-[50]">
                         <ImageExtras 
                               icon={<FaPlane className="text-lg"/>}
                               iconBg={"bg-purple-700"}

@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Margaret:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 
 
@@ -6,7 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
-p, span, div, b, strong, button, a, h3{
+*{
     font-family: 'Poppins';
 }
 

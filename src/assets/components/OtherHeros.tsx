@@ -53,7 +53,7 @@ export const OtherHeros:FC<HeroComponentInterface> = ({heroHeader, desc, img, da
             <BreadCrumbs links={breadLinks} />
 
 
-            <section id={"pageLinks"} className="bg-white py-[10vh] mt-[10vh] center text-center flex-col gap-5 min-h-[30vh] w-full border-y border-primary">
+            <section id={"pageLinks"} className="bg-primary bg-opacity-5 py-[10vh] mt-[10vh] center text-center flex-col gap-5 min-h-[30vh] w-full border-y border-primary">
                     <h2 className="text-secondary font-semibold text-4xl md:text-5/12 w-11/12 lg:w-6/12">
                         {dataHeader}
                     </h2>
@@ -73,7 +73,7 @@ export const OtherHeros:FC<HeroComponentInterface> = ({heroHeader, desc, img, da
 
                     <Button 
                         text="Get started"
-                        className="bg-white border border-secondary shadow-xl text-black"
+                        className="bg-transparent border border-secondary shadow-xl text-black"
                         navigateTo="contact"
                         icon={
                             <BsTelephoneFill />
