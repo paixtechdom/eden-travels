@@ -53,7 +53,7 @@ import trainServices from "../assets/images/trainServices.jpg"
 import adventureTourss from "../assets/images/adventureTourss.jpg"
 import cityTours from "../assets/images/cityTours.jpg"
 import naijaCulture from "../assets/images/naijaCulture.jpg"
-import logisticsImg from "../assets/images/logisticsImg.jpg"
+// import logisticsImg from "../assets/images/logisticsImg.jpg"
 
 
 export const NavInfo = [
