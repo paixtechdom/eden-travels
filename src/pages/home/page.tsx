@@ -41,9 +41,9 @@ const HomePage: React.FC = () => {
         <>
          <Helmet>
                 <title>
-                Eden Classic Travel and Tours
+                Onidson travels and tours Ltd
                 </title>
-                <meta name="description" content="Explore the world with Eden Classic Travel and Tours - personalized tour packages, flight bookings, travel insurance, and professional training. Discover seamless journeys and exceptional travel experiences. Contact us today!" />
+                <meta name="description" content="Explore the world with Onidson travels and tours Ltd - personalized tour packages, flight bookings, travel insurance, and professional training. Discover seamless journeys and exceptional travel experiences. Contact us today!" />
             </Helmet>
         <main className="center bg-white flex-col">
             <Hero />

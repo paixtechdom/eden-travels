@@ -55,9 +55,9 @@ const ContactPage = () => {
         <>
             <Helmet>
                 <title>
-                    Contact Eden Classic Travel and Tours
+                    Contact Onidson travels and tours Ltd
                 </title>
-                <meta name="description" content={`Connect with Eden Classic Travel and Tours through our contact information. Reach us by phone at ${contactInfo[0].contact}, email us at  ${contactInfo[1].contact}, or visit us at  ${contactInfo[2].contact}. We're here to help!`} />
+                <meta name="description" content={`Connect with Onidson travels and tours Ltd through our contact information. Reach us by phone at ${contactInfo[0].contact}, email us at  ${contactInfo[1].contact}, or visit us at  ${contactInfo[2].contact}. We're here to help!`} />
             </Helmet>            
 
             <main className="center flex-col w-full pt-[20vh] pb-[10vh] bg-white">
