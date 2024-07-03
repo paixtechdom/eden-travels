@@ -54,7 +54,8 @@ export const Navbar = () => {
                     dispatch(setCurrentDropDown(""))
                     DocscrollTop()
                 }}>
-                    <img src={logo} alt="Eden Travels and Tour Logo" className='w-9/12 md:w-7/12'/>
+                    {/* <img src={logo} alt="Eden Travels and Tour Logo" className='w-9/12 md:w-7/12'/> */}
+                    <h2 className="text-2xl font-bold uppercase">Onidson</h2>
                     
                 </Link>
 
