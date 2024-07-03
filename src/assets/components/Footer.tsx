@@ -13,7 +13,7 @@ const FooterLinks = [
     {
         header: 'Services',
         to: "services",
-        links: ["Travel Arrangements", "Travel Packages and Insurance", "Travel Documentation and Corporate Services"]
+        links: ["Flight Services", "Logistics Services", "Interstate Travelling"]
     },
     {
         header: "Courses",
