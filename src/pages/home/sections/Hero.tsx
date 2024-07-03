@@ -26,13 +26,13 @@ export const Hero: React.FC = () => {
 
                     <Parallax id="herohone">
 
-                    <h1 className="font-semibold text-4xl tracking-wide lg:leading-[60px] md:text-5xl text-secondary"><span className="font-bold">Eden Classic Travels & Tours Ltd</span></h1>
+                    <h1 className="font-semibold text-4xl tracking-wide lg:leading-[60px] md:text-5xl text-secondary"><span className="font-bold">Onidson travels and tours Ltd</span></h1>
                     </Parallax>
                     
 
                     <Parallax id="heropdesc">
                     <p className="leading-relaxed text-xl tracking-wide text-gray-900 mt-6">
-                    Embark on your adventure with curated travel experiences and aviation courses offered by Eden Classic Travels & Tours Ltd.
+                    Embark on your adventure with curated travel experiences and aviation courses offered by Onidson travels and tours Ltd.
                     </p>
                     </Parallax>
 

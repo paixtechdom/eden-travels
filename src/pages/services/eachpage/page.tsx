@@ -9,8 +9,8 @@ import { ImageExtras } from "../../../assets/components/ImageExtras"
 import { FaPassport, FaPlane, FaSuitcase } from "react-icons/fa6"
 import { setCurrentDropDown, setCurrentDropDownIndex, setCurrentNav } from "../../../assets/store/navigation/navigationSlice"
 import planaTakeOff from "../../../assets/images/planaTakeOff.jpg"
-import girlTour from "../../../assets/images/girlTour.jpg"
-import travelDoc from "../../../assets/images/travelDoc.jpg"
+import logisticsImg from "../../../assets/images/logisticsImg.jpg"
+import naija from "../../../assets/images/naija.jpg"
 import { BeforeFooter } from "../../../assets/components/BeforeFooter"
 import { Helmet } from "react-helmet-async"
 
@@ -64,16 +64,16 @@ const EachServicePage = () => {
     
     const metaConstants = [
         {
-            title: "Professional Aviation Services",
-            desc: "Discover top-notch aviation services including flight training, aircraft maintenance, and charter services. Enhance your aviation career with our expert solutions."
+            title: "Flight Services",
+            desc: "Discover top-notch flight services including flight training, aircraft maintenance, and charter services. Enhance your aviation career with our expert solutions."
         },
         {
-            title: "Comprehensive Travelling Solutions",
-            desc: "Explore our comprehensive travelling solutions. From flight bookings to travel insurance, we offer everything you need for a seamless travel experience."
+            title: "Logistic Services",
+            desc: "Discover efficient logistics solutions tailored for seamless delivery operations. From courier services to comprehensive freight management, optimize your logistics with our reliable solutions."
         },
         {
-            title: "Exciting Tour Packages",
-            desc: "Uncover exciting tour packages to the world's most beautiful destinations. Enjoy curated experiences with our guided tours and travel packages."
+            title: "Interstate Travelling",
+            desc: "Explore seamless interstate travel services across Nigeria. From bus and car rentals to train services, travel comfortably and conveniently with our reliable transportation solutions"
         }
     ];
     
@@ -118,24 +118,24 @@ const EachServicePage = () => {
 
                  <ImageText 
                     span={ servicePageIndex === 0
-                        ? "Effortless Travel Arrangements"
+                        ? "Effortless Flight Arrangements"
                         : servicePageIndex === 1
-                        ? "Tailored Travel Packages and Comprehensive Insurance"
-                        : "Expert Travel Documentation and Corporate Services"
+                        ? "Efficient Logistics Solutions"
+                        : "Effortless Interstate Travel"
                     }
                     desc={
                         servicePageIndex === 0
                             ? "Book flights, accommodations, and transportation with ease. Our team ensures your travel arrangements are seamless and hassle-free."
                             : servicePageIndex === 1
-                            ? "Explore customized travel packages and secure travel insurance. We offer solutions for unforgettable trips with peace of mind."
-                            : "Handle your travel documentation and corporate travel needs efficiently. From visa services to corporate travel plans, we have you covered."
+                            ? "Simplify your logistics with our comprehensive solutions. From courier services to freight management, we streamline your delivery operations for optimal efficiency and reliability."
+                            : "Simplify your interstate travel with our seamless booking services for buses, car rentals, and train journeys across Nigeria. Whether you're planning a business trip or a leisurely adventure, we ensure your travel arrangements are convenient and stress-free."
                     }
                     img={
                         servicePageIndex === 0 ?
                         planaTakeOff : 
                         servicePageIndex === 1 ?
-                        girlTour :
-                        travelDoc
+                        logisticsImg :
+                        naija
                     }>
                     <>
                         <div className="absolute -bottom-5 right-[45%]">
@@ -152,7 +152,7 @@ const EachServicePage = () => {
                     
                     </ImageText>
                     <BeforeFooter 
-                        text="Contact us now to book your next flight"
+                        text="Contact us now to get started"
                     />
                 </>
             }

@@ -35,6 +35,7 @@ import incentiveTravel from "../assets/images/incentiveTravel.jpg"
 import medicalInsurance from "../assets/images/medicalInsurance.jpg"
 import tripCancellation from "../assets/images/tripCancellation.jpg"
 import baggageLoss from "../assets/images/baggageLoss.jpg"
+import logisticsServices from "../assets/images/logisticsServices.jpg"
 import customerandSales from "../assets/images/customerandSales.jpg"
 import effectiveCommunication from "../assets/images/effectiveCommunication.jpg"
 import customerComplaints from "../assets/images/customerComplaints.jpg"
@@ -59,6 +60,21 @@ import travelTechnology from "../assets/images/travelTechnology.jpg"
 import bookingSoftware from "../assets/images/bookingSoftware.jpg"
 import travelApps from "../assets/images/travelApps.jpg"
 import technologyTrends from "../assets/images/technologyTrends.jpg"
+import domesticCourier from "../assets/images/domesticCourier.jpg"
+import ecommerceFulfillment from "../assets/images/ecommerceFulfillment.jpg"
+import internationalCourier from "../assets/images/internationalCourier.jpg"
+import airFreight from "../assets/images/airFreight.jpg"
+import seaFreight from "../assets/images/seaFreight.jpg"
+import landFreight from "../assets/images/landFreight.jpg"
+import inventoryManagement from "../assets/images/inventoryManagement.jpg"
+import procurementServices from "../assets/images/procurementServices.jpg"
+import distributionServices from "../assets/images/distributionServices.jpg"
+import interstateTravelling from "../assets/images/interstateTravelling.jpg"
+import busServices from "../assets/images/busServices.jpg"
+import trainServices from "../assets/images/trainServices.jpg"
+import adventureTourss from "../assets/images/adventureTourss.jpg"
+import cityTours from "../assets/images/cityTours.jpg"
+import naijaCulture from "../assets/images/naijaCulture.jpg"
 
 
 export const NavInfo = [
@@ -75,16 +91,8 @@ export const NavInfo = [
         link: 'services',
         sublinks: [
             {
-                title: "Flight Arrangements",
-                link: "travel-arrangements"
-            },
-            {
-                title: "Flight Packages and Insurance",
-                link: "travel-packages"
-            },
-            {
-                title: "Flight Documentation and Corporate Services",
-                link: "documentation"
+                title: "Flight Services",
+                link: "logistics"
             },
             {
                 title: "Logistics Services",
@@ -139,214 +147,100 @@ export const NavInfo = [
 ]
 export const servicesList = [
     {
-        title: "Flight Arrangements",
-        img: travelArrangements,
-        desc: "Hassle-free booking for flights, accommodations, and transportation.",
+        title: "Flight Services",
+        img: airportTransfers,
+        desc: "Comprehensive flight services including booking, accommodations, transportation, travel packages, insurance, and documentation to ensure a seamless and stress-free travel experience.",
         sub: [
             {
-                title: "Flight Booking",
-                img: flightBooking,
-                desc: "Efficient booking solutions for domestic and international flights, group bookings, and charter flights.",
+                title: "Flight Arrangements",
+                img: travelArrangements,
+                desc: "Hassle-free booking for flights, accommodations, and transportation.",
                 sub: [
                     {
-                        title: "Domestic Flights",
-                        img: domaesticFlights,
+                        title: "Flight Booking",
+                        img: flightBooking,
+                        desc: "Efficient booking solutions for domestic and international flights, group bookings, and charter flights.",
                         sub: [
-                            "Booking for all major domestic airlines",
-                            "Last-minute flight deals",
-                            "Multi-city itineraries"
+                            "Domestic Flights",
+                            "International Flights",
+                            "Group Bookings",
+                            "Charter Flights"
+                        ]  
+                    },
+                    {
+                        title: "Accommodation Booking",
+                        img: accommodationBooking,
+                        desc: "Convenient booking options for hotels, vacation rentals, and budget lodging.",
+                        sub: [
+                            "Hotel Reservations",
+                            "Vacation Rentals",
+                            "Hostels and Budget Lodging"
                         ]
                     },
                     {
-                        title: "International Flights",
-                        img: internationalFlights,
+                        title: "Transportation Services",
+                        img: transportationServices,
+                        desc: "Comprehensive transportation solutions including car rentals, airport transfers, train and bus tickets, and cruise bookings.",
                         sub: [
-                            "Booking for all major international airlines",
-                            "Assistance with travel documents",
-                            "Connecting flight arrangements"
-                        ]
-                    },
-                    {
-                        title: "Group Bookings",
-                        img: groupBookings,
-                        sub: [
-                            "Special rates for group travel",
-                            "Custom itineraries",
-                            "Group check-in assistance"
-                        ]
-                    },
-                    {
-                        title: "Charter Flights",
-                        img: charterFlights,
-                        sub: [
-                            "Private jet charters",
-                            "Luxury amenities",
-                            "Flexible scheduling"
-                        ]
-                    }
-                ]  
-            },
-
-            {
-                title: "Accommodation Booking",
-                img: accommodationBooking,
-                desc: "Convenient booking options for hotels, vacation rentals, and budget lodging.",
-                sub: [
-                    {
-                        title: "Hotel Reservations",
-                        img: hotelReservations,
-                        sub: [
-                            "Booking for major hotel chains",
-                            "Luxury and boutique hotels",
-                            "Discounted rates and special offers"
-                        ]
-                    },
-                    {
-                        title: "Vacation Rentals",
-                        img: vacationRentals,
-                        sub: [
-                            "Booking for apartments and villas",
-                            "Long-term rental options",
-                            "Family-friendly properties"
-                        ]
-                    },
-                    {
-                        title: "Hostels and Budget Lodging",
-                        img: budgetLodging,
-                        sub: [
-                            "Affordable hostel bookings",
-                            "Shared and private rooms",
-                            "Youth and backpacker-friendly"
+                            "Car Rentals",
+                            "Airport Transfers",
+                            "Train and Bus Tickets",
+                            "Cruise Bookings"
                         ]
                     }
                 ]
-                
             },
             {
-                title: "Transportation Services",
-                img: transportationServices,
-                desc: "Comprehensive transportation solutions including car rentals, airport transfers, train and bus tickets, and cruise bookings.",
+                title: "Flight Packages and Insurance",
+                img: familyTour,
+                desc: "Tailored travel packages and comprehensive insurance coverage.",
                 sub: [
                     {
-                        title: "Car Rentals",
-                        img: carRentals,
+                        title: "Tour Packages",
+                        img: tourPackages,
+                        desc: "Explore customizable travel packages, group tours, adventure tours, and cultural heritage tours.",
                         sub: [
-                            "Wide range of vehicles",
-                            "Flexible rental periods",
-                            "Airport pickup and drop-off"
+                            "Customizable Travel Packages",
+                            "Group Tours",
+                            "Adventure Tours",
+                            "Cultural and Heritage Tours"
                         ]
                     },
                     {
-                        title: "Airport Transfers",
-                        img: airportTransfers,
+                        title: "Travel Insurance",
+                        img: travelInsurance,
+                        desc: "Protect your travel with medical, trip cancellation, and baggage loss insurance.",
                         sub: [
-                            "Private and shared transfers",
-                            "Meet and greet services",
-                            "Luxury transfer options"
-                        ]
-                    },
-                    {
-                        title: "Train and Bus Tickets",
-                        img: trainBusTickets,
-                        sub: [
-                            "Domestic and international routes",
-                            "Flexible ticket options",
-                            "Discounts for group travel"
-                        ]
-                    },
-                    {
-                        title: "Cruise Bookings",
-                        img: cruiseBookings,
-                        sub: [
-                            "Ocean and river cruises",
-                            "Luxury and budget options",
-                            "Custom itineraries"
+                            "Medical Travel Insurance",
+                            "Trip Cancellation Insurance",
+                            "Baggage Loss Insurance"
                         ]
                     }
                 ]
-                
-            },
-        ]
-    },
-    {
-        title: "Flight Packages and Insurance",
-        img: familyTour,
-        desc: "Tailored travel packages and comprehensive insurance coverage.",
-        sub: [
-            {
-                title: "Tour Packages",
-                img: tourPackages,
-                desc: "Explore customizable travel packages, group tours, adventure tours, and cultural heritage tours.",
-                sub: [
-                    {
-                        title: "Customizable Travel Packages",
-                        img: customizableTravel,
-                        sub: [
-                            "Tailored itineraries",
-                            "Flexible travel dates",
-                            "Personalized experiences"
-                        ]
-                    },
-                    {
-                        title: "Group Tours",
-                        img: groupTours,
-                        sub: [
-                            "Scheduled group departures",
-                            "Special rates for groups",
-                            "Expert tour guides"
-                        ]
-                    },
-                    {
-                        title: "Adventure Tours",
-                        img: adventureTours,
-                        sub: [
-                            "Adventure activities",
-                            "Guided expeditions",
-                            "Equipment rentals"
-                        ]
-                    },
-                    {
-                        title: "Cultural and Heritage Tours",
-                        img: culturalTours,
-                        sub: [
-                            "Historical site visits",
-                            "Cultural immersion experiences",
-                            "Local guide services"
-                        ]
-                    }
-                ]
-               
             },
             {
-                title: "Travel Insurance",
-                img: travelInsurance,
-                desc: "Protect your travel with medical, trip cancellation, and baggage loss insurance.",
+                title: "Flight Documentation and Corporate Services",
+                img: passportServices,
+                desc: "Visa, passport services, and efficient corporate travel solutions.",
                 sub: [
                     {
-                        title: "Medical Travel Insurance",
-                        img: medicalInsurance,
+                        title: "Visa and Passport Services",
+                        img: visaandPassportServices,
+                        desc: "Simplify your travel with visa application assistance, passport renewal services, and travel document guidance.",
                         sub: [
-                            "Emergency medical coverage",
-                            "Hospitalization benefits",
-                            "24/7 assistance"
+                            "Visa Application Assistance",
+                            "Passport Renewal Services",
+                            "Travel Document Guidance"
                         ]
                     },
                     {
-                        title: "Trip Cancellation Insurance",
-                        img: tripCancellation,
+                        title: "Corporate Travel",
+                        img: corporateTravel,
+                        desc: "Efficient business travel management, conference and event planning, and incentive travel programs.",
                         sub: [
-                            "Refunds for cancellations",
-                            "Coverage for trip interruptions",
-                            "Non-refundable expense protection"
-                        ]
-                    },
-                    {
-                        title: "Baggage Loss Insurance",
-                        img: baggageLoss,
-                        sub: [
-                            "Lost baggage compensation",
-                            "Delayed baggage coverage",
-                            "Stolen baggage protection"
+                            "Business Travel Management",
+                            "Conference and Event Planning",
+                            "Incentive Travel Programs"
                         ]
                     }
                 ]
@@ -354,82 +248,208 @@ export const servicesList = [
         ]
     },
     {
-        title: "Flight Documentation and Corporate Services",
-        img: passportServices,
-        desc: "Visa, passport services, and efficient corporate travel solutions.",
+        title: "Logistics Services",
+        img: logisticsServices,
+        desc: "Comprehensive logistics services to meet all your delivery needs, both locally and internationally.",
         sub: [
             {
-                title: "Visa and Passport Services",
-                img: visaandPassportServices,
-                desc: "Simplify your travel with visa application assistance, passport renewal services, and travel document guidance.",
+                title: "Courier Services",
+                img: "courierServices",
+                desc: "Reliable and efficient courier solutions for local and international deliveries.",
                 sub: [
                     {
-                        title: "Visa Application Assistance",
-                        img: visaApplication,
+                        title: "Domestic Courier",
+                        img: domesticCourier,
+                        desc: "Fast and secure courier services within the country.",
                         sub: [
-                            "Application process guidance",
-                            "Document preparation",
-                            "Appointment scheduling"
+                            "Same-Day Delivery",
+                            "Next-Day Delivery",
+                            "Express Delivery"
                         ]
                     },
                     {
-                        title: "Passport Renewal Services",
-                        img: passportRenewal,
+                        title: "International Courier",
+                        img: internationalCourier,
+                        desc: "Global courier services for documents and parcels.",
                         sub: [
-                            "Renewal form assistance",
-                            "Expedited processing",
-                            "Document checklist"
+                            "Document Delivery",
+                            "Parcel Delivery",
+                            "Freight Services"
                         ]
                     },
                     {
-                        title: "Travel Document Guidance",
-                        img: documentGuidance,
+                        title: "E-commerce Fulfillment",
+                        img: ecommerceFulfillment,
+                        desc: "Comprehensive solutions for online businesses including warehousing and shipping.",
                         sub: [
-                            "Information on required documents",
-                            "Embassy and consulate support",
-                            "Travel advisories"
+                            "Warehousing",
+                            "Order Processing",
+                            "Shipping Solutions"
                         ]
                     }
                 ]
-                
             },
             {
-                title: "Corporate Travel",
-                img: corporateTravel,
-                desc: "Efficient business travel management, conference and event planning, and incentive travel programs.",
+                title: "Freight Services",
+                img: "freightServices",
+                desc: "Efficient freight services for bulk goods and cargo.",
                 sub: [
                     {
-                        title: "Business Travel Management",
-                        img: businessTravel,
+                        title: "Air Freight",
+                        img: airFreight,
+                        desc: "Fast and reliable air freight services for urgent deliveries.",
                         sub: [
-                            "Itinerary planning",
-                            "Corporate discounts",
-                            "Travel policy compliance"
+                            "Express Air Freight",
+                            "Standard Air Freight",
+                            "Charter Services"
                         ]
                     },
                     {
-                        title: "Conference and Event Planning",
-                        img: conferencePlanning,
+                        title: "Sea Freight",
+                        img: seaFreight,
+                        desc: "Cost-effective sea freight services for large shipments.",
                         sub: [
-                            "Venue selection",
-                            "Event logistics",
-                            "Participant coordination"
+                            "Full Container Load (FCL)",
+                            "Less than Container Load (LCL)",
+                            "Bulk Shipping"
                         ]
                     },
                     {
-                        title: "Incentive Travel Programs",
-                        img: incentiveTravel,
+                        title: "Land Freight",
+                        img: landFreight,
+                        desc: "Reliable land freight services for domestic and cross-border deliveries.",
                         sub: [
-                            "Reward trips",
-                            "Team-building events",
-                            "Custom incentive packages"
+                            "Truckload (TL)",
+                            "Less than Truckload (LTL)",
+                            "Specialized Freight"
                         ]
                     }
                 ]
             },
+            {
+                title: "Supply Chain Solutions",
+                img: "supplyChainSolutions",
+                desc: "Comprehensive supply chain solutions to streamline your logistics operations.",
+                sub: [
+                    {
+                        title: "Inventory Management",
+                        img: inventoryManagement,
+                        desc: "Efficient inventory management solutions to keep your stock organized.",
+                        sub: [
+                            "Stock Control",
+                            "Order Management",
+                            "Warehouse Solutions"
+                        ]
+                    },
+                    {
+                        title: "Procurement Services",
+                        img: procurementServices,
+                        desc: "Professional procurement services to manage your purchasing needs.",
+                        sub: [
+                            "Supplier Management",
+                            "Contract Negotiation",
+                            "Sourcing Solutions"
+                        ]
+                    },
+                    {
+                        title: "Distribution Services",
+                        img: distributionServices,
+                        desc: "Effective distribution services to ensure timely delivery of goods.",
+                        sub: [
+                            "Last-Mile Delivery",
+                            "Fulfillment Centers",
+                            "Reverse Logistics"
+                        ]
+                    }
+                ]
+            }
         ]
     },
+    {
+        title: "Interstate Travelling",
+        img: interstateTravelling,
+        desc: "Seamless interstate travel services across Nigeria to ensure a comfortable and hassle-free journey.",
+        sub: [
+            {
+                title: "Travel Booking",
+                img: "travelBooking",
+                desc: "Seamless booking services for interstate travel in Nigeria.",
+                sub: [
+                    {
+                        title: "Bus Services",
+                        img: busServices,
+                        desc: "Comfortable and affordable bus services across states.",
+                        sub: [
+                            "Luxury Buses",
+                            "Economy Buses",
+                            "Shuttle Services"
+                        ]
+                    },
+                    {
+                        title: "Car Rentals",
+                        img: carRentals,
+                        desc: "Convenient car rental options for interstate travel.",
+                        sub: [
+                            "Self-Drive Rentals",
+                            "Chauffeur Services",
+                            "Long-Term Rentals"
+                        ]
+                    },
+                    {
+                        title: "Train Services",
+                        img: trainServices,
+                        desc: "Efficient and comfortable train services for travel across states.",
+                        sub: [
+                            "First-Class",
+                            "Economy Class",
+                            "Sleeper Coaches"
+                        ]
+                    }
+                ]
+            },
+            {
+                title: "Tour Packages",
+                img: "tourPackages",
+                desc: "Discover Nigeria with our customizable tour packages.",
+                sub: [
+                    {
+                        title: "Adventure Tours",
+                        img: adventureTourss,
+                        desc: "Exciting adventure tours to explore Nigeria's natural beauty.",
+                        sub: [
+                            "Mountain Climbing",
+                            "Safari Tours",
+                            "Water Sports"
+                        ]
+                    },
+                    {
+                        title: "Cultural Tours",
+                        img: naijaCulture,
+                        desc: "Experience Nigeria's rich cultural heritage with our guided tours.",
+                        sub: [
+                            "Heritage Sites",
+                            "Cultural Festivals",
+                            "Local Cuisine Tours"
+                        ]
+                    },
+                    {
+                        title: "City Tours",
+                        img: cityTours,
+                        desc: "Explore major cities in Nigeria with our organized city tours.",
+                        sub: [
+                            "Lagos Tours",
+                            "Abuja Tours",
+                            "Port Harcourt Tours"
+                        ]
+                    }
+                ]
+            },
+           
+        ]
+    }
 ];
+
+
 
 
 export const coursesList = [
