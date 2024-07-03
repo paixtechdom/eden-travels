@@ -7,7 +7,7 @@ import { RootState } from "../store/AppStore"
 import { setCurrentDropDown, setCurrentDropDownIndex, setCurrentNav, toggleShowNav } from "../store/navigation/navigationSlice"
 import { DocscrollTop } from "../../App"
 import { useEffect } from "react"
-import logo from "../images/Eden travels sm.png"
+// import logo from "../images/Eden travels sm.png"
 
 
 

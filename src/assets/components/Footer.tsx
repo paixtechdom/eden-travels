@@ -1,6 +1,6 @@
 import { BsEnvelopeFill, BsGeoAltFill, BsTelephoneFill } from "react-icons/bs"
 import { Link } from "react-router-dom"
-import logo from "../images/Eden travels sm.png"
+// import logo from "../images/Eden travels sm.png"
 import { RiWhatsappFill } from "react-icons/ri"
 
 
@@ -30,8 +30,8 @@ export const ContactInfo = [
     },
     {
         icon: <BsEnvelopeFill />,
-        contact: 'hello@edenclassic.com',
-        link: "mailto:hello@edenclassic.com"
+        contact: 'hello@onidsontravels.com',
+        link: "mailto:hello@onidsontravels.com"
     },
     {
         icon: <BsTelephoneFill />,

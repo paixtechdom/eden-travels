@@ -15,7 +15,7 @@ const contactInfo = [
     },
     {
         icon: <BsEnvelopeFill />,
-        contact: "hello@edenclassic.com",
+        contact: "hello@onidsontravels.com",
         link: "mailto:hello@edenclassic.com"
     },
     {

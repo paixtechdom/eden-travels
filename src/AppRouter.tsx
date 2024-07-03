@@ -10,7 +10,7 @@ import { servicesList, coursesList } from './assets/Constants';
 import EachServicePage from './pages/services/eachpage/page';
 import EachCoursesPage from './pages/courses/eachpage/page';
 import CoursesPage from './pages/courses/page';
-import logo from "./assets/images/Eden travels sm.png"
+// import logo from "./assets/images/Eden travels sm.png"
 import InterStateTrevellingPage from './pages/services/interstatetravelling/page';
 import LogisticsPage from './pages/services/logistics/page';
 
