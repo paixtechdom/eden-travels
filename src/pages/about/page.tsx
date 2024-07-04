@@ -52,7 +52,7 @@ const AboutPage = () => {
                 <meta name="description" content="Welcome to our travel agency, Onidson travels and tours Ltd. Our dedicated team offers personalized travel services, seamless flight bookings, and expert visa assistance. Let us create unforgettable journeys for you!" />
             </Helmet>
             <main className="mb-[15vh]">
-                <section className="w-full center min-h-[90vh] bg-white flex-col flex pt-[20vh] pb-[10vh]">
+                <section className="w-full center min-h-[90vh] bg-white flex-col flex pt-[15vh] md:pt-[10vh] lg:pt-[20vh] pb-[10vh]">
                     <div className="flex flex-col w-11/12 lg:w-10/12 gap-6">
                         <div className="flex flex-col w-full lg:w-9/12 gap-6">
 

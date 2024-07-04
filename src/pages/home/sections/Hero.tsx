@@ -14,7 +14,7 @@ import  "react-lazy-load-image-component/src/effects/opacity.css"
 
 export const Hero: React.FC = () => {
     return(
-        <div className="min-h-screen bg-white heroGradient2 md:bg-white -heroGradient bg-cover bg-center w-full center relative pb-[15vh] lg:pb-0 pt-[15vh] lg:py-0 "> 
+        <div className="min-h-screen bg-white heroGradient2 -heroGradient bg-cover bg-center w-full center relative pb-[15vh] lg:pb-0 pt-[15vh] lg:py-0 "> 
             <div className="w-11/12 lg:w-10/12 flex flex-col lg:flex-row items- center justify-center z-10 gap-[150px]">
                 <div className="flex flex-col w-full md:w-9/12">
                     <Parallax id="heroadve">
