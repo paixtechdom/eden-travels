@@ -46,7 +46,7 @@ export const Navbar = () => {
         <header className={`fixed center w-full left-0 top-0 h-[8vh] md:h-[10vh] z-50 transition-all duration-1000 ${scrolledDown ? "shadow-xl border-b border-primary bg-white bg-opacity-50 backdrop-blur-2xl" : ""} `}>
             <div className="flex items-center justify-between w-11/12 lg:w-10/12">
 
-                <Link to={'/'} className='w-2/12' onClick={() => {
+                <Link to={'/'} className=' w-4/12 lg:w-2/12' onClick={() => {
                     dispatch(setCurrentNav(0))
                     if(showNav){
                         dispatch(toggleShowNav())
@@ -55,7 +55,6 @@ export const Navbar = () => {
                     DocscrollTop()
                 }}>
                     <img src={logo} alt="Onidson Travels and Tour Logo" className='w-9/12 md:w-8/12'/>
-                    {/* <h2 className="text-2xl font-bold uppercase">Onidson</h2> */}
                     
                 </Link>
 
