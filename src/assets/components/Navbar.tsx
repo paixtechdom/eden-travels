@@ -7,7 +7,7 @@ import { RootState } from "../store/AppStore"
 import { setCurrentDropDown, setCurrentDropDownIndex, setCurrentNav, toggleShowNav } from "../store/navigation/navigationSlice"
 import { DocscrollTop } from "../../App"
 import { useEffect } from "react"
-// import logo from "../images/Eden travels sm.png"
+import logo from "../images/Onidson sm.png"
 
 
 
@@ -54,8 +54,8 @@ export const Navbar = () => {
                     dispatch(setCurrentDropDown(""))
                     DocscrollTop()
                 }}>
-                    {/* <img src={logo} alt="Eden Travels and Tour Logo" className='w-9/12 md:w-7/12'/> */}
-                    <h2 className="text-2xl font-bold uppercase">Onidson</h2>
+                    <img src={logo} alt="Onidson Travels and Tour Logo" className='w-9/12 md:w-8/12'/>
+                    {/* <h2 className="text-2xl font-bold uppercase">Onidson</h2> */}
                     
                 </Link>
 

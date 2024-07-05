@@ -9,7 +9,7 @@ import { servicesList, coursesList } from './assets/Constants';
 import EachServicePage from './pages/services/eachpage/page';
 import EachCoursesPage from './pages/courses/eachpage/page';
 import CoursesPage from './pages/courses/page';
-// import logo from "./assets/images/Eden travels sm.png"
+import logo from "./assets/images/Onidson sm.png"
 import InterStateTrevellingPage from './pages/services/interstatetravelling/page';
 import LogisticsPage from './pages/services/logistics/page';
 
@@ -66,10 +66,10 @@ export const AppRouter = () => {
   const Loader = () => {
     return(
         <section className='h-screen w-full bg-white  center flex-col text-4xl  text-center gap-2 text-gray-900'>
-           {/* <img src={logo} alt="Eden Travels and Tour Logo" className='animate-bounce w-6/12 md:w-5/12 lg:w-3/12'/> */}
-           <h3 className='font-bold text-3xl uppercase animate-bounce'>Onidson</h3>
-           <p className='font-bold text-xl'>travels and tours Ltd</p>
-            {/* <p className="text-sm">Seamless Travel, Planned for Your Next Journey</p> */}
+           <img src={logo} alt="Onidson Travels and Tour Logo" className='animate-bounce w-6/12 md:w-5/12 lg:w-3/12'/>
+           {/* <h3 className='font-bold text-3xl uppercase animate-bounce'>Onidson</h3>
+           <p className='font-bold text-xl'>travels and tours Ltd</p> */}
+            <p className="text-sm">Seamless Travel, Planned for Your Next Journey</p>
         </section>
     )
   }
