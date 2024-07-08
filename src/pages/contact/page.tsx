@@ -77,7 +77,7 @@ const ContactPage = () => {
     const sendContactEmail = (subject:string) => {
         const newMessage = formInputs.message.replace(/\n/g, '<br>')
 
-        axios.post(`contactEmail.php` ,{
+        axios.post(`contactemail.php` ,{
             subject: subject,
             message: newMessage.replace(/\n/g, '<br>'),
             phoneNumber: formInputs.phoneNumber,
@@ -119,7 +119,7 @@ const ContactPage = () => {
         <>
             <Helmet>
                 <title>
-                    Contact Eden Classic Travel and Tours
+                    Contact Onidson Travels and Tours Ltd
                 </title>
                 <meta name="description" content={`Connect with Onidson Travels and Tours Ltd through our contact information. Reach us by phone at ${contactInfo[0].contact}, email us at  ${contactInfo[1].contact}, or visit us at  ${contactInfo[2].contact}. We're here to help!`} />
             </Helmet>            
