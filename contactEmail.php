@@ -16,7 +16,7 @@ $subject= $data['subject'];
 $message = $data['message'];
 $phoneNumber = $data['phoneNumber'];
 $from = $data['from'];
-$name = $data['fullName'];
+$name = $data['name'];
 
 $message = '
 <!DOCTYPE html>
