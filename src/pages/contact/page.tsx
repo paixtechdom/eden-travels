@@ -61,11 +61,12 @@ const ContactPage = () => {
             alert("Invalid Subject")
         }
         else if(formInputs.message == "" || formInputs.message.length < 2) {
-            alert("Invalid essage Name")
+            alert("Invalid Message")
         }
         else{
-            const subject = 'Message from ' +formInputs.fullName + ' to Onidson Travels and Tours'
-            sendContactEmail(subject)
+            // const subject = 'Message from ' +formInputs.fullName + ' to Onidson Travels and Tours'
+            // sendContactEmail(subject)
+            isError()
         }
 
         setLoading(false)
@@ -73,40 +74,40 @@ const ContactPage = () => {
     }
 
 
-    const sendContactEmail = (subject:string) => {
-        const newMessage = formInputs.message.replace(/\n/g, '<br>')
+    // const sendContactEmail = (subject:string) => {
+    //     const newMessage = formInputs.message.replace(/\n/g, '<br>')
 
-        axios.post(`contactEmail.php` ,{
-            subject: subject,
-            message: newMessage.replace(/\n/g, '<br>'),
-            phoneNumber: formInputs.phoneNumber,
-            from: formInputs.email,
-            name: formInputs.fullName,
-          }, {
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          })
-          .then((response) => {
-              if(response.data.success == true){
-                alert("Message sent successfully")
-                setFormInputs({
-                    fullName: "",
-                    email: "",
-                    phoneNumber: "",
-                    message: "",
-                    subject: ""
-                })
+    //     axios.post(`contactEmail.php` ,{
+    //         subject: subject,
+    //         message: newMessage.replace(/\n/g, '<br>'),
+    //         phoneNumber: formInputs.phoneNumber,
+    //         from: formInputs.email,
+    //         name: formInputs.fullName,
+    //       }, {
+    //         headers: {
+    //           'Content-Type': 'application/json',
+    //         },
+    //       })
+    //       .then((response) => {
+    //           if(response.data.success == true){
+    //             alert("Message sent successfully")
+    //             setFormInputs({
+    //                 fullName: "",
+    //                 email: "",
+    //                 phoneNumber: "",
+    //                 message: "",
+    //                 subject: ""
+    //             })
                 
-            }else{
-                isError()
-            }
-        })
-        .catch(() => {
-            isError()
-        });
+    //         }else{
+    //             isError()
+    //         }
+    //     })
+    //     .catch(() => {
+    //         isError()
+    //     });
         
-    }
+    // }
     const isError = () => {
         alert("Error sending Message")
     }
