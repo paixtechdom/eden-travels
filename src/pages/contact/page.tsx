@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet-async"
 import { RiWhatsappFill } from "react-icons/ri"
 import { BiLoaderAlt } from "react-icons/bi"
 import { formatId } from "../../assets/Functions"
-import axios from "axios"
+// import axios from "axios"
 
 const contactInfo = [
     {
