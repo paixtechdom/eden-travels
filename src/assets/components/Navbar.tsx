@@ -7,7 +7,7 @@ import { RootState } from "../store/AppStore"
 import { setCurrentDropDown, setCurrentDropDownIndex, setCurrentNav, toggleShowNav } from "../store/navigation/navigationSlice"
 import { DocscrollTop } from "../../App"
 import { useEffect } from "react"
-import logo from "../images/Eden travels sm.png"
+import logo from "../images/Onidson sm.png"
 
 
 
@@ -43,10 +43,10 @@ export const Navbar = () => {
     return(
         <>
            <>
-        <header className={`fixed center w-full left-0 top-0 h-[8vh] md:h-[10vh] z-50 transition-all duration-1000 ${scrolledDown ? "shadow-xl border-b border-primary bg-white" : ""} `}>
+        <header className={`fixed center w-full left-0 top-0 h-[8vh] md:h-[10vh] z-50 transition-all duration-1000 ${scrolledDown ? "shadow-xl border-b border-primary bg-white bg-opacity-50 backdrop-blur-2xl" : ""} `}>
             <div className="flex items-center justify-between w-11/12 lg:w-10/12">
 
-                <Link to={'/'} className='w-2/12' onClick={() => {
+                <Link to={'/'} className=' w-4/12 lg:w-2/12' onClick={() => {
                     dispatch(setCurrentNav(0))
                     if(showNav){
                         dispatch(toggleShowNav())
@@ -54,7 +54,7 @@ export const Navbar = () => {
                     dispatch(setCurrentDropDown(""))
                     DocscrollTop()
                 }}>
-                    <img src={logo} alt="Eden Travels and Tour Logo" className='w-9/12 md:w-7/12'/>
+                    <img src={logo} alt="Onidson Travels and Tour Logo" className='w-9/12 md:w-8/12'/>
                     
                 </Link>
 
@@ -107,8 +107,8 @@ export const Navbar = () => {
                                         {/**** NAVS WITH SUBLINKS */}
                                         {
                                             nav.sublinks ?
-                                            <div className={`flex flex-col gap-[1px] w-full overflow-hidden transition-all duration-200 lg:duration-1000 lg:absolute lg:min-w-[250px] lg:bg-primary
-                                            ${currentDropDown == nav.title ? 'lg:top-[7vh] lg:left-0' : 'h-0 lg:h-fit text-[0px]  lg:-top-[500px]'} `}>
+                                            <div className={`flex flex-col gap-[1px] w-full overflow-hidden transition-all duration-200 lg:duration-1000 lg:absolute lg:min-w-[250px] bg-opacity-20 lg:bg-opacity-100 bg-primary
+                                            ${currentDropDown == nav.title ? 'lg:top-[7vh] lg:left-0' : 'h-0 lg:h-fit text-[0px]  lg:-top-[500px]'} lg:shadow-xl`}>
         
                                                 {   
                                                     nav?.sublinks?.map((sublink:any, j:number) => (

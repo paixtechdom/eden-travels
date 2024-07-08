@@ -1,7 +1,2 @@
-7. Blur images - all images
 
-react lazy load image 
-
-
-
-
+design

@@ -10,7 +10,7 @@ export const CardParent:FC<CardParentInterface> = ({data, heading, description, 
         <div id={heading?.replace(" ", "")?.replace(" ", "")?.replace(" ", "")?.replace(" ", "")} className="w-full center flex-col gap-9 py-[10vh] lg:py-[20vh] z-20">
             <div className="flex flex-col items-center text-center gap-4 w-11/12 lg:w-9/12">
                 <h2 className="font-semibold text-center text-4xl md:text-5/12">{heading}</h2>
-                <Link to={`/${parentNav}`} className="underline center flex-wrap">
+                <Link to={`/${parentNav}`} className="text-secondary center flex-wrap">
                     {description}
                     <BsArrowRight className="ml-1"/>
                 </Link>

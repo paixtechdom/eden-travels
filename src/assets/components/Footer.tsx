@@ -1,6 +1,6 @@
 import { BsEnvelopeFill, BsGeoAltFill, BsTelephoneFill } from "react-icons/bs"
 import { Link } from "react-router-dom"
-import logo from "../images/Eden travels sm.png"
+import logo from "../images/Onidson sm.png"
 import { RiWhatsappFill } from "react-icons/ri"
 
 
@@ -13,7 +13,7 @@ const FooterLinks = [
     {
         header: 'Services',
         to: "services",
-        links: ["Travel Arrangements", "Travel Packages and Insurance", "Travel Documentation and Corporate Services"]
+        links: ["Flight Services", "Logistics Services", "Interstate Travelling"]
     },
     {
         header: "Courses",
@@ -30,8 +30,8 @@ export const ContactInfo = [
     },
     {
         icon: <BsEnvelopeFill />,
-        contact: 'hello@edenclassic.com',
-        link: "mailto:hello@edenclassic.com"
+        contact: 'hello@onidsontravels.com',
+        link: "mailto:hello@onidsontravels.com"
     },
     {
         icon: <BsTelephoneFill />,
@@ -48,13 +48,13 @@ export const ContactInfo = [
 
 const Footer = () => {
     return(
-        <footer className="w-full center flex-col bg-white pt-[10vh] lg:pt-[15vh] border-t border-primary">
+        <footer className="w-full center flex-col bg-primary bg-opacity-5 pt-[10vh] lg:pt-[15vh] border-t border-primary">
             <div className="w-11/12 lg:w-10/12 flex flex-col gap-6 text-gray-900 z-10">
                 <div className="flex flex-col md:grid md:grid-cols-4 xl:grid-cols-8 gap-y-9 md:gap-9">
 
                     <div className="flex flex-col gap-2 col-span-2 xl:col-span-3">
                         <img src={logo} alt="Eden Travels and Tour Logo" className="w-4/12"/>
-                        {/* <h2 className="text-3xl text-black font-bold">Eden Travels and Tours</h2> */}
+                        {/* <h2 className="text-2xl text-black font-bold">Onidson travels & and tours</h2> */}
                      
 
                         <div className="flex flex-col gap-3 mt-6 ">
@@ -94,9 +94,10 @@ const Footer = () => {
 
             </div>
             <div className="justify-center w-full items-center text-center flex flex-col gap-3 mt-[10vh] py-6 bg-secondary border-t border-primary text-white">
-                <p className="w-full lg:w-fit">Copyright © {new Date().getFullYear()}</p>
+                <p className="w-full lg:w-fit">Copyright © {new Date().getFullYear()} <strong>Onidson Travels & Tours Ltd</strong></p>
 
-                <p className="w-full lg:w-fit">All Rights Reserved </p>
+
+                <a target="_blank" href="https://paixtechdom.com" className="">Developed By <strong>Paix Techdom</strong></a>
             </div>
         </footer>
     )
