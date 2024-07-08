@@ -82,7 +82,7 @@ const EachServicePage = () => {
         <>
               <Helmet>
                     <title>
-                        {`${metaConstants[servicePageIndex]?.title} -  Eden Classic Travel and Tours`}
+                        {`${metaConstants[servicePageIndex]?.title} -  Onidson Travels and Tours Ltd`}
                     </title>
                     <meta name="description" content={`${metaConstants[servicePageIndex]?.desc}`} />
                 </Helmet>

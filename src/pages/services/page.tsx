@@ -19,9 +19,9 @@ const ServicesPage = () => {
       <>
           <Helmet>
                 <title>
-                    Our Service at Eden Classic Travel and Tours
+                    Our Service at Onidson Travels and Tours Ltd
                 </title>
-                <meta name="description" content={`Eden Classic Travel and Tours offers a wide range of services tailored to your travel needs. From flight bookings and accommodations to travel packages and corporate services, we provide exceptional travel experiences. Contact us today`} />
+                <meta name="description" content={`Onidson Travels and Tours Ltd offers a wide range of services tailored to your travel needs. From flight bookings and accommodations to travel packages and corporate services, we provide exceptional travel experiences. Contact us today`} />
             </Helmet>   
          <main className="center w-full flex-col">
             
