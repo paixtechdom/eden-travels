@@ -2,10 +2,12 @@ import { BsArrowRight, BsEnvelopeFill, BsGeoAltFill, BsTelephoneFill } from "rea
 import { InputFieldInterface } from "../../assets/Interfaces"
 import { ChangeEvent, FC, useState } from "react"
 import { Button } from "../../assets/components/Button"
-// import { FaFacebook } from "react-icons/fa6"
 import { BreadCrumbs } from "../../assets/components/BreadCrumbs"
 import { Helmet } from "react-helmet-async"
 import { RiWhatsappFill } from "react-icons/ri"
+import { BiLoaderAlt } from "react-icons/bi"
+import { formatId } from "../../assets/Functions"
+import axios from "axios"
 
 const contactInfo = [
     {
@@ -35,20 +37,81 @@ const contactInfo = [
 
 const ContactPage = () => {
     const [ formInputs, setFormInputs ] = useState({
-        firstName: "",
-        lastName: "",
+        fullName: "",
         email: "",
         phoneNumber: "",
         message: "",
         subject: ""
     })
+    const [ loading, setLoading ] = useState(false)
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setFormInputs({
             ...formInputs,
-            [e.target.name]: e.target.value
+            [e.target.name]: formatId(e.target.value).replace(/\n/g, '<br>')
         })
     }
+
+    const handleSubmit = (e : any) => {
+        e.preventDefault()
+        setLoading(true)
+        if(formInputs.fullName == "" || formInputs.fullName.length < 2){
+            alert("Invalid Full Name")
+        }else if(formInputs.subject == "" || formInputs.subject.length < 2) {
+            alert("Invalid Subject")
+        }
+        else if(formInputs.message == "" || formInputs.message.length < 2) {
+            alert("Invalid essage Name")
+        }
+        else{
+            const subject = 'Message from ' +formInputs.fullName + ' to Onidson Travels and Tours'
+            sendContactEmail(subject)
+        }
+
+        setLoading(false)
+        
+    }
+
+
+    const sendContactEmail = (subject:string) => {
+        const newMessage = formInputs.message.replace(/\n/g, '<br>')
+
+        axios.post(`contactEmail.php` ,{
+            subject: subject,
+            message: newMessage.replace(/\n/g, '<br>'),
+            phoneNumber: formInputs.phoneNumber,
+            from: formInputs.email,
+            name: formInputs.fullName,
+          }, {
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          })
+          .then((response) => {
+              if(response.data.success == true){
+                alert("Message sent successfully")
+                setFormInputs({
+                    fullName: "",
+                    email: "",
+                    phoneNumber: "",
+                    message: "",
+                    subject: ""
+                })
+                
+            }else{
+                isError()
+            }
+        })
+        .catch(() => {
+            isError()
+        });
+        
+    }
+    const isError = () => {
+        alert("Error sending Message")
+    }
+
+
 
 
     return(
@@ -104,20 +167,13 @@ const ContactPage = () => {
 
 
                         <div className="w-full lg:w-7/12 flex flex-col p-6 md:p-9 py-[6vh]">
-                            <form className="flex flex-col md:grid md:grid-cols-2 gap-6 gap-y-9">
+                            <form onSubmit={handleSubmit} className="flex flex-col md:grid md:grid-cols-2 gap-6 gap-y-9">
                                 <InputField 
-                                    label="First Name"
+                                    label="Full Name"
                                     type="text"
-                                    name="firstName"
+                                    name="fullName"
                                     handleChange={handleChange}
-                                    value={formInputs.firstName}
-                                />
-                                <InputField 
-                                    label="Last Name"
-                                    type="text"
-                                    name="lastName"
-                                    handleChange={handleChange}
-                                    value={formInputs.lastName}
+                                    value={formInputs.fullName}
                                 />
                                 <InputField 
                                     label="Email"
@@ -137,7 +193,6 @@ const ContactPage = () => {
                                     label="Subject"
                                     type="subject"
                                     name="subject"
-                                    className="col-span-2"
                                     handleChange={handleChange}
                                     value={formInputs.phoneNumber}
                                 />
@@ -156,8 +211,11 @@ const ContactPage = () => {
                                 <div className="flex items-center lg:justify-end w-full lg:col-span-2">
                                     <Button 
                                         className="text-primary bg-secondary flex items-center h-fit py-3 font-bold w-fit px-9"
-                                        text="Send Message" 
-                                        icon={<BsArrowRight className="ml-3 "/>}
+                                        text={`${loading ? "Sending Message" : "Send Message"}`} 
+                                        icon={
+                                            loading ?
+                                            <BiLoaderAlt className="animate-spin" /> :
+                                        <BsArrowRight className="ml-3 "/>}
                                     />
                                 </div>
 
@@ -184,6 +242,7 @@ const InputField:FC<InputFieldInterface> = ({type, label, className, handleChang
                 type={type}
                 onChange={(e) => handleChange(e)}
                 name={name}
+                required
                 className={`p-2 rounded-tl-xl rounded-br-xl bg-transparent outline-none border ${value !== "" ? "border focus:border-secondary" : " border-secondary"} hover:border hover:border-secondary cursor-pointer`}
             />
         </div>
@@ -201,6 +260,7 @@ const MessageField:FC<InputFieldInterface> = ({label, className, handleChange, n
                 onChange={(e) => handleChange(e)}
                 name={name}
                 placeholder={placeholder || label}
+                required
                 className={`p-2 min-h-28 max-h-28 rounded-tl-xl rounded-br-xl bg-transparent outline-none border ${value !== "" ? "border focus:border-secondary" : " border-secondary"} hover:border hover:border-secondary cursor-pointer`}
             >
 

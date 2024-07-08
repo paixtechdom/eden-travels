@@ -148,5 +148,6 @@ export interface InputFieldInterface {
     className?: string
     handleChange: Function,
     value: string,
-    placeholder?: string
+    placeholder?: string,
+    formInputs?: any
 }

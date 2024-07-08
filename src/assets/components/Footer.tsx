@@ -97,7 +97,7 @@ const Footer = () => {
                 <p className="w-full lg:w-fit">Copyright © {new Date().getFullYear()} <strong>Onidson Travels & Tours Ltd</strong></p>
 
 
-                <a href="https://paixtechdom.com" className="">Developed By <strong>Paix Techdom</strong></a>
+                <a target="_blank" href="https://paixtechdom.com" className="">Developed By <strong>Paix Techdom</strong></a>
             </div>
         </footer>
     )

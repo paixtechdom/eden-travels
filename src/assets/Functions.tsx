@@ -1,7 +1,3 @@
-
-
-
-
 export const formatId = (id: string) => {
         return id.trim()
                 .replace("-","")
