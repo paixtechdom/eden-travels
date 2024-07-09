@@ -16,7 +16,7 @@ const Alert = () => {
         if(showAlert){
             setTimeout(() => {
                 dispatch(toggleShowAlert(false))
-            }, 2000);
+            }, 3000);
         }
     }, [showAlert])
     

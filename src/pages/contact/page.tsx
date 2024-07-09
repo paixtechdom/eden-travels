@@ -20,7 +20,7 @@ const contactInfo = [
     {
         icon: <BsEnvelopeFill />,
         contact: "info@onidsontravels.com",
-        link: "mailto:hello@edenclassic.com"
+        link: "mailto:info@onidsontravels.com"
     },
     {
         icon: <BsTelephoneFill />,
@@ -68,7 +68,7 @@ const ContactPage = () => {
             return;
         }
         setEmptyFieldsError(false)
-        const subject = 'Message from ' +cleanedInputs.fullName + ' to Onidson Travels and Tours'
+        const subject = 'Message from ' +cleanedInputs.fullName + ' to Onidson Travels and Logistics Ltd'
         sendContactEmail(subject)        
     }
 
