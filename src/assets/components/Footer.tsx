@@ -30,7 +30,7 @@ export const ContactInfo = [
     },
     {
         icon: <BsEnvelopeFill />,
-        contact: 'hello@onidsontravels.com',
+        contact: 'info@onidsontravels.com',
         link: "mailto:hello@onidsontravels.com"
     },
     {

@@ -3,6 +3,9 @@ import { AppRouter } from "./AppRouter";
 import { useDispatch } from "react-redux";
 import { toggleScrolledDown } from "./assets/store/navigation/navigationSlice";
 import { RiWhatsappFill } from "react-icons/ri";
+import Alert from "./assets/components/Alert";
+
+
 
 
 export const DocscrollTop = () => {
@@ -13,9 +16,8 @@ export const DocscrollTop = () => {
 }
 
 function App() {
-  const dispatch = useDispatch()
   const [ showWhatsappButton, setShowWhatsappButton ] = useState(false)
-
+  const dispatch = useDispatch()
   useEffect(() => {
     document.addEventListener('scroll', () => {
         dispatch(toggleScrolledDown(document.documentElement.scrollTop > 50 ? true : false))
@@ -34,7 +36,8 @@ function App() {
   return (
     <div className='App relative overflow-x-hidden'>
         <AppRouter />
-        
+
+        <Alert />
 
         <a href="https://api.whatsapp.com/send?phone=2348157886733" className={`fixed bottom-[12vh] z-20 bg-green-600 text-white transition-all duration-500 rounded-full p-4 text-4xl shadow-xl cursor-pointer hover:scale-110 active:scale-110 ${showWhatsappButton ? "right-5" : "-right-[200px]"}`}>
           <RiWhatsappFill />

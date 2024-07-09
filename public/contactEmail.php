@@ -11,7 +11,7 @@ require_once 'config.php';
 // Get data from the React app
 $data = json_decode(file_get_contents('php://input'), true);
 // $to = $data['to'];
-$to = "paixtechdom@gmail.com";
+$to = "management@onidsontravels.com";
 $subject= $data['subject'];
 $message = $data['message'];
 $phoneNumber = $data['phoneNumber'];
@@ -73,9 +73,11 @@ $message = '
         <hr>
         <br>
         <h2>' . $subject .' </h2>  <br>
-        <p class="message">Name : '.  $name . '</p> <br>
-        <p class="message">Phone Number : '.  $phoneNumber . '</p> <br>
+        
+        <p class="message">Name : '.  $name . '</p>
+        <p class="message">Phone Number : '.  $phoneNumber . '</p> 
         <p class="message">Email: '.  $from . '</p> <br>
+
         <p class="message">'.  $message . '</p> <br>
 
         <a href="mailto:'.$from.'">Click to Reply mail</a>

@@ -1,4 +1,4 @@
-import { BsArrowRight, BsEnvelopeFill, BsGeoAltFill, BsTelephoneFill } from "react-icons/bs"
+import { BsArrowRight, BsEnvelopeFill, BsExclamationCircleFill, BsGeoAltFill, BsTelephoneFill } from "react-icons/bs"
 import { InputFieldInterface } from "../../assets/Interfaces"
 import { ChangeEvent, FC, useState } from "react"
 import { Button } from "../../assets/components/Button"
@@ -6,8 +6,10 @@ import { BreadCrumbs } from "../../assets/components/BreadCrumbs"
 import { Helmet } from "react-helmet-async"
 import { RiWhatsappFill } from "react-icons/ri"
 import { BiLoaderAlt } from "react-icons/bi"
-import { formatId } from "../../assets/Functions"
 import axios from "axios"
+import { useDispatch } from "react-redux"
+import { setAlertMessage, setAlertType, toggleShowAlert } from "../../assets/store/AlertSlice"
+
 
 const contactInfo = [
     {
@@ -17,7 +19,7 @@ const contactInfo = [
     },
     {
         icon: <BsEnvelopeFill />,
-        contact: "hello@onidsontravels.com",
+        contact: "info@onidsontravels.com",
         link: "mailto:hello@edenclassic.com"
     },
     {
@@ -31,11 +33,12 @@ const contactInfo = [
         link: "https://api.whatsapp.com/send?phone=2348157886733"
     },
 ]
-// const socialLinks = [
-//     <FaFacebook/>, <BsWhatsapp/>, <BsInstagram/>
-// ]
 
 const ContactPage = () => {
+    const dispatch = useDispatch()
+    const [ loading, setLoading ] = useState(false)
+    const [ emptyFieldsError, setEmptyFieldsError ] = useState(false)
+
     const [ formInputs, setFormInputs ] = useState({
         fullName: "",
         email: "",
@@ -43,73 +46,78 @@ const ContactPage = () => {
         message: "",
         subject: ""
     })
-    const [ loading, setLoading ] = useState(false)
+    const cleanedInputs = Object.fromEntries(
+        Object.entries(formInputs).map(([key, value]) => [key, value.replace(/\s+/g, ' ').trim()])
+    );
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setFormInputs({
             ...formInputs,
-            [e.target.name]: formatId(e.target.value).replace(/\n/g, '<br>')
+            [e.target.name]: (e.target.value).replace(/\n/g, '<br>')
         })
     }
 
     const handleSubmit = (e : any) => {
         e.preventDefault()
         setLoading(true)
-        if(formInputs.fullName == "" || formInputs.fullName.length < 2){
-            alert("Invalid Full Name")
-        }else if(formInputs.subject == "" || formInputs.subject.length < 2) {
-            alert("Invalid Subject")
+       
+        const isEmpty = Object.values(cleanedInputs).some(value => value === "");
+        if (isEmpty) {
+            setEmptyFieldsError(true)
+            setLoading(false)
+            return;
         }
-        else if(formInputs.message == "" || formInputs.message.length < 2) {
-            alert("Invalid Message")
-        }
-        else{
-            const subject = 'Message from ' +formInputs.fullName + ' to Onidson Travels and Tours'
-            sendContactEmail(subject)
-            // isError()
-        }
-
-        setLoading(false)
-        
+        setEmptyFieldsError(false)
+        const subject = 'Message from ' +cleanedInputs.fullName + ' to Onidson Travels and Tours'
+        sendContactEmail(subject)        
     }
 
 
     const sendContactEmail = (subject:string) => {
-        const newMessage = formInputs.message.replace(/\n/g, '<br>')
+        const newMessage = cleanedInputs.message.replace(/\n/g, '<br>')
 
         axios.post(`contactemail.php` ,{
             subject: subject,
             message: newMessage.replace(/\n/g, '<br>'),
-            phoneNumber: formInputs.phoneNumber,
-            from: formInputs.email,
-            name: formInputs.fullName,
+            phoneNumber: cleanedInputs.phoneNumber,
+            from: cleanedInputs.email,
+            name: cleanedInputs.fullName,
           }, {
             headers: {
               'Content-Type': 'application/json',
             },
           })
-          .then((response) => {
-              if(response.data.success == true){
-                alert("Message sent successfully")
-                setFormInputs({
-                    fullName: "",
-                    email: "",
-                    phoneNumber: "",
-                    message: "",
-                    subject: ""
-                })
+            .then((response) => {
+                if(response.data.success == true){
+                    dispatch(setAlertType("success"))
+                    dispatch(toggleShowAlert(true))
+                    dispatch(setAlertMessage("Message sent successfully!"))
+                    clearForm()
                 
-            }else{
+                }else{
+                    isError()
+                }
+            })
+            .catch(() => {
                 isError()
-            }
-        })
-        .catch(() => {
-            isError()
-        });
+            });
+            setLoading(false)
         
     }
     const isError = () => {
-        alert("Error sending Message")
+        dispatch(toggleShowAlert(true))
+        dispatch(setAlertMessage("Failed to send message!"))
+        dispatch(setAlertType("error"))
+    }
+
+    const clearForm = () => {
+        setFormInputs({
+            fullName: "",
+            email: "",
+            phoneNumber: "",
+            message: "",
+            subject: ""
+        })
     }
 
 
@@ -139,15 +147,6 @@ const ContactPage = () => {
                         <div className="bg-secondary flex flex-col justify-start text-gray-300 p-6 md:p-9 py-[6vh] rounded-t-xl lg:rounded-r-none lg:rounded-l-xl relative overflow-hidden w-full lg:w-4/12  gap-[10vh]">
                             <div className="flex flex-col gap-2">
                                 <h2 className="text-primary text-2xl font-semibold">Contact Information</h2>
-                                {/* <div className="flex gap-4 ">
-                                    {
-                                        socialLinks.map((link, i) => (
-                                            <div key={i} className="center h-8 w-8 rounded-xl text-white hover:bg-white hover:text-black transition-all duration-500 cursor-pointer">
-                                                {link}
-                                            </div>
-                                        ))
-                                    }
-                                </div> */}
                             </div>
                             <div className="flex flex-col gap-5">
                                 {
@@ -195,7 +194,7 @@ const ContactPage = () => {
                                     type="subject"
                                     name="subject"
                                     handleChange={handleChange}
-                                    value={formInputs.phoneNumber}
+                                    value={formInputs.subject}
                                 />
 
 
@@ -208,7 +207,11 @@ const ContactPage = () => {
                                     handleChange={handleChange}
                                     value={formInputs.message}
                                 />
-
+                                {emptyFieldsError ? 
+                                    <div className="text-red-700 flex gap-2 items-center col-span-2"><BsExclamationCircleFill /> Please, fill out all fields
+                                    </div> 
+                                    : ""
+                                }
                                 <div className="flex items-center lg:justify-end w-full lg:col-span-2">
                                     <Button 
                                         className="text-primary bg-secondary flex items-center h-fit py-3 font-bold w-fit px-9"
@@ -244,6 +247,7 @@ const InputField:FC<InputFieldInterface> = ({type, label, className, handleChang
                 onChange={(e) => handleChange(e)}
                 name={name}
                 required
+                value={value}
                 className={`p-2 rounded-tl-xl rounded-br-xl bg-transparent outline-none border ${value !== "" ? "border focus:border-secondary" : " border-secondary"} hover:border hover:border-secondary cursor-pointer`}
             />
         </div>
@@ -262,6 +266,7 @@ const MessageField:FC<InputFieldInterface> = ({label, className, handleChange, n
                 name={name}
                 placeholder={placeholder || label}
                 required
+                value={value}
                 className={`p-2 min-h-28 max-h-28 rounded-tl-xl rounded-br-xl bg-transparent outline-none border ${value !== "" ? "border focus:border-secondary" : " border-secondary"} hover:border hover:border-secondary cursor-pointer`}
             >
 
