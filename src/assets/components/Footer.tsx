@@ -94,7 +94,7 @@ const Footer = () => {
 
             </div>
             <div className="justify-center w-full items-center text-center flex flex-col gap-3 mt-[10vh] py-6 bg-secondary border-t border-primary text-white">
-                <p className="w-full lg:w-fit">Copyright © {new Date().getFullYear()} <strong>Onidson Travels & Tours Ltd</strong></p>
+                <p className="w-full lg:w-fit">Copyright © {new Date().getFullYear()} <strong>Onidson Travels & Logistics Ltd</strong></p>
 
 
                 <a target="_blank" href="https://paixtechdom.com" className="">Developed By <strong>Paix Techdom</strong></a>
