@@ -47,9 +47,9 @@ const AboutPage = () => {
         <>  
             <Helmet>
                 <title>
-                    About Onidson Travels and Tours Ltd
+                    About Onidson Travels and Logistics Ltd
                 </title>
-                <meta name="description" content="Welcome to our travel agency, Onidson Travels and Tours Ltd. Our dedicated team offers personalized travel services, seamless flight bookings, and expert visa assistance. Let us create unforgettable journeys for you!" />
+                <meta name="description" content="Welcome to our travel agency, Onidson Travels and Logistics Ltd. Our dedicated team offers personalized travel services, seamless flight bookings, and expert visa assistance. Let us create unforgettable journeys for you!" />
             </Helmet>
             <main className="mb-[15vh]">
                 <section className="w-full center min-h-[90vh] bg-white flex-col flex pt-[15vh] md:pt-[10vh] lg:pt-[20vh] pb-[10vh]">

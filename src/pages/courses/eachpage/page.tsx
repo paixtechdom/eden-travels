@@ -63,7 +63,7 @@ const EachCoursesPage = () => {
         <>
               <Helmet>
                     <title>
-                        {`${metaConstants[coursesPageIndex]?.title} -  Onidson Travels and Tours Ltd`}
+                        {`${metaConstants[coursesPageIndex]?.title} -  Onidson Travels and Logistics Ltd`}
                     </title>
                     <meta name="description" content={`${metaConstants[coursesPageIndex]?.desc}`} />
                 </Helmet>

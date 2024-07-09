@@ -292,7 +292,7 @@ const StudyAbroadPage = () => {
         <>
               <Helmet>
                 <title>
-                    Study Abroad with Onidson Travels and Tours Ltd
+                    Study Abroad with Onidson Travels and Logistics Ltd
                 </title>
                 <meta name="description" content={"Explore opportunities to study abroad with expert guidance on programs, applications, scholarships, and cultural experiences. Plan your educational journey today."} />
             </Helmet>            

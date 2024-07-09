@@ -24,7 +24,7 @@ $message = '
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email to Onidson Travels and Tours Ltd</title>
+    <title>Email to Onidson Travels and Logistics Ltd</title>
     <style>
         body{
             background-color: white;
@@ -81,7 +81,7 @@ $message = '
         <a href="mailto:'.$from.'">Click to Reply mail</a>
         <br>
         <hr>
-        <a href="https://onidsontravels.com">Onidson Travels and Tours Ltd</a> <br> <br>
+        <a href="https://onidsontravels.com">Onidson Travels and Logistics Ltd</a> <br> <br>
 
 
     </div>

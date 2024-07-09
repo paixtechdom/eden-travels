@@ -41,9 +41,9 @@ const HomePage: React.FC = () => {
         <>
          <Helmet>
                 <title>
-                Onidson Travels and Tours Ltd
+                Onidson Travels and Logistics Ltd
                 </title>
-                <meta name="description" content="Explore the world with Onidson Travels and Tours Ltd - personalized tour packages, flight bookings, travel insurance, and professional training. Discover seamless journeys and exceptional travel experiences. Contact us today!" />
+                <meta name="description" content="Explore the world with Onidson Travels and Logistics Ltd - personalized tour packages, flight bookings, travel insurance, and professional training. Discover seamless journeys and exceptional travel experiences. Contact us today!" />
             </Helmet>
         <main className="center bg-white flex-col">
             <Hero />
