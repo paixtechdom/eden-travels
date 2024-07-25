@@ -12,7 +12,7 @@ const Alert = () => {
     const showAlert = alert.showAlert
     
 
-    useEffect(() => {
+    // useEffect(() => {
         if(showAlert){
             setTimeout(() => {
                 dispatch(toggleShowAlert(false))
@@ -27,7 +27,7 @@ const Alert = () => {
             alertType == "success" ? "border-green-700" : "border-red-700"
         }
         `}>
-            <p className="text-lg">
+            <p className="">
                 {alertMessage}
             </p>
 
