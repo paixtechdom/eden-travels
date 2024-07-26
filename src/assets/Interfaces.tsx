@@ -58,7 +58,8 @@ export interface HeroComponentInterface{
     data: any, 
     dataHeader: string
     type?: string,
-    breadLinks?: string[]
+    breadLinks?: string[],
+    children?: JSX.Element
 }
 
 

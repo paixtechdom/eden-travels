@@ -74,7 +74,7 @@ export const Navbar = () => {
                                 NavInfo?.map((nav :any , i: number) => (
                                     <div key={i} className={`flex flex-col transition-all duration-1000 justify-between w-full text-blue lg:border-0 relative lg:w-fit`}>
 
-                                        <div className={`flex w-full lg:w-fit py-4 px-[5%] lg:p-0 justify-between lg:justify-end lg:items-center cursor-pointer text-black bg-white lg:bg-transparent
+                                        <div className={`flex w-full lg:w-fit py-4 px-[5%] lg:p-0 justify-between lg:justify-end lg:items-center cursor-pointer text-black bg-transparent
                                         ${currentNav === i ? 
                                             'font-bold text-secondary lg:bg-transparent ' 
                                         : 'hover:bg-opacity-90 lg:hover:bg-transparent hover:font-bold'} hover:bg-opacity-10`} 

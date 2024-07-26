@@ -5,7 +5,7 @@ import { Parallax } from "./Parallax"
 export const ImageListing : FC <imageListInterface> =  ({data, heading}) => {
     return(
 <>
-            <section id="imagelisting" className="w-full center flex-col text-center gap-9 pt-[10vh] lg:pt-[20vh]">
+            <section id="imagelisting" className="w-full center flex-col text-center gap-9 pt-[10vh] lg:pt-[20vh] relative">
                     <h2 className="text-3xl font-semibold tracking-[1.2px] leading-[35px] w-full">
                         {heading}
                     </h2>
@@ -13,9 +13,9 @@ export const ImageListing : FC <imageListInterface> =  ({data, heading}) => {
                     
                     {
                         data.map((d, i) => (
-                            <Parallax key={i} id={d.text}>
+                            <Parallax key={i} id={d.text.replace(" ", '')}>
 
-                            <div key={i} className="center relative rounded-xl overflow-hidden w-full cursor-pointer bg-primary bg-opacity-15 lg:h-[30vh]">
+                            <div key={i} className="center relative rounded-xl overflow-hidden w-full cursor-pointer bg-secondary bg-opacity-45 lg:h-[30vh]">
                                 <img src={d.img} alt={d.text} className="w-full hover:scale-150 transition-all duration-500 object-cover h-full"/>
                                 {
                                     d.text !== "" &&

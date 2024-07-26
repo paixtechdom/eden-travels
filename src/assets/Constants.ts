@@ -128,7 +128,7 @@ export const servicesList = [
     {
         title: "Interstate Travelling",
         img: interstateTravelling,
-        desc: "Seamless interstate travel services across Nigeria to ensure a comfortable and hassle-free journey.",
+        desc: "Seamless, comfortable and hassle-free interstate travel services covering Lagos, Abuja and Port Harcourt",
         sub: [
             {
                 title: "Travel Booking",
@@ -140,9 +140,7 @@ export const servicesList = [
                         img: busServices,
                         desc: "Comfortable and affordable bus services across states.",
                         sub: [
-                            // "Lagos to Abuja",
-                            // "Lagos",
-                            // "Shuttle Services"
+                            "Cost effective travel"
                         ]
                     },
                     {
@@ -177,9 +175,9 @@ export const servicesList = [
                         img: adventureTourss,
                         desc: "Exciting adventure tours to explore Nigeria's natural beauty.",
                         sub: [
-                            // "Mountain Climbing",
-                            // "Safari Tours",
-                            // "Water Sports"
+                            "Lekki",
+                            "Lagos Island",
+                            "National Museum"
                         ]
                     },
                     {
@@ -187,9 +185,9 @@ export const servicesList = [
                         img: naijaCulture,
                         desc: "Experience Nigeria's rich cultural heritage with our guided tours.",
                         sub: [
-                            // "Heritage Sites",
-                            // "Cultural Festivals",
-                            // "Local Cuisine Tours"
+                           "Aso Rock",
+                           "Usuma Dam",
+                           "Jabi Lake"
                         ]
                     },
                     {
@@ -197,9 +195,9 @@ export const servicesList = [
                         img: cityTours,
                         desc: "Explore major cities in Nigeria with our organized city tours.",
                         sub: [
-                            // "Lagos Tours",
-                            // "Abuja Tours",
-                            // "Port Harcourt Tours"
+                            "Tourist Beach",
+                            "Isaac Boro Park",
+                            "Bonny Island"
                         ]
                     }
                 ]

@@ -6,7 +6,7 @@ import bus from "../../../assets/images/buses/bus 1.png"
 import bus2 from "../../../assets/images/buses/bus 4.png"
 import siena from "../../../assets/images/buses/bus 2.png"
 import { ImageExtras } from "../../../assets/components/ImageExtras"
-import { PiCheck } from "react-icons/pi"
+import { PiCheck, PiPackageFill } from "react-icons/pi"
 import { FaPlane } from "react-icons/fa6"
 import { FC, useEffect, useRef, useState } from "react"
 import { LazyLoadImage } from "react-lazy-load-image-component"
@@ -21,34 +21,6 @@ const HeroContent= [
         preTitle: "Your adventure begins at",
         title: "Onidson Travels and Logistics Ltd",
         desc: "Embark on your adventure with curated travel experiences and aviation courses offered by Onidson Travels and Logistics Ltd.",
-        img: bus,
-        button: {
-            learn: "/Services/interstate-travelling",
-            cta : {
-                text: "Get ticket",
-                link: "contact",
-                icon: <FaBus />
-            }
-        }
-    },
-    {
-        preTitle: "Seamless travel for you",
-        title: "Book your next flight here and now",
-        desc: "Travek around the world",
-        img: airplane,
-        button: {
-            learn: "/services/flight-services",
-            cta : {
-                text: "Book flight",
-                link: "contact",
-                icon: <BsAirplaneFill />
-            }
-        }
-    }, 
-    {
-        preTitle: "Travel safely and swiftly",
-        title: "Interstate Travelling within Nigeria",
-        desc: "Toggle to and fro between Lagos, Port Harcourt and Abuja",
         img: bus2,
         button: {
             learn: "/Services/interstate-travelling",
@@ -57,12 +29,62 @@ const HeroContent= [
                 link: "contact",
                 icon: <FaBus />
             }
+        },
+        topImgExtra: { 
+            text: "Safe Travels",
+        },
+        bottomImgExtra: {
+            text: "Trusted Services",
+            icon: <FaBus />
         }
     },
     {
-        preTitle: "Logistics",
-        title: "We handle the movement of your parcels and goods",
-        desc: "Logisctics",
+        preTitle: "Seamless travel for you",
+        title: "Book your next flight here and now",
+        desc: "From flight booking, visa and ticket acquitistion, schooling abroad to international tours, we got everything covered for you.",
+        img: airplane,
+        button: {
+            learn: "/services/flight-services",
+            cta : {
+                text: "Book flight",
+                link: "contact",
+                icon: <BsAirplaneFill />
+            }
+        },
+        topImgExtra: { 
+            text: "Successful Travels",
+        },
+        bottomImgExtra: {
+            text: "Easy Booking",
+            icon: <FaPlane />
+        }
+        
+    }, 
+    {
+        preTitle: "Travel safely and swiftly",
+        title: "Interstate Travelling within Nigeria",
+        desc: "Toggle to and fro between Lagos, Port Harcourt and Abuja",
+        img: bus,
+        button: {
+            learn: "/Services/interstate-travelling",
+            cta : {
+                text: "Get ticket",
+                link: "contact",
+                icon: <FaBus />
+            }
+        },
+        topImgExtra: { 
+            text: "Comfort",
+        },
+        bottomImgExtra: {
+            text: "Easy Booking",
+            icon: <FaBus />
+        }
+    },
+    {
+        preTitle: "Taking courier services on another level",
+        title: "We handle the movement of your packages",
+        desc: "Do you want to send packages internationally? We've got you covered.",
         img: siena,
         button: {
             learn: "/Services/logistics-services",
@@ -71,9 +93,17 @@ const HeroContent= [
                 link: "contact",
                 icon: <BsTelephoneFill />
             }
+        },
+        topImgExtra: { 
+            text: "Swift Delivery",
+        },
+        bottomImgExtra: {
+            text: "International Deliveries",
+            icon: <PiPackageFill />
         }
     },
 ]
+
 
 
 export const Hero: React.FC = () => {
@@ -128,7 +158,7 @@ export const Hero: React.FC = () => {
             </div>
             {/*  */}
 
-            <div className="center absolute top-[85vh] z-50">
+            <div className="center absolute top-[85vh] z-30">
                 <div className="center gap-3 bg-secondary backdrop-blur-xl border border-secondary p-4 rounded-full px-9">
                     {
                         HeroContent.map((i, j) => (
@@ -143,7 +173,7 @@ export const Hero: React.FC = () => {
 
                     {
                         HeroContent.map((content, i) =>(
-                            <div className={`absolute w-11/12 lg:w-10/12 xl:w-9/12 flex flex-col lg:flex-row items-center justify-center z-10 gap-[50px] lg:gap-0 transition-all duration-1000 ease-in-out ${currentSlide == i ? "": "opacity-0 scale-[0.8]" }`}
+                            <div key={i} className={`absolute w-11/12 lg:w-10/12 xl:w-9/12 flex flex-col lg:flex-row items-center justify-center z-10 gap-[50px] lg:gap-0 transition-all duration-1000 ease-in-out ${currentSlide == i ? "": "opacity-0 scale-[0.8]" }`}
                             onTouchStart={handleTouchStart}
                             onTouchEnd={handleTouchEnd}
                             ref={sliderRef}
@@ -203,21 +233,21 @@ export const Hero: React.FC = () => {
 
                                 <div className="absolute -top-5 right-[45%] z-[50]">
                                     <ImageExtras 
-                                        icon={<PiCheck className="text-lg"/>}
+                                        icon={<PiCheck />}
                                         iconBg={"bg-green-700"}
                                         topText={<p className="font-bold">100%</p>}
                                         bottomText={<p className="text-gray-400">
-                                            Successful Travels
+                                            {content.topImgExtra.text}
                                         </p>}
                                     />
                                 </div>
                                 <div className="absolute -bottom-[10%] left-[35%] z-[50]">
                                     <ImageExtras 
-                                        icon={<FaPlane className="text-lg"/>}
+                                        icon={content.bottomImgExtra?.icon}
                                         iconBg={"bg-purple-700"}
                                         topText={<p className="font-bold">100%</p>}
                                         bottomText={<p className="text-gray-400">
-                                            Easy Booking
+                                            {content.bottomImgExtra.text}
                                         </p>}
                                     />
                                 </div>

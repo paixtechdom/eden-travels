@@ -15,6 +15,30 @@ import dubai from "../../assets/images/dubai.jpg"
 import paris from "../../assets/images/paris.jpg"
 import canada from "../../assets/images/canada.jpg"
 import newYork from "../../assets/images/new york.jpg"
+import bus1 from "../../assets/images/buses/buses 1.jpg"
+import bus2 from "../../assets/images/buses/buses 2.jpg"
+import bus3 from "../../assets/images/buses/buses 3.jpg"
+import siena1 from "../../assets/images/buses/siena 2.png"
+
+
+const buses = [
+    {
+        img: bus2,
+        text: "Safe Jourmey"
+    },
+    {
+        text: "Experienced Drivers",
+        img: bus1,
+    },
+    {
+        img: bus3,
+        text: "Safe Vehicles"
+    },
+    {
+        img: siena1,
+        text: "Comfortable Jourmey"
+    },
+]
 
 export const visitablePlaces = [
     {
@@ -46,8 +70,11 @@ const HomePage: React.FC = () => {
                 <meta name="description" content="Explore the world with Onidson Travels and Logistics Ltd - personalized tour packages, flight bookings, travel insurance, and professional training. Discover seamless journeys and exceptional travel experiences. Contact us today!" />
             </Helmet>
         <main className="center bg-white flex-col">
+
             <Hero />
-            <ImageListing data={visitablePlaces} heading="Travel anywhere, anytime!"/>
+
+            <ImageListing data={buses} heading="Book your next journey now"/>
+            
 
             <section className="bg-white blue-50 border-y border-primary shado w-xl py-[10vh] center text-center flex-col gap-5 min-h-[30vh] w-full mt-[20vh] mb-[10vh] lg:mb-0 relative">
 
@@ -79,7 +106,11 @@ const HomePage: React.FC = () => {
                 description="View all services tailored to your needs"
                 parentNav={"services"}
             />
-                 
+            <div className="mb-[15vh] -mt-[5vh] lg:-mt-[10vh]">
+
+            <ImageListing data={visitablePlaces} heading="Travel anywhere, anytime!"/> 
+            </div>
+
             <ImageText
                 heading={"Elevate Your Travel Experience with Our"} 
                 span={" Expert Services"}

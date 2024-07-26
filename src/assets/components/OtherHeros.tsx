@@ -4,56 +4,10 @@ import { HeroComponentInterface } from "../Interfaces"
 import { BreadCrumbs } from "./BreadCrumbs"
 import { BsTelephoneFill } from "react-icons/bs"
 import { Parallax } from "./Parallax"
-import { ImageListing } from "./ImageListing"
-import bus1 from "../images/buses/buses 1.jpg"
-import bus2 from "../images/buses/buses 2.jpg"
-import bus3 from "../images/buses/buses 3.jpg"
-import siena1 from "../images/buses/siena 2.png"
-import dubai from "../images/dubai.jpg"
-import paris from "../images/paris.jpg"
-import canada from "../images/canada.jpg"
-import newYork from "../images/new york.jpg"
-
-export const travelPlaces = [
-    {
-        img: dubai,
-        text: "Dubai"
-    },
-    {
-        img: newYork,
-        text: "USA"
-    },
-    {
-        img: paris,
-        text: "Paris"
-    },
-    {
-        img: canada,
-        text: "Canada"
-    },
-]
-
-const visitablePlaces = [
-    {
-        img: bus1,
-        text: "Safe"
-    },
-    {
-        img: bus2,
-        text: "Fast"
-    },
-    {
-        img: bus3,
-        text: "Comfort"
-    },
-    {
-        img: siena1,
-        text: "Neat"
-    },
-]
 
 
-export const OtherHeros:FC<HeroComponentInterface> = ({heroHeader, desc, img, data, dataHeader, type, breadLinks}) => {
+
+export const OtherHeros:FC<HeroComponentInterface> = ({heroHeader, desc, img, data, dataHeader, type, breadLinks, children}) => {
     return(
         <>
             <section className={`min-h-[75vh] bg-white w-full flex items-start lg:items-center justify-center relative  ${type == "row" ? "pt-[15vh] lg:pt-[10vh]" : "pt-[15vh] md:pt-[10vh] lg:pt-[20vh]"}`}> 
@@ -95,17 +49,10 @@ export const OtherHeros:FC<HeroComponentInterface> = ({heroHeader, desc, img, da
             </section>
 
             <BreadCrumbs links={breadLinks} />
-            <div className="-mt-[10vh] mb-[20vh]">
 
-            {
-                heroHeader == "Interstate Travelling" ?
-                <ImageListing data={visitablePlaces} heading="Book your next journey now"/> :
-                heroHeader == "Flight Services" ? 
-                <ImageListing data={travelPlaces} heading="Book your next flight now"/>
-                : ''
-                
-            }
-            </div>
+
+            {children}
+
 
 
             <section id={"pageLinks"} className="bg-primary bg-opacity-5 py-[10vh] mt-[10vh] center text-center flex-col gap-5 min-h-[30vh] w-full border-y border-primary">
