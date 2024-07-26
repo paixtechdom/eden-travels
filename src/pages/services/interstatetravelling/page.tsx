@@ -17,6 +17,8 @@ const InterStateTrevellingPage = () => {
             data={[]}
         />
 
+        <div className="bg-red-400 h-screen"></div>
+
     </main>
     )
 }

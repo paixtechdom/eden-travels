@@ -12,7 +12,7 @@ const Alert = () => {
     const showAlert = alert.showAlert
     
 
-    // useEffect(() => {
+    useEffect(() => {
         if(showAlert){
             setTimeout(() => {
                 dispatch(toggleShowAlert(false))

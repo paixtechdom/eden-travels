@@ -18,7 +18,7 @@ interface img{
 
 export interface imageListInterface { 
     data: img[], 
-    heading: string
+    heading?: string
 }
 
 export interface BreadCrumbsInterface { 

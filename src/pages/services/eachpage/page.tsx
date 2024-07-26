@@ -35,6 +35,9 @@ const serviceImageExtras = [
       }
     ]
 
+
+
+
 const EachServicePage = () => {
     const [ servicePageIndex, setServicePageIndex ] = useState(6)
     const dispatch = useDispatch()
@@ -64,6 +67,10 @@ const EachServicePage = () => {
     
     const metaConstants = [
         {
+            title: "Interstate Travelling",
+            desc: "Explore seamless interstate travel services across Nigeria. From bus and car rentals to train services, travel comfortably and conveniently with our reliable transportation solutions"
+        },
+        {
             title: "Flight Services",
             desc: "Discover top-notch flight services including flight training, aircraft maintenance, and charter services. Enhance your aviation career with our expert solutions."
         },
@@ -71,10 +78,6 @@ const EachServicePage = () => {
             title: "Logistic Services",
             desc: "Discover efficient logistics solutions tailored for seamless delivery operations. From courier services to comprehensive freight management, optimize your logistics with our reliable solutions."
         },
-        {
-            title: "Interstate Travelling",
-            desc: "Explore seamless interstate travel services across Nigeria. From bus and car rentals to train services, travel comfortably and conveniently with our reliable transportation solutions"
-        }
     ];
     
     
@@ -101,6 +104,11 @@ const EachServicePage = () => {
                         breadLinks={["Home", "Services", servicesList[servicePageIndex].title]}
                         type="row"
                     />
+
+
+                    
+
+
 
                     {
                     servicesList[servicePageIndex]?.sub?.map((service, i) => (

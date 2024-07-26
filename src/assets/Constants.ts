@@ -47,9 +47,9 @@ import landFreight from "../assets/images/landFreight.jpg"
 import inventoryManagement from "../assets/images/inventoryManagement.jpg"
 import procurementServices from "../assets/images/procurementServices.jpg"
 import distributionServices from "../assets/images/distributionServices.jpg"
-import interstateTravelling from "../assets/images/interstateTravelling.jpg"
+import interstateTravelling from "../assets/images/buses/buses 2.jpg"
 import busServices from "../assets/images/busServices.jpg"
-import trainServices from "../assets/images/trainServices.jpg"
+// import trainServices from "../assets/images/trainServices.jpg"
 import adventureTourss from "../assets/images/adventureTourss.jpg"
 import cityTours from "../assets/images/cityTours.jpg"
 import naijaCulture from "../assets/images/naijaCulture.jpg"
@@ -70,16 +70,16 @@ export const NavInfo = [
         link: 'services',
         sublinks: [
             {
+                title: "Interstate Travelling",
+                link: "interstate-travelling"
+            },
+            {
                 title: "Flight Services",
                 link: "logistics"
             },
             {
                 title: "Logistics Services",
                 link: "logistics"
-            },
-            {
-                title: "Interstate Travelling",
-                link: "interstate-travelling"
             },
             {
                 title: "View All",
@@ -125,6 +125,88 @@ export const NavInfo = [
     },
 ]
 export const servicesList = [
+    {
+        title: "Interstate Travelling",
+        img: interstateTravelling,
+        desc: "Seamless interstate travel services across Nigeria to ensure a comfortable and hassle-free journey.",
+        sub: [
+            {
+                title: "Travel Booking",
+                img: busServices,
+                desc: "Seamless booking services for interstate travel in Nigeria.",
+                sub: [
+                    {
+                        title: "One way Trip",
+                        img: busServices,
+                        desc: "Comfortable and affordable bus services across states.",
+                        sub: [
+                            // "Lagos to Abuja",
+                            // "Lagos",
+                            // "Shuttle Services"
+                        ]
+                    },
+                    {
+                        title: "Round Trip",
+                        img: carRentals,
+                        desc: "Convenient car rental options for interstate travel.",
+                        sub: [
+                            // "Self-Drive Rentals",
+                            // "Chauffeur Services",
+                            // "Long-Term Rentals"
+                        ]
+                    },
+                    // {
+                    //     title: "Train Services",
+                    //     img: trainServices,
+                    //     desc: "Efficient and comfortable train services for travel across states.",
+                    //     sub: [
+                    //         "First-Class",
+                    //         "Economy Class",
+                    //         "Sleeper Coaches"
+                    //     ]
+                    // }
+                ]
+            },
+            {
+                title: "CIty Travelling",
+                img: naijaCulture,
+                desc: "Discover Nigeria with our customizable tour packages.",
+                sub: [
+                    {
+                        title: "Lagos",
+                        img: adventureTourss,
+                        desc: "Exciting adventure tours to explore Nigeria's natural beauty.",
+                        sub: [
+                            // "Mountain Climbing",
+                            // "Safari Tours",
+                            // "Water Sports"
+                        ]
+                    },
+                    {
+                        title: "Abuja",
+                        img: naijaCulture,
+                        desc: "Experience Nigeria's rich cultural heritage with our guided tours.",
+                        sub: [
+                            // "Heritage Sites",
+                            // "Cultural Festivals",
+                            // "Local Cuisine Tours"
+                        ]
+                    },
+                    {
+                        title: "Port Harcourt",
+                        img: cityTours,
+                        desc: "Explore major cities in Nigeria with our organized city tours.",
+                        sub: [
+                            // "Lagos Tours",
+                            // "Abuja Tours",
+                            // "Port Harcourt Tours"
+                        ]
+                    }
+                ]
+            },
+           
+        ]
+    },
     {
         title: "Flight Services",
         img: airportTransfers,
@@ -342,88 +424,6 @@ export const servicesList = [
                     }
                 ]
             }
-        ]
-    },
-    {
-        title: "Interstate Travelling",
-        img: interstateTravelling,
-        desc: "Seamless interstate travel services across Nigeria to ensure a comfortable and hassle-free journey.",
-        sub: [
-            {
-                title: "Travel Booking",
-                img: busServices,
-                desc: "Seamless booking services for interstate travel in Nigeria.",
-                sub: [
-                    {
-                        title: "Bus Services",
-                        img: busServices,
-                        desc: "Comfortable and affordable bus services across states.",
-                        sub: [
-                            "Luxury Buses",
-                            "Economy Buses",
-                            "Shuttle Services"
-                        ]
-                    },
-                    {
-                        title: "Car Rentals",
-                        img: carRentals,
-                        desc: "Convenient car rental options for interstate travel.",
-                        sub: [
-                            "Self-Drive Rentals",
-                            "Chauffeur Services",
-                            "Long-Term Rentals"
-                        ]
-                    },
-                    {
-                        title: "Train Services",
-                        img: trainServices,
-                        desc: "Efficient and comfortable train services for travel across states.",
-                        sub: [
-                            "First-Class",
-                            "Economy Class",
-                            "Sleeper Coaches"
-                        ]
-                    }
-                ]
-            },
-            {
-                title: "Tour Packages",
-                img: naijaCulture,
-                desc: "Discover Nigeria with our customizable tour packages.",
-                sub: [
-                    {
-                        title: "Adventure Tours",
-                        img: adventureTourss,
-                        desc: "Exciting adventure tours to explore Nigeria's natural beauty.",
-                        sub: [
-                            "Mountain Climbing",
-                            "Safari Tours",
-                            "Water Sports"
-                        ]
-                    },
-                    {
-                        title: "Cultural Tours",
-                        img: naijaCulture,
-                        desc: "Experience Nigeria's rich cultural heritage with our guided tours.",
-                        sub: [
-                            "Heritage Sites",
-                            "Cultural Festivals",
-                            "Local Cuisine Tours"
-                        ]
-                    },
-                    {
-                        title: "City Tours",
-                        img: cityTours,
-                        desc: "Explore major cities in Nigeria with our organized city tours.",
-                        sub: [
-                            "Lagos Tours",
-                            "Abuja Tours",
-                            "Port Harcourt Tours"
-                        ]
-                    }
-                ]
-            },
-           
         ]
     }
 ];
