@@ -47,12 +47,14 @@ import landFreight from "../assets/images/landFreight.jpg"
 import inventoryManagement from "../assets/images/inventoryManagement.jpg"
 import procurementServices from "../assets/images/procurementServices.jpg"
 import distributionServices from "../assets/images/distributionServices.jpg"
-import interstateTravelling from "../assets/images/buses/buses 2.jpg"
+// import interstateTravelling from "../assets/images/buses/buses 2.jpg"
+import interstateTravelling from "../assets/images/buses/hiace.jpg"
 import busServices from "../assets/images/busServices.jpg"
 // import trainServices from "../assets/images/trainServices.jpg"
-import adventureTourss from "../assets/images/adventureTourss.jpg"
-import cityTours from "../assets/images/cityTours.jpg"
+import lagos from "../assets/images/lagos.jpg"
 import naijaCulture from "../assets/images/naijaCulture.jpg"
+import portHarcourt from "../assets/images/portHarcourt.jpg"
+import abuja from "../assets/images/abuja.jpg"
 // import logisticsImg from "../assets/images/logisticsImg.jpg"
 
 
@@ -140,7 +142,7 @@ export const servicesList = [
                         img: busServices,
                         desc: "Comfortable and affordable bus services across states.",
                         sub: [
-                            "Cost effective travel"
+                            // "Cost effective travel"
                         ]
                     },
                     {
@@ -172,7 +174,7 @@ export const servicesList = [
                 sub: [
                     {
                         title: "Lagos",
-                        img: adventureTourss,
+                        img: lagos,
                         desc: "Exciting adventure tours to explore Nigeria's natural beauty.",
                         sub: [
                             "Lekki",
@@ -182,7 +184,7 @@ export const servicesList = [
                     },
                     {
                         title: "Abuja",
-                        img: naijaCulture,
+                        img: abuja,
                         desc: "Experience Nigeria's rich cultural heritage with our guided tours.",
                         sub: [
                            "Aso Rock",
@@ -192,7 +194,7 @@ export const servicesList = [
                     },
                     {
                         title: "Port Harcourt",
-                        img: cityTours,
+                        img: portHarcourt,
                         desc: "Explore major cities in Nigeria with our organized city tours.",
                         sub: [
                             "Tourist Beach",

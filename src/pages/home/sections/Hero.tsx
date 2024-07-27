@@ -4,7 +4,8 @@ import { Parallax } from "../../../assets/components/Parallax"
 import airplane from "../../../assets/images/airplane.png"
 import bus from "../../../assets/images/buses/bus 1.png"
 import bus2 from "../../../assets/images/buses/bus 4.png"
-import siena from "../../../assets/images/buses/bus 2.png"
+import bus3 from "../../../assets/images/buses/bus 2.png"
+// import bus3 from "../../../assets/images/buses/bus 2.jpg"
 import { ImageExtras } from "../../../assets/components/ImageExtras"
 import { PiCheck, PiPackageFill } from "react-icons/pi"
 import { FaPlane } from "react-icons/fa6"
@@ -82,10 +83,10 @@ const HeroContent= [
         }
     },
     {
-        preTitle: "Taking courier services on another level",
+        preTitle: "Taking courier services to another level",
         title: "We handle the movement of your packages",
         desc: "Do you want to send packages internationally? We've got you covered.",
-        img: siena,
+        img: bus3,
         button: {
             learn: "/Services/logistics-services",
             cta : {

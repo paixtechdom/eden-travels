@@ -16,19 +16,19 @@ export const ListingCard:FC<ListingCardInterface> = ({data}) => {
             />
             </div>
 
-            <div className="flex flex-col gap-3 p-3 px-6 pb-8">
+            <div className="flex flex-col gap-4 p-3 px-6 pb-8">
                 <h3 className="font-semibold text-lg">{data?.title}</h3>
-
                 <div className="flex flex-col gap-3">
                     {
                         data?.sub?.map((sub: any, i) => (
                             <p key={i} className="flex items-start text-gray-700 w-fit text-sm">
-                                <span className="mr-2 mt-1 h-3 w-3 rounded-full bg-primary"></span>
+                                <span className="mr-2 h-3 w-3 rounded-full bg-primary"></span>
                                 {sub}
                             </p>
                         ))
                     }
                 </div>
+   
 
             </div>
         </div>
