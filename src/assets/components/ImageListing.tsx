@@ -15,11 +15,14 @@ export const ImageListing : FC <imageListInterface> =  ({data, heading}) => {
                         data.map((d, i) => (
                             <Parallax key={i} id={d.text.replace(" ", '')}>
 
-                            <div key={i} className="center relative rounded-xl overflow-hidden w-full cursor-pointer bg-secondary bg-opacity-45 lg:h-[30vh]">
+                            <div key={i} className="center relative rounded-xl overflow-hidden w-full cursor-pointer bg-secondary bg-opacity-25 lg:h-[30vh]">
                                 <img src={d.img} alt={d.text} className="w-full hover:scale-150 transition-all duration-500 object-cover h-full"/>
                                 {
                                     d.text !== "" &&
-                                    <p className="absolute top-3 left-3 text-sm font-bold px-3 bg-gray-200 p-2 bg-opacity-75 rounded-lg w-fit shadow">{d.text}</p>
+                                    <div className="absolute top-3 left-3 text-sm font-bold px-3 bg-primary p-2 bg-opacity-25 rounded-full lg w-fit  backdrop-blur-xl shadow-xl center gap-2">
+                                        <p className="size-4 bg-white rounded-full h-4 w-4"></p>
+                                        {d.text}
+                                    </div>
                                 }
                             </div>
                             </Parallax>

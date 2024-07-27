@@ -34,13 +34,20 @@ export const ContactInfo = [
         link: "mailto:info@onidsontravels.com"
     },
     {
-        icon: <BsTelephoneFill />,
-        contact: '+234 912 939 7279',
-        link: "tel:+2349129397279"
-    },
-    {
         icon: <RiWhatsappFill />,
         contact: '+234 815 788 6733',
+        link: "https://api.whatsapp.com/send?phone=2348157886733"
+    },
+    // business development
+    {
+        icon: <RiWhatsappFill />,
+        contact: '+234 903 818 0112',
+        link: "https://api.whatsapp.com/send?phone=2348157886733"
+    },
+    // customer service experience
+    {
+        icon: <RiWhatsappFill />,
+        contact: '+234 708 869 6489',
         link: "https://api.whatsapp.com/send?phone=2348157886733"
     },
 ]

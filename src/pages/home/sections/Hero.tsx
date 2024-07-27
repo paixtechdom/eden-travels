@@ -108,13 +108,13 @@ const HeroContent= [
 
 
 export const Hero: React.FC = () => {
-    const [ currentSlide, setCurrentSlide ] = useState(0)
+    const [ currentSlide, setCurrentSlide ] = useState(1)
     const [startX, setStartX ] = useState(0)
     const sliderRef = useRef(null)
     
     useEffect(() => {
         const int = setInterval(() => {
-            slide()
+            // slide()
         }, 10000);
         return () => clearInterval(int)
     }, [currentSlide])
@@ -141,7 +141,7 @@ export const Hero: React.FC = () => {
 
 
     return(
-        <div className="min-h-screen bg-white heroGradient2 -heroGradient bg-cover bg-center w-full center relative pb-[15vh] lg:pb-0 pt-[15vh] lg:py-0 overflow-hidden"> 
+        <section className="min-h-screen h-fit bg-white heroGradient2 -heroGradient bg-cover bg-center w-full center relative pb-[15vh] lg:pb-0 pt-[15vh] lg:py-0 overflow-hidden"> 
             {/* ARROWS */}
             <>
            <div className="absolute hidden lg:flex w-full [105%] justify-between items-center z-20 ">
@@ -170,7 +170,7 @@ export const Hero: React.FC = () => {
                 </div>
             </div>
             </>
-                <div className="relative flex justify-center lg:items-center min-h-screen w-full">
+                <div className="relative flex justify-center lg:items-center min-h-screen h-fit w-full">
 
                     {
                         HeroContent.map((content, i) =>(
@@ -190,14 +190,14 @@ export const Hero: React.FC = () => {
 
                                 <Parallax id="herohone">
 
-                                    <h1 className="text-4xl tracking-wide lg:leading-[60px] md:text-5xl text-secondary font-bold">
+                                    <h1 className="text-4xl tracking-wide lg:leading-[60px] md:text-5xl text-secondary font-bold md:w-9/12 lg:w-full">
                                         {content.title}
                                     </h1>
                                 </Parallax>
                                 
 
                                 <Parallax id="heropdesc">
-                                    <p className="leading-relaxed tracking-wide text-gray-900 mt-6">
+                                    <p className="leading-relaxed tracking-wide text-gray-900 mt-6 md:w-9/12 lg:w-full">
                                         {content.desc}
                                     </p>
                                 </Parallax>
@@ -274,7 +274,7 @@ export const Hero: React.FC = () => {
             {/* </div> */}
 
 
-        </div>
+        </section>
     )
 }
 
