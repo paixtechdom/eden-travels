@@ -9,25 +9,8 @@ import { BiLoaderAlt } from "react-icons/bi"
 import axios from "axios"
 import { useDispatch } from "react-redux"
 import { setAlertMessage, setAlertType, toggleShowAlert } from "../../assets/store/AlertSlice"
+import { ContactInfo } from "../../assets/components/Footer"
 
-
-const contactInfo = [
-    {
-        icon: <BsGeoAltFill />,
-        contact: "Lagos, Nigeria",
-        link: "#"
-    },
-    {
-        icon: <BsEnvelopeFill />,
-        contact: "info@onidsontravels.com",
-        link: "mailto:info@onidsontravels.com"
-    },
-    {
-        icon: <RiWhatsappFill />,
-        contact: "+234 815 788 6733",
-        link: "https://api.whatsapp.com/send?phone=2348157886733"
-    },
-]
 
 const ContactPage = () => {
     const dispatch = useDispatch()
@@ -124,7 +107,7 @@ const ContactPage = () => {
                 <title>
                     Contact Onidson Travels and Logistics Ltd
                 </title>
-                <meta name="description" content={`Connect with Onidson Travels and Logistics Ltd through our contact information. Reach us by phone at ${contactInfo[0].contact}, email us at  ${contactInfo[1].contact}, or visit us at  ${contactInfo[2].contact}. We're here to help!`} />
+                <meta name="description" content={`Connect with Onidson Travels and Logistics Ltd through our contact information. Reach us by phone at ${ContactInfo[0].contact}, email us at  ${ContactInfo[1].contact}, or visit us at  ${ContactInfo[2].contact}. We're here to help!`} />
             </Helmet>            
 
             <main className="center flex-col w-full pt-[20vh] pb-[10vh] bg-white">
@@ -143,18 +126,22 @@ const ContactPage = () => {
                             <div className="flex flex-col gap-2">
                                 <h2 className="text-primary text-2xl font-semibold">Contact Information</h2>
                             </div>
-                            <div className="flex flex-col gap-5">
-                                {
-                                    contactInfo.map((contact, i) => (
-                                        <a href={`${contact.link}`} key={i} className="flex gap-3 items-start">
-                                            <div className="text-xl text-white">
-                                                {contact.icon}
-                                            </div>
+                            <div className="flex flex-col gap-5 w-full">
+                            {
+                                ContactInfo.map((info, i) => (
+                                    <div key={i} className="flex flex-col gap-2 w-full">
 
-                                            <p>{contact.contact}</p>
-                                        </a>
-                                    ))
-                                }
+                                        <div key={i} className="flex items-center gap-2">
+                                            {info.icon}
+                                            <p>
+                                                {info.text}
+                                            </p>
+
+                                        </div>
+                                        <a href={info.link} className="pl-6">{info.contact}</a>
+                                    </div>
+                                ))
+                            }
                             </div>
 
                             

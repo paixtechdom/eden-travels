@@ -15,7 +15,9 @@ export default {
       },
       colors:{
         "primary": "#66CCFF",
+        "primaryFade": "#66CCFF63",
         "secondary" : "#0e1925",
+        "secondaryFade" : "#0e1925A3",
         "tertiary" : "rgb(150,100,0)"
       }
     },

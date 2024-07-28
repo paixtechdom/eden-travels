@@ -114,7 +114,7 @@ export const Hero: React.FC = () => {
     
     useEffect(() => {
         const int = setInterval(() => {
-            // slide()
+            slide()
         }, 10000);
         return () => clearInterval(int)
     }, [currentSlide])
@@ -170,31 +170,28 @@ export const Hero: React.FC = () => {
                 </div>
             </div>
             </>
-                <div className="relative flex justify-center lg:items-center min-h-screen h-fit w-full">
+            <div className="relative flex justify-center lg:items-center min-h-screen h-fit w-full">
 
-                    {
-                        HeroContent.map((content, i) =>(
-                            <div key={i} className={`absolute w-11/12 lg:w-10/12 xl:w-9/12 flex flex-col lg:flex-row items-center justify-center z-10 gap-[50px] lg:gap-0 transition-all duration-1000 ease-in-out ${currentSlide == i ? "": "opacity-0 scale-[0.8]" }`}
-                            onTouchStart={handleTouchStart}
-                            onTouchEnd={handleTouchEnd}
-                            ref={sliderRef}
-                            >
-                            
-                                <div className="flex flex-col w-full lg:w-8/12 pr-[40px]">
+                {
+                    HeroContent.map((content, i) =>(
+                        <div key={i} className={`absolute w-11/12 lg:w-10/12 xl:w-9/12 flex flex-col lg:flex-row items-center justify-center z-10 gap-[50px] lg:gap-0 transition-all duration-1000 ease-in-out ${currentSlide == i ? "": "opacity-0 scale-[0.8]" }`}
+                        onTouchStart={handleTouchStart}
+                        onTouchEnd={handleTouchEnd}
+                        ref={sliderRef}
+                        >
+                        
+                            <div className="flex flex-col w-full lg:w-8/12 pr-[40px]">
                                 <Parallax id="heroadve">
-
                                     <p className="leading-relaxed tracking-wide text-gray-800">
                                         {content.preTitle}
                                     </p>
                                 </Parallax>
 
                                 <Parallax id="herohone">
-
                                     <h1 className="text-4xl tracking-wide lg:leading-[60px] md:text-5xl text-secondary font-bold md:w-9/12 lg:w-full">
                                         {content.title}
                                     </h1>
                                 </Parallax>
-                                
 
                                 <Parallax id="heropdesc">
                                     <p className="leading-relaxed tracking-wide text-gray-900 mt-6 md:w-9/12 lg:w-full">
@@ -221,52 +218,56 @@ export const Hero: React.FC = () => {
 
                                     </div>
                                 </Parallax>
-                                </div>
-                            
-                                <div className="center lg:w-6/12 relative min-h-[30px]">
-                                    <LazyLoadImage 
-                                            src={content.img} 
-                                            placeholderSrc={"Airplane and destinations"} 
-                                            effect='blur'
-                                            className="w-full z-[50] min-h-[45px]  g-red-500"
-                                    
-                                    />
-
-                                <div className="absolute -top-5 right-[45%] z-[50]">
-                                    <ImageExtras 
-                                        icon={<PiCheck />}
-                                        iconBg={"bg-green-700"}
-                                        topText={<p className="font-bold">100%</p>}
-                                        bottomText={<p className="text-gray-400">
-                                            {content.topImgExtra.text}
-                                        </p>}
-                                    />
-                                </div>
-                                <div className="absolute -bottom-[10%] left-[35%] z-[50]">
-                                    <ImageExtras 
-                                        icon={content.bottomImgExtra?.icon}
-                                        iconBg={"bg-purple-700"}
-                                        topText={<p className="font-bold">100%</p>}
-                                        bottomText={<p className="text-gray-400">
-                                            {content.bottomImgExtra.text}
-                                        </p>}
-                                    />
-                                </div>
-
-
-
-
-                                </div>
                             </div>
-                        ))
-                    }
-                </div>
-                    <div className="absolute lg:-right-[20%] bottom-0 lg:bottom-auto z-[5] w-full scale-[0.4] lg:scale-[0.2] hidden lg:block">
-                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full scale-[3] opacity-50">
-                        <path fill="#93C5FD" d="M37.5,-49.2C50.5,-42.2,64.1,-33.8,72.5,-20.6C80.9,-7.4,84,10.4,77.4,23.4C70.7,36.3,54.4,44.4,39.9,44.5C25.4,44.7,12.7,36.9,1,35.6C-10.8,34.3,-21.6,39.4,-33.5,38.4C-45.4,37.4,-58.5,30.4,-63.5,19.6C-68.5,8.8,-65.3,-5.7,-59.7,-18.2C-54,-30.8,-45.9,-41.4,-35.5,-49.2C-25.2,-57,-12.6,-61.9,-0.2,-61.7C12.3,-61.5,24.6,-56.1,37.5,-49.2Z" transform="translate(100 100)"/>
-                        </svg>
                         
-                    </div>
+                            <div className="center lg:w-6/12 relative md:absolute md:right-0 md:z-[-1] md:opacity-90 md:scale-[0.6] md:h-[40vh] md:top-[30vh] lg:relative md:right-0 md:z-[-1] lg:opacity-100 lg:scale-[1] lg:top-0 lg:h-fit ">
+                                <LazyLoadImage 
+                                    src={content.img} 
+                                    placeholderSrc={"Airplane and destinations"} 
+                                    effect='blur'
+                                    className="w-full z-[50] min- h- [45px]  g-red-500"
+                                
+                                />
+
+                            <div className="absolute -top-5 right-[45%] z-[50]">
+                                <ImageExtras 
+                                    icon={<PiCheck />}
+                                    iconBg={"bg-green-700"}
+                                    topText={<p className="font-bold">100%</p>}
+                                    bottomText={<p className="text-gray-400">
+                                        {content.topImgExtra.text}
+                                    </p>}
+                                />
+                            </div>
+                            <div className="absolute -bottom-[10%] left-[35%] z-[50]">
+                                <ImageExtras 
+                                    icon={content.bottomImgExtra?.icon}
+                                    iconBg={"bg-purple-700"}
+                                    topText={<p className="font-bold">100%</p>}
+                                    bottomText={<p className="text-gray-400">
+                                        {content.bottomImgExtra.text}
+                                    </p>}
+                                />
+                            </div>
+
+
+
+
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+
+
+
+            {/* BLOD - VISIBLE FROM LG */}
+            <div className="absolute lg:-right-[20%] bottom-0 lg:bottom-auto z-[5] w-full scale-[0.4] lg:scale-[0.2] hidden lg:block">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full scale-[3] opacity-50">
+                <path fill="#93C5FD" d="M37.5,-49.2C50.5,-42.2,64.1,-33.8,72.5,-20.6C80.9,-7.4,84,10.4,77.4,23.4C70.7,36.3,54.4,44.4,39.9,44.5C25.4,44.7,12.7,36.9,1,35.6C-10.8,34.3,-21.6,39.4,-33.5,38.4C-45.4,37.4,-58.5,30.4,-63.5,19.6C-68.5,8.8,-65.3,-5.7,-59.7,-18.2C-54,-30.8,-45.9,-41.4,-35.5,-49.2C-25.2,-57,-12.6,-61.9,-0.2,-61.7C12.3,-61.5,24.6,-56.1,37.5,-49.2Z" transform="translate(100 100)"/>
+                </svg>
+                
+            </div>
 
 
 

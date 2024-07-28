@@ -7,12 +7,12 @@ import { ListingCardInterface } from "../../Interfaces"
 
 export const ListingCard:FC<ListingCardInterface> = ({data}) => {
     return(
-        <div className="flex flex-col gap-6 w-full shadow-lg rounded-xl p- 2 bg-white">
-            <div className="center w-full overflow-hidden rounded-t-xl min-h-[30px]">
+        <div className="flex flex-col gap-6 w-full shadow-lg rounded-xl bg-gradient-to-b from-primaryFade via-white to-white overflow-hidden">
+            <div className="center w-full overflow-hidden min-h-[30px] bg-gradient-to-br from-secondaryFade to-transparent via-transparent p-2">
             <img 
                 src={data?.img} 
                 alt={data?.title} 
-                className="w-full transition-all duration-500 hover:scale-150 active:scale-150"
+                className="w-full transition-all duration-500 hover:scale-150 active:scale-150 rounded-t-lg"
             />
             </div>
 
@@ -21,10 +21,10 @@ export const ListingCard:FC<ListingCardInterface> = ({data}) => {
                 <div className="flex flex-col gap-3">
                     {
                         data?.sub?.map((sub: any, i) => (
-                            <p key={i} className="flex items-start text-gray-700 w-fit text-sm">
+                            <div key={i} className="flex items-center text-gray-700 w-fit text-sm">
                                 <span className="mr-2 h-3 w-3 rounded-full bg-primary"></span>
-                                {sub}
-                            </p>
+                                <span>{sub}</span>
+                            </div>
                         ))
                     }
                 </div>

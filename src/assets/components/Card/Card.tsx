@@ -9,12 +9,12 @@ import { BsArrowRight } from "react-icons/bs"
 
 export const Card:FC<CardInterface> = ({data}) => {
     return(
-        <div className="flex flex-col gap-6 w-full shadow-lg rounded-xl p-2 bg-white h-full">
-            <div className="center w-full overflow-hidden rounded-t-xl min-h-[30px]">
+        <div className="flex flex-col gap-6 w-full shadow-lg rounded-xl bg-white h-full bg-gradient-to-b from-primaryFade via-white to-white overflow-hidden">
+            <div className="center w-full overflow-hidden min-h-[30px] bg-gradient-to-br from-secondaryFade to-transparent via-transparent p-2">
             <img 
                     src={data?.img} 
                     alt={data?.title} 
-                    className="w-full transition-all duration-500 hover:scale-150 active:scale-150"
+                    className="w-full transition-all duration-500 hover:scale-150 active:scale-150 rounded-t-lg"
                 />
             </div>
 
@@ -24,7 +24,7 @@ export const Card:FC<CardInterface> = ({data}) => {
                 <div className="flex flex-col gap-3">
                     {
                         data?.sub?.map((sub, i) => (
-                            <p key={i} className="rounded-lg shadow-md center bg-white p-2 text-gray-600 w-fit text-sm">
+                            <p key={i} className="rounded-full shadow-md center bg-white p-2 text-gray-600 w-fit text-sm pr-4">
                                 <span className="mr-2 mt-1 h-3 w-3 rounded-full bg-primary"></span>
 
                                 {sub?.title}

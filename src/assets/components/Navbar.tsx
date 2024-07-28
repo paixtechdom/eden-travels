@@ -44,7 +44,7 @@ export const Navbar = () => {
         <>
            <>
         <header className={`fixed center w-full left-0 top-0 h-[8vh] md:h-[10vh] z-50 transition-all duration-1000 ${scrolledDown ? "shadow-xl border-b border-primary bg-white bg-opacity-50 backdrop-blur-2xl" : ""} `}>
-            <div className="flex items-center justify-between w-11/12 lg:w-10/12">
+            <div className="flex items-center justify-between w-11/12 xl:w-10/12">
 
                 <Link to={'/'} className=' w-4/12 lg:w-2/12' onClick={() => {
                     dispatch(setCurrentNav(0))

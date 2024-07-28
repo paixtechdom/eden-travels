@@ -9,7 +9,7 @@ export const ImageListing : FC <imageListInterface> =  ({data, heading}) => {
                     <h2 className="text-3xl font-semibold tracking-[1.2px] leading-[35px] w-full">
                         {heading}
                     </h2>
-                <div className="w-11/12 lg:w-10/12 flex flex-col md:grid-cols-2 md:grid lg:flex lg:flex-row rounded-2xl gap-6">
+                <div className="w-11/12 xl:w-10/12 flex flex-col md:grid-cols-2 md:grid lg:flex lg:flex-row rounded-2xl gap-6">
                     
                     {
                         data.map((d, i) => (
